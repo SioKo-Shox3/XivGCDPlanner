@@ -18,9 +18,15 @@ namespace XivGCDPlanner.Controls
         public double TimePosition { get; set; }
         public int TrackIndex { get; set; }
 
+        private bool _isDragging = false;
+        private Point _dragStartPoint;
+        private Canvas? _parentCanvas;
+        private double _pixelsPerSecond;
+
         public TimelineEventVisual(SkillEvent skillEvent, double pixelsPerSecond = 50)
         {
             SkillEvent = skillEvent;
+            _pixelsPerSecond = pixelsPerSecond;
             
             // 幅を計算：GCDスキルの場合はGCD時間、アビリティの場合は固定幅
             double skillWidth;
@@ -214,20 +220,92 @@ namespace XivGCDPlanner.Controls
             // ドラッグ可能にする
             AllowDrop = true;
             Cursor = Cursors.Hand;
+            
+            // マウスイベントハンドラーを追加
+            MouseLeftButtonDown += OnMouseLeftButtonDown;
+            MouseMove += OnMouseMove;
+            MouseLeftButtonUp += OnMouseLeftButtonUp;
+            MouseLeave += OnMouseLeave;
+        }
+
+        private void OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                // ダブルクリックの場合はドラッグを開始しない
+                return;
+            }
+
+            _isDragging = true;
+            _dragStartPoint = e.GetPosition(this);
+            _parentCanvas = Parent as Canvas;
+            
+            CaptureMouse();
+            e.Handled = true;
+        }
+
+        private void OnMouseMove(object sender, MouseEventArgs e)
+        {
+            if (_isDragging && e.LeftButton == MouseButtonState.Pressed && _parentCanvas != null)
+            {
+                Point currentPosition = e.GetPosition(_parentCanvas);
+                Point newPosition = new Point(
+                    currentPosition.X - _dragStartPoint.X,
+                    Canvas.GetTop(this) // Y座標は固定（トラック変更なし）
+                );
+
+                // 位置を制限（負の値にならないように）
+                if (newPosition.X >= 0)
+                {
+                    Canvas.SetLeft(this, newPosition.X);
+                    
+                    // リアルタイムで時間位置を更新
+                    TimePosition = newPosition.X / _pixelsPerSecond;
+                }
+                
+                e.Handled = true;
+            }
+        }
+
+        private void OnMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (_isDragging)
+            {
+                _isDragging = false;
+                ReleaseMouseCapture();
+                
+                // 最終的なドロップ処理
+                if (_parentCanvas != null)
+                {
+                    // 新しい時間位置を計算
+                    double newTime = Canvas.GetLeft(this) / _pixelsPerSecond;
+                    
+                    // TimelineControlのSkillDroppedイベントを発生させる
+                    if (_parentCanvas.Parent is TimelineControl timelineControl)
+                    {
+                        var skillDropEventArgs = new SkillDropEventArgs(SkillEvent.Skill, newTime, SkillEvent);
+                        
+                        // パブリックメソッドを使って処理
+                        timelineControl.HandleSkillDrop(skillDropEventArgs);
+                    }
+                }
+                
+                e.Handled = true;
+            }
+        }
+
+        private void OnMouseLeave(object sender, MouseEventArgs e)
+        {
+            if (_isDragging && e.LeftButton != MouseButtonState.Pressed)
+            {
+                _isDragging = false;
+                ReleaseMouseCapture();
+            }
         }
 
         protected override void OnMouseDown(MouseButtonEventArgs e)
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                // DataObjectを使用して適切なデータ形式で設定
-                var dataObject = new DataObject();
-                dataObject.SetData(typeof(SkillEvent), SkillEvent);
-                dataObject.SetData(DataFormats.Serializable, SkillEvent);
-                
-                DragDrop.DoDragDrop(this, dataObject, DragDropEffects.Move);
-                e.Handled = true;
-            }
+            // 従来のドラッグ処理は無効化
             base.OnMouseDown(e);
         }
     }

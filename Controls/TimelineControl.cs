@@ -22,6 +22,9 @@ namespace XivGCDPlanner.Controls
         private double _pixelsPerSecond = 50;
         private readonly List<TimelineEventVisual> _eventVisuals = new List<TimelineEventVisual>();
         
+        // ドラッグ状態の管理
+        private bool _isDraggingSeekBar = false;
+        
         // トラック設定
         private const int GcdTrackIndex = 0;
         private const int AbilityTrackIndex = 1;
@@ -81,6 +84,8 @@ namespace XivGCDPlanner.Controls
             // キャンバスにイベントハンドラーを追加
             _timelineCanvas.MouseRightButtonDown += OnTimelineRightClick;
             _timelineCanvas.MouseLeftButtonDown += OnTimelineLeftClick;
+            _timelineCanvas.MouseMove += OnTimelineMouseMove;
+            _timelineCanvas.MouseLeftButtonUp += OnTimelineLeftButtonUp;
             _timelineCanvas.AllowDrop = true;
             _timelineCanvas.Drop += OnCanvasDrop;
             _timelineCanvas.DragOver += OnCanvasDragOver;
@@ -231,6 +236,34 @@ namespace XivGCDPlanner.Controls
             _seekBar.X2 = x;
         }
 
+        private void OnSeekBarMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _isDraggingSeekBar = true;
+            _timelineCanvas.CaptureMouse();
+            e.Handled = true;
+        }
+
+        private void OnSeekBarMouseMove(object sender, MouseEventArgs e)
+        {
+            if (_isDraggingSeekBar && e.LeftButton == MouseButtonState.Pressed)
+            {
+                Point position = e.GetPosition(_timelineCanvas);
+                double newTime = Math.Max(0, position.X / _pixelsPerSecond);
+                SeekPosition = newTime;
+                e.Handled = true;
+            }
+        }
+
+        private void OnSeekBarMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if (_isDraggingSeekBar)
+            {
+                _isDraggingSeekBar = false;
+                _timelineCanvas.ReleaseMouseCapture();
+                e.Handled = true;
+            }
+        }
+
         private void OnTimelineRightClick(object sender, MouseButtonEventArgs e)
         {
             Point position = e.GetPosition(_timelineCanvas);
@@ -241,8 +274,35 @@ namespace XivGCDPlanner.Controls
 
         private void OnTimelineLeftClick(object sender, MouseButtonEventArgs e)
         {
+            // タイムラインをクリックしたらその位置にシークバーを移動し、ドラッグ開始
             Point position = e.GetPosition(_timelineCanvas);
             SeekPosition = position.X / _pixelsPerSecond;
+            
+            // ドラッグモード開始
+            _isDraggingSeekBar = true;
+            _timelineCanvas.CaptureMouse();
+            e.Handled = true;
+        }
+
+        private void OnTimelineMouseMove(object sender, MouseEventArgs e)
+        {
+            if (_isDraggingSeekBar)
+            {
+                // シークバーをリアルタイムで移動
+                Point position = e.GetPosition(_timelineCanvas);
+                SeekPosition = position.X / _pixelsPerSecond;
+            }
+        }
+
+        private void OnTimelineLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (_isDraggingSeekBar)
+            {
+                // シークバーのドラッグ終了
+                _isDraggingSeekBar = false;
+                _timelineCanvas.ReleaseMouseCapture();
+                e.Handled = true;
+            }
         }
 
         private void OnCanvasDragOver(object sender, DragEventArgs e)
@@ -315,6 +375,11 @@ namespace XivGCDPlanner.Controls
                 MessageBox.Show($"スキルを配置できませんでした: {ex.Message}", "エラー", 
                     MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+        }
+
+        public void HandleSkillDrop(SkillDropEventArgs e)
+        {
+            SkillDropped?.Invoke(this, e);
         }
     }
 
