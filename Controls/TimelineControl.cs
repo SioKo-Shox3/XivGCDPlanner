@@ -210,7 +210,7 @@ namespace XivGCDPlanner.Controls
 
         private void AddEventVisual(SkillEvent skillEvent)
         {
-            var visual = new TimelineEventVisual(skillEvent);
+            var visual = new TimelineEventVisual(skillEvent, _pixelsPerSecond);
             
             // 位置を計算
             double x = skillEvent.Time * _pixelsPerSecond;
@@ -247,7 +247,9 @@ namespace XivGCDPlanner.Controls
 
         private void OnCanvasDragOver(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(typeof(SkillBase)) || e.Data.GetDataPresent(typeof(SkillEvent)))
+            if (e.Data.GetDataPresent(typeof(SkillBase)) || 
+                e.Data.GetDataPresent(typeof(SkillEvent)) ||
+                e.Data.GetDataPresent(DataFormats.Serializable))
             {
                 e.Effects = DragDropEffects.Move;
             }
@@ -263,16 +265,40 @@ namespace XivGCDPlanner.Controls
             Point position = e.GetPosition(_timelineCanvas);
             double time = position.X / _pixelsPerSecond;
 
+            SkillBase? skill = null;
+            SkillEvent? originalEvent = null;
+
+            // データの取得を試行
             if (e.Data.GetDataPresent(typeof(SkillBase)))
             {
-                var skill = (SkillBase)e.Data.GetData(typeof(SkillBase));
-                SkillDropped?.Invoke(this, new SkillDropEventArgs(skill, time));
+                skill = (SkillBase)e.Data.GetData(typeof(SkillBase));
+            }
+            else if (e.Data.GetDataPresent(DataFormats.Serializable))
+            {
+                var data = e.Data.GetData(DataFormats.Serializable);
+                if (data is SkillBase skillData)
+                {
+                    skill = skillData;
+                }
+                else if (data is SkillEvent skillEventData)
+                {
+                    skill = skillEventData.Skill;
+                    originalEvent = skillEventData;
+                }
             }
             else if (e.Data.GetDataPresent(typeof(SkillEvent)))
             {
                 var skillEvent = (SkillEvent)e.Data.GetData(typeof(SkillEvent));
-                SkillDropped?.Invoke(this, new SkillDropEventArgs(skillEvent.Skill, time, skillEvent));
+                skill = skillEvent.Skill;
+                originalEvent = skillEvent;
             }
+
+            if (skill != null)
+            {
+                SkillDropped?.Invoke(this, new SkillDropEventArgs(skill, time, originalEvent));
+            }
+            
+            e.Handled = true;
         }
 
         public void AddSkillAtTime(SkillBase skill, double time)

@@ -29,6 +29,12 @@ namespace XivGCDPlanner.Models
         public double ActualGcdTime => BaseGcdTime * SpellSpeedModifier;
 
         /// <summary>
+        /// 詠唱後のクールダウン時間を計算
+        /// GCD時間 = 詠唱時間 + クールダウン時間
+        /// </summary>
+        public double CooldownTime => Math.Max(0, ActualGcdTime - CastTime);
+
+        /// <summary>
         /// 次にGCDスキルが使用可能になる時刻
         /// </summary>
         public double NextGcdAvailableTime => LastGcdUseTime < 0 ? 0 : LastGcdUseTime + ActualGcdTime;

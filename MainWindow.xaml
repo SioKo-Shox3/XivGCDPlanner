@@ -48,11 +48,11 @@
                     <StackPanel>
                         <TextBlock Text="スキル選択" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
                         
-                        <!-- Spell Speed Setting -->
+                        <!-- GCD Setting -->
                         <GroupBox Header="設定" Margin="0,0,0,10">
                             <StackPanel>
-                                <TextBlock Text="スペルスピード:" Margin="0,0,0,5"/>
-                                <TextBox Text="{Binding SpellSpeed, UpdateSourceTrigger=PropertyChanged}" 
+                                <TextBlock Text="GCD時間（秒）:" Margin="0,0,0,5"/>
+                                <TextBox Text="{Binding GcdTime, UpdateSourceTrigger=PropertyChanged, StringFormat=F2}" 
                                         Width="100" HorizontalAlignment="Left"/>
                             </StackPanel>
                         </GroupBox>
@@ -83,17 +83,22 @@
                     <GroupBox Grid.Column="0" Header="GCDスキル" Margin="0,0,5,0">
                         <ListBox ItemsSource="{Binding AvailableGcdSkills}" 
                                 SelectedItem="{Binding SelectedSkill}"
-                                MouseDoubleClick="OnSkillDoubleClick"
                                 AllowDrop="True">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <Border Background="LightBlue" Padding="5" Margin="2" CornerRadius="3"
-                                           MouseDown="OnSkillMouseDown">
+                                           MouseDown="OnSkillMouseDown"
+                                           MouseLeftButtonDown="OnSkillMouseDown">
                                         <StackPanel>
                                             <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
                                             <TextBlock Text="{Binding Potency, StringFormat='威力: {0}'}" 
                                                       FontSize="10" Foreground="Gray"/>
                                         </StackPanel>
+                                        <Border.InputBindings>
+                                            <MouseBinding MouseAction="LeftDoubleClick" 
+                                                         Command="{Binding DataContext.SkillDoubleClickCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                         CommandParameter="{Binding}"/>
+                                        </Border.InputBindings>
                                     </Border>
                                 </DataTemplate>
                             </ListBox.ItemTemplate>
@@ -104,17 +109,22 @@
                     <GroupBox Grid.Column="1" Header="アビリティ" Margin="5,0,0,0">
                         <ListBox ItemsSource="{Binding AvailableAbilitySkills}" 
                                 SelectedItem="{Binding SelectedSkill}"
-                                MouseDoubleClick="OnSkillDoubleClick"
                                 AllowDrop="True">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <Border Background="LightGreen" Padding="5" Margin="2" CornerRadius="3"
-                                           MouseDown="OnSkillMouseDown">
+                                           MouseDown="OnSkillMouseDown"
+                                           MouseLeftButtonDown="OnSkillMouseDown">
                                         <StackPanel>
                                             <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
                                             <TextBlock Text="{Binding RecastTime, StringFormat='リキャスト: {0}秒'}" 
                                                       FontSize="10" Foreground="Gray"/>
                                         </StackPanel>
+                                        <Border.InputBindings>
+                                            <MouseBinding MouseAction="LeftDoubleClick" 
+                                                         Command="{Binding DataContext.SkillDoubleClickCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                         CommandParameter="{Binding}"/>
+                                        </Border.InputBindings>
                                     </Border>
                                 </DataTemplate>
                             </ListBox.ItemTemplate>

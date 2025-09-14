@@ -37,22 +37,30 @@ public partial class MainWindow : Window
         _viewModel.SetTimelineControl(TimelineControl);
     }
 
-    private void OnSkillDoubleClick(object sender, MouseButtonEventArgs e)
-    {
-        if (e.ClickCount == 2 && sender is ListBox listBox && listBox.SelectedItem is SkillBase skill)
-        {
-            _viewModel.SkillDoubleClickCommand.Execute(skill);
-        }
-    }
-
     private void OnSkillMouseDown(object sender, MouseButtonEventArgs e)
     {
-        if (e.LeftButton == MouseButtonState.Pressed && sender is Border border)
+        // ダブルクリックの場合はドラッグを開始しない
+        if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 1 && sender is Border border)
         {
             var skill = border.DataContext as SkillBase;
             if (skill != null)
             {
-                DragDrop.DoDragDrop(border, skill, DragDropEffects.Move);
+                // 少し遅延を入れてダブルクリックでないことを確認
+                System.Threading.Tasks.Task.Delay(200).ContinueWith(_ =>
+                {
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        if (Mouse.LeftButton == MouseButtonState.Pressed)
+                        {
+                            // DataObjectを使用して適切なデータ形式で設定
+                            var dataObject = new DataObject();
+                            dataObject.SetData(typeof(SkillBase), skill);
+                            dataObject.SetData(DataFormats.Serializable, skill);
+                            
+                            DragDrop.DoDragDrop(border, dataObject, DragDropEffects.Move);
+                        }
+                    });
+                });
             }
         }
     }

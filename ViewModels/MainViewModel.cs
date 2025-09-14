@@ -19,6 +19,7 @@ namespace XivGCDPlanner.ViewModels
         private double _selectedTime;
         private double _seekPosition;
         private int _spellSpeed = 400;
+        private double _gcdTime = 2.50;
         private TimelineControl? _timelineControl;
 
         public MainViewModel()
@@ -81,6 +82,22 @@ namespace XivGCDPlanner.ViewModels
         {
             get => _seekPosition;
             set => SetProperty(ref _seekPosition, value);
+        }
+
+        /// <summary>
+        /// GCD時間（秒）
+        /// </summary>
+        public double GcdTime
+        {
+            get => _gcdTime;
+            set
+            {
+                if (SetProperty(ref _gcdTime, value))
+                {
+                    UpdateGcdTimeForAllSkills();
+                    RefreshTimeline();
+                }
+            }
         }
 
         /// <summary>
@@ -196,7 +213,19 @@ namespace XivGCDPlanner.ViewModels
         {
             if (SelectedSkill == null) return;
 
-            Timeline.AddSkillEvent(SelectedTime, SelectedSkill);
+            var skillEvent = Timeline.AddSkillEvent(SelectedTime, SelectedSkill);
+            
+            // GCDスキルの場合、GCD終了時刻にシークバーを移動
+            if (SelectedSkill is GcdSkill gcdSkill)
+            {
+                double skillEndTime = SelectedTime + _gcdTime;
+                SeekPosition = skillEndTime;
+                if (_timelineControl != null)
+                {
+                    _timelineControl.SeekPosition = skillEndTime;
+                }
+            }
+            
             RefreshTimeline();
         }
 
@@ -253,6 +282,17 @@ namespace XivGCDPlanner.ViewModels
         }
 
         /// <summary>
+        /// 全GCDスキルのGCD時間を更新
+        /// </summary>
+        private void UpdateGcdTimeForAllSkills()
+        {
+            foreach (var skill in Timeline.GcdSkills)
+            {
+                skill.BaseGcdTime = _gcdTime;
+            }
+        }
+
+        /// <summary>
         /// シーク位置にスキルを追加
         /// </summary>
         /// <param name="skill">追加するスキル</param>
@@ -262,7 +302,19 @@ namespace XivGCDPlanner.ViewModels
 
             try
             {
-                Timeline.AddSkillEvent(SeekPosition, skill);
+                var skillEvent = Timeline.AddSkillEvent(SeekPosition, skill);
+                
+                // GCDスキルの場合、GCD終了時刻にシークバーを移動
+                if (skill is GcdSkill gcdSkill)
+                {
+                    double skillEndTime = SeekPosition + _gcdTime;
+                    SeekPosition = skillEndTime;
+                    if (_timelineControl != null)
+                    {
+                        _timelineControl.SeekPosition = skillEndTime;
+                    }
+                }
+                
                 RefreshTimeline();
                 _timelineControl?.RefreshTimeline();
             }
@@ -313,7 +365,19 @@ namespace XivGCDPlanner.ViewModels
                 }
 
                 // 新しい位置にスキルを追加
-                Timeline.AddSkillEvent(e.Time, e.Skill);
+                var skillEvent = Timeline.AddSkillEvent(e.Time, e.Skill);
+                
+                // GCDスキルの場合、GCD終了時刻にシークバーを移動
+                if (e.Skill is GcdSkill gcdSkill)
+                {
+                    double skillEndTime = e.Time + _gcdTime;
+                    SeekPosition = skillEndTime;
+                    if (_timelineControl != null)
+                    {
+                        _timelineControl.SeekPosition = skillEndTime;
+                    }
+                }
+                
                 RefreshTimeline();
                 _timelineControl?.RefreshTimeline();
             }
