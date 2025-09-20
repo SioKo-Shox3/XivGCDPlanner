@@ -23,6 +23,12 @@ namespace XivGCDPlanner.Controls
         private Canvas? _parentCanvas;
         private double _pixelsPerSecond;
 
+        // スナップ状態管理
+        private bool _isSnapped = false;
+        private double _snappedPosition = 0;
+        private double _snapDistance = 40; // スナップ検出距離（ピクセル）
+        private double _releaseDistance = 60; // スナップ解除距離（ピクセル）
+
         public TimelineEventVisual(SkillEvent skillEvent, double pixelsPerSecond = 50)
         {
             SkillEvent = skillEvent;
@@ -240,6 +246,10 @@ namespace XivGCDPlanner.Controls
             _dragStartPoint = e.GetPosition(this);
             _parentCanvas = Parent as Canvas;
             
+            // スナップ状態をリセット
+            _isSnapped = false;
+            _snappedPosition = 0;
+            
             CaptureMouse();
             e.Handled = true;
         }
@@ -249,19 +259,125 @@ namespace XivGCDPlanner.Controls
             if (_isDragging && e.LeftButton == MouseButtonState.Pressed && _parentCanvas != null)
             {
                 Point currentPosition = e.GetPosition(_parentCanvas);
-                Point newPosition = new Point(
-                    currentPosition.X - _dragStartPoint.X,
-                    Canvas.GetTop(this) // Y座標は固定（トラック変更なし）
-                );
-
+                double rawProposedX = currentPosition.X - _dragStartPoint.X;
+                
                 // 位置を制限（負の値にならないように）
-                if (newPosition.X >= 0)
+                if (rawProposedX < 0) rawProposedX = 0;
+                
+                // 生の時間位置を計算
+                double rawProposedTime = rawProposedX / _pixelsPerSecond;
+                
+                double finalTime = rawProposedTime;
+                double finalX = rawProposedX;
+                
+                // TimelineControlを取得
+                if (_parentCanvas.Parent is TimelineControl timelineControl)
                 {
-                    Canvas.SetLeft(this, newPosition.X);
+                    // デバッグ: タイムライン上のスキル数を確認
+                    try
+                    {
+                        var window = Window.GetWindow(this);
+                        if (window != null)
+                        {
+                            int totalVisuals = timelineControl.GetEventVisualsCount();
+                            window.Title = $"FF14 GCD Planner - Drag: {rawProposedTime:F1}s, Visuals: {totalVisuals}";
+                        }
+                    }
+                    catch { /* デバッグ表示のエラーは無視 */ }
                     
-                    // リアルタイムで時間位置を更新
-                    TimePosition = newPosition.X / _pixelsPerSecond;
+                    if (_isSnapped)
+                    {
+                        // 既にスナップ中の場合、解除距離をチェック
+                        double currentSnapX = _snappedPosition * _pixelsPerSecond;
+                        double distanceFromSnap = Math.Abs(rawProposedX - currentSnapX);
+                        
+                        if (distanceFromSnap <= _releaseDistance)
+                        {
+                            // まだスナップ範囲内なので、スナップ位置を維持
+                            finalTime = _snappedPosition;
+                            finalX = currentSnapX;
+                            timelineControl.ShowSnapIndicator(_snappedPosition);
+                            
+                            // デバッグ: スナップ維持
+                            try
+                            {
+                                var window = Window.GetWindow(this);
+                                if (window != null)
+                                {
+                                    window.Title = $"FF14 GCD Planner - MAINTAINING SNAP at {_snappedPosition:F1}s (dist: {distanceFromSnap:F0}px)";
+                                }
+                            }
+                            catch { /* デバッグ表示のエラーは無視 */ }
+                        }
+                        else
+                        {
+                            // 解除距離を超えたので、スナップを解除
+                            _isSnapped = false;
+                            _snappedPosition = 0;
+                            timelineControl.HideSnapIndicator();
+                            // マウス位置に従う
+                            finalTime = rawProposedTime;
+                            finalX = rawProposedX;
+                            
+                            // デバッグ: スナップ解除
+                            try
+                            {
+                                var window = Window.GetWindow(this);
+                                if (window != null)
+                                {
+                                    window.Title = $"FF14 GCD Planner - SNAP RELEASED (dist: {distanceFromSnap:F0}px > {_releaseDistance})";
+                                }
+                            }
+                            catch { /* デバッグ表示のエラーは無視 */ }
+                        }
+                    }
+                    else
+                    {
+                        // スナップしていない場合、新しいスナップ対象を検索
+                        double snapDistance = timelineControl.SnapDistanceInTime;
+                        double? snapTarget = timelineControl.FindSnapTarget(this, rawProposedTime, snapDistance);
+                        
+                        // デバッグ: スナップ検索結果
+                        try
+                        {
+                            var window = Window.GetWindow(this);
+                            if (window != null)
+                            {
+                                if (snapTarget.HasValue)
+                                {
+                                    window.Title = $"FF14 GCD Planner - SNAP FOUND: {snapTarget.Value:F1}s (dist: {snapDistance:F2}s)";
+                                }
+                                else
+                                {
+                                    window.Title = $"FF14 GCD Planner - No snap at {rawProposedTime:F1}s (search dist: {snapDistance:F2}s)";
+                                }
+                            }
+                        }
+                        catch { /* デバッグ表示のエラーは無視 */ }
+                        
+                        if (snapTarget.HasValue)
+                        {
+                            // 新しいスナップ対象が見つかった場合
+                            _isSnapped = true;
+                            _snappedPosition = snapTarget.Value;
+                            finalTime = snapTarget.Value;
+                            finalX = finalTime * _pixelsPerSecond;
+                            timelineControl.ShowSnapIndicator(snapTarget.Value);
+                        }
+                        else
+                        {
+                            // スナップ対象がない場合、マウス位置に従う
+                            finalTime = rawProposedTime;
+                            finalX = rawProposedX;
+                            timelineControl.HideSnapIndicator();
+                        }
+                    }
                 }
+                
+                // 最終位置を設定
+                Point newPosition = new Point(finalX, Canvas.GetTop(this));
+                Canvas.SetLeft(this, newPosition.X);
+                TimePosition = finalTime;
                 
                 e.Handled = true;
             }
@@ -273,6 +389,16 @@ namespace XivGCDPlanner.Controls
             {
                 _isDragging = false;
                 ReleaseMouseCapture();
+                
+                // スナップ状態をクリア
+                _isSnapped = false;
+                _snappedPosition = 0;
+                
+                // ドラッグ終了時にスナップインジケーターを非表示
+                if (_parentCanvas?.Parent is TimelineControl timelineCtrl)
+                {
+                    timelineCtrl.HideSnapIndicator();
+                }
                 
                 // 最終的なドロップ処理
                 if (_parentCanvas != null)
