@@ -1,0 +1,27 @@
+{
+  "id": "m1s",
+  "name": "AAC ライトヘビー級 M1零式",
+  "duration": 620,
+  "events": [
+    { "time": 10.5, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 28.0, "name": "ブラッディスクラッチ", "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 48.0, "name": "ネイルチッパー", "type": "mechanic", "castTime": 6.0, "description": "AoEメカニクス" },
+    { "time": 72.0, "name": "ヘアスプリッター", "type": "tankbuster", "castTime": 5.0, "description": "タンクバスター(MT)" },
+    { "time": 95.0, "name": "シェイド・シフト", "type": "mechanic", "castTime": 8.0, "description": "影分身メカニクス" },
+    { "time": 120.0, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 145.0, "name": "ムサスピテイル", "type": "mechanic", "castTime": 6.0, "description": "尻尾メカニクス" },
+    { "time": 170.0, "name": "ブラッディスクラッチ", "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 195.0, "name": "ナインライヴス", "type": "mechanic", "castTime": 10.0, "description": "9連メカニクス" },
+    { "time": 230.0, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 260.0, "name": "ヘアスプリッター", "type": "tankbuster", "castTime": 5.0, "description": "タンクバスター" },
+    { "time": 290.0, "name": "シェイド・シフト", "type": "mechanic", "castTime": 12.0, "description": "影分身メカニクス（強化版）" },
+    { "time": 330.0, "name": "ブラッディスクラッチ", "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 360.0, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 400.0, "name": "ナインライヴス", "type": "mechanic", "castTime": 10.0, "description": "9連メカニクス（強化版）" },
+    { "time": 450.0, "name": "ムサスピテイル", "type": "mechanic", "castTime": 6.0, "description": "尻尾メカニクス" },
+    { "time": 480.0, "name": "ブラッディスクラッチ", "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 510.0, "name": "ヘアスプリッター", "type": "tankbuster", "castTime": 5.0, "description": "タンクバスター" },
+    { "time": 550.0, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 600.0, "name": "時間切れ", "type": "enrage", "castTime": 10.0, "description": "時間切れ" }
+  ]
+}

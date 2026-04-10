@@ -1,0 +1,140 @@
+{
+  "id": "blm",
+  "name": "黒魔道士",
+  "role": "caster",
+  "icon": "icons/jobs/blm.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 141,
+        "name": "ファイア",
+        "castTime": 2.5,
+        "potency": 180,
+        "icon": "",
+        "description": "対象に火属性魔法攻撃。威力：180"
+      },
+      {
+        "id": 142,
+        "name": "ブリザド",
+        "castTime": 2.5,
+        "potency": 180,
+        "icon": "",
+        "description": "対象に氷属性魔法攻撃。威力：180"
+      },
+      {
+        "id": 144,
+        "name": "サンダー",
+        "castTime": 2.5,
+        "potency": 30,
+        "icon": "",
+        "description": "対象に雷属性魔法攻撃。威力：30 + 継続ダメージ"
+      },
+      {
+        "id": 147,
+        "name": "ファイラ",
+        "castTime": 3.0,
+        "potency": 260,
+        "icon": "",
+        "description": "対象に火属性魔法攻撃。威力：260"
+      },
+      {
+        "id": 25793,
+        "name": "ブリザラ",
+        "castTime": 3.0,
+        "potency": 260,
+        "icon": "",
+        "description": "対象に氷属性魔法攻撃。威力：260"
+      },
+      {
+        "id": 3577,
+        "name": "ファイジャ",
+        "castTime": 2.8,
+        "potency": 310,
+        "icon": "",
+        "description": "対象に火属性魔法攻撃。威力：310"
+      },
+      {
+        "id": 25797,
+        "name": "パラドックス",
+        "castTime": 2.5,
+        "potency": 500,
+        "icon": "",
+        "description": "対象に無属性魔法攻撃。威力：500"
+      },
+      {
+        "id": 7422,
+        "name": "フレア",
+        "castTime": 4.0,
+        "potency": 220,
+        "icon": "",
+        "description": "自身周囲に火属性範囲魔法攻撃。威力：220"
+      },
+      {
+        "id": 162,
+        "name": "フリーズ",
+        "castTime": 2.8,
+        "potency": 120,
+        "icon": "",
+        "description": "対象とその周囲に氷属性範囲魔法攻撃。威力：120"
+      },
+      {
+        "id": 36986,
+        "name": "フレアスター",
+        "castTime": 3.0,
+        "potency": 400,
+        "icon": "",
+        "description": "対象に無属性魔法攻撃。威力：400"
+      }
+    ],
+    "ability": [
+      {
+        "id": 7562,
+        "name": "ルーシッドドリーム",
+        "recastTime": 60.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "自身のMPを継続回復する。"
+      },
+      {
+        "id": 7561,
+        "name": "迅速魔",
+        "recastTime": 60.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "次に実行する魔法の詠唱時間を無しにする。"
+      },
+      {
+        "id": 7421,
+        "name": "三連魔",
+        "recastTime": 60.0,
+        "maxCharges": 2,
+        "icon": "",
+        "description": "次に実行する3回までの魔法の詠唱時間を無しにする。"
+      },
+      {
+        "id": 158,
+        "name": "マナフォント",
+        "recastTime": 100.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "自身のMPを全回復する。"
+      },
+      {
+        "id": 3573,
+        "name": "黒魔紋",
+        "recastTime": 120.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "自身の足元に黒魔紋を生成する。効果時間中、自身の AA速度と魔法の詠唱時間を15%短縮。"
+      },
+      {
+        "id": 25798,
+        "name": "アンプリファイア",
+        "recastTime": 120.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "ポリグロットを1つ付与する。"
+      }
+    ]
+  }
+}

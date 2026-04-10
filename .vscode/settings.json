@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "rustc": true,
+        "npm init": true,
+        "npm install": true,
+        "npx tauri": true
+    }
+}

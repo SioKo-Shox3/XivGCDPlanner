@@ -1,0 +1,29 @@
+{
+  "name": "xivgcdplanner",
+  "version": "0.1.0",
+  "scripts": {
+    "preview": "vite preview",
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "tauri": "tauri"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "@tauri-apps/cli": "^2.10.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.8"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.10.1",
+    "@tauri-apps/plugin-fs": "^2.5.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "zustand": "^5.0.12"
+  },
+  "private": true
+}

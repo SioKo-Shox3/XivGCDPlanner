@@ -1,0 +1,140 @@
+{
+  "id": "sam",
+  "name": "侍",
+  "role": "melee",
+  "icon": "icons/jobs/sam.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 7477,
+        "name": "刃風",
+        "castTime": 0,
+        "potency": 200,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：200"
+      },
+      {
+        "id": 7478,
+        "name": "陣風",
+        "castTime": 0,
+        "potency": 300,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：300。コンボ条件：刃風"
+      },
+      {
+        "id": 7479,
+        "name": "士風",
+        "castTime": 0,
+        "potency": 300,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：300。コンボ条件：刃風"
+      },
+      {
+        "id": 7480,
+        "name": "月光",
+        "castTime": 0,
+        "potency": 440,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：440。コンボ条件：陣風"
+      },
+      {
+        "id": 7481,
+        "name": "花車",
+        "castTime": 0,
+        "potency": 440,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：440。コンボ条件：士風"
+      },
+      {
+        "id": 7482,
+        "name": "雪風",
+        "castTime": 0,
+        "potency": 380,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：380。コンボ条件：刃風"
+      },
+      {
+        "id": 7486,
+        "name": "居合術・彼岸花",
+        "castTime": 1.3,
+        "potency": 200,
+        "icon": "",
+        "description": "対象に居合術攻撃。威力：200 + 継続ダメージ"
+      },
+      {
+        "id": 7487,
+        "name": "居合術・天下五剣",
+        "castTime": 1.3,
+        "potency": 640,
+        "icon": "",
+        "description": "対象に居合術攻撃。威力：640"
+      },
+      {
+        "id": 7488,
+        "name": "居合術・乱れ雪月花",
+        "castTime": 1.3,
+        "potency": 1340,
+        "icon": "",
+        "description": "対象に居合術攻撃。威力：1340"
+      },
+      {
+        "id": 25782,
+        "name": "奥義・南天星斗",
+        "castTime": 1.3,
+        "potency": 860,
+        "icon": "",
+        "description": "対象に居合術攻撃。威力：860"
+      }
+    ],
+    "ability": [
+      {
+        "id": 7490,
+        "name": "明鏡止水",
+        "recastTime": 55.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "次のウェポンスキル3回分のコンボ条件を無視する。"
+      },
+      {
+        "id": 7494,
+        "name": "葉隠",
+        "recastTime": 60.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "閃を消費してケンキゲージを貯める。"
+      },
+      {
+        "id": 7495,
+        "name": "必殺剣・震天",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：250"
+      },
+      {
+        "id": 7496,
+        "name": "必殺剣・紅蓮",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "対象に範囲物理攻撃。威力：100"
+      },
+      {
+        "id": 16481,
+        "name": "意気衝天",
+        "recastTime": 60.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "ケンキゲージを50貯める。"
+      },
+      {
+        "id": 25783,
+        "name": "無明照破",
+        "recastTime": 15.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：600"
+      }
+    ]
+  }
+}
