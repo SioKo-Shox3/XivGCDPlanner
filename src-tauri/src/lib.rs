@@ -102,14 +102,25 @@ pub fn run() {
                 )?;
             }
 
-            // Resolve data directory (next to the executable, or workspace root in dev)
+            // Resolve data directory
+            // In dev mode, resource_dir points to target/debug which doesn't have our data,
+            // so we fall back to src-tauri/data/ relative to the manifest directory.
             let resource_dir = app
                 .handle()
                 .path()
                 .resource_dir()
                 .unwrap_or_else(|_| PathBuf::from("."));
 
-            let data_dir = resource_dir.join("data");
+            let data_dir = {
+                let bundled = resource_dir.join("data");
+                if bundled.join("jobs").exists() {
+                    bundled
+                } else {
+                    // Dev fallback: Cargo.toml lives in src-tauri/, data is src-tauri/data/
+                    let manifest = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+                    manifest.join("data")
+                }
+            };
             let save_dir = app
                 .handle()
                 .path()

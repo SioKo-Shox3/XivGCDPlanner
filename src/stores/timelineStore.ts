@@ -7,6 +7,7 @@ import type {
   RotationStats,
   TimelineViewState,
 } from "@/types";
+import { calculateGcdTime } from "@/services/tauriCommands";
 
 interface AppState {
   // Data
@@ -41,6 +42,7 @@ interface AppState {
 
   // Actions - rotation editing
   addPlacement: (p: SkillPlacement) => void;
+  appendSkill: (skillId: number, skillType: "gcd" | "ability") => void;
   removePlacement: (id: string) => void;
   movePlacement: (id: string, newTime: number) => void;
   clearPlacements: () => void;
@@ -91,6 +93,26 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   addPlacement: (p) =>
     set((s) => ({ placements: [...s.placements, p].sort((a, b) => a.time - b.time) })),
+  appendSkill: (skillId, skillType) => {
+    const s = get();
+    if (!s.selectedJobId || !s.selectedTimelineId) return;
+    const gcdTime = calculateGcdTime(2.5, s.spellSpeed);
+    let time = 0;
+    if (skillType === "gcd") {
+      const lastGcd = [...s.placements].filter((p) => p.skillType === "gcd").pop();
+      time = lastGcd ? Math.round((lastGcd.time + gcdTime) * 100) / 100 : 0;
+    } else {
+      // Place ability after the last placement (GCD or ability)
+      const last = s.placements[s.placements.length - 1];
+      time = last ? Math.round((last.time + 0.7) * 100) / 100 : 0;
+    }
+    set({
+      placements: [...s.placements, { id: crypto.randomUUID(), skillId, skillType, time }].sort(
+        (a, b) => a.time - b.time
+      ),
+      validationResult: null,
+    });
+  },
   removePlacement: (id) =>
     set((s) => ({
       placements: s.placements.filter((p) => p.id !== id),

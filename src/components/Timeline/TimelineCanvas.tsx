@@ -6,8 +6,8 @@ import { SkillBlock } from "./SkillBlock";
 import { calculateGcdTime } from "@/services/tauriCommands";
 
 export function TimelineCanvas() {
-  const selectedTimeline = useAppStore((s) => s.selectedTimeline)();
-  const selectedJob = useAppStore((s) => s.selectedJob)();
+  const selectedTimeline = useAppStore((s) => s.timelines.find((t) => t.id === s.selectedTimelineId));
+  const selectedJob = useAppStore((s) => s.jobs.find((j) => j.id === s.selectedJobId));
   const placements = useAppStore((s) => s.placements);
   const validationResult = useAppStore((s) => s.validationResult);
   const pps = useAppStore((s) => s.view.pixelsPerSecond);

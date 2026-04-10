@@ -3,6 +3,10 @@
         "rustc": true,
         "npm init": true,
         "npm install": true,
-        "npx tauri": true
+        "npx tauri": true,
+        "/^cd c:\\\\Users\\\\KINGkawamura\\\\Documents\\\\XivGCDPlanner; node -e \"\nconst ids = \\[75,36955,36957,36958,25772,36956,3554,3556,3559,87,86,7397,25770,36959,85,83,16478,16479,92,36960,3557,3555,7399,16480,36961,25771,16477,94,7548,7549\\];\nasync function main\\(\\) \\{\n  const results = \\{\\};\n  for \\(const id of ids\\) \\{\n    try \\{\n      const res = await fetch\\('https://beta\\.xivapi\\.com/api/1/sheet/Action/' \\+ id \\+ '\\?fields=Icon,Name'\\);\n      const data = await res\\.json\\(\\);\n      const iconPath = data\\.fields\\.Icon\\.path_hr1;\n      const url = 'https://beta\\.xivapi\\.com/api/1/asset\\?path=' \\+ encodeURIComponent\\(iconPath\\) \\+ '&format=png';\n      results\\[id\\] = \\{ name: data\\.fields\\.Name, url \\};\n      console\\.log\\(id \\+ ' ' \\+ data\\.fields\\.Name \\+ ' -> ' \\+ url\\);\n    \\} catch \\(e\\) \\{\n      console\\.error\\('Failed: ' \\+ id \\+ ' ' \\+ e\\.message\\);\n    \\}\n  \\}\n\\}\nmain\\(\\);\n\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
     }
 }

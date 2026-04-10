@@ -3,8 +3,8 @@ import { useAppStore } from "@/stores/timelineStore";
 import { validateRotation, calculateStats } from "@/services/tauriCommands";
 
 export function StatsPanel() {
-  const selectedJob = useAppStore((s) => s.selectedJob)();
-  const selectedTimeline = useAppStore((s) => s.selectedTimeline)();
+  const selectedJob = useAppStore((s) => s.jobs.find((j) => j.id === s.selectedJobId));
+  const selectedTimeline = useAppStore((s) => s.timelines.find((t) => t.id === s.selectedTimelineId));
   const placements = useAppStore((s) => s.placements);
   const spellSpeed = useAppStore((s) => s.spellSpeed);
   const stats = useAppStore((s) => s.stats);

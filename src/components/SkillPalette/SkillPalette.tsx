@@ -2,7 +2,7 @@ import { useAppStore } from "@/stores/timelineStore";
 import { SkillIcon } from "./SkillIcon";
 
 export function SkillPalette() {
-  const selectedJob = useAppStore((s) => s.selectedJob)();
+  const selectedJob = useAppStore((s) => s.jobs.find((j) => j.id === s.selectedJobId));
 
   if (!selectedJob) {
     return (

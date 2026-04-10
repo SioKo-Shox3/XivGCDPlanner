@@ -9,8 +9,13 @@ interface Props {
 
 export function SkillIcon({ skill, skillType }: Props) {
   const startDrag = useAppStore((s) => s.startDrag);
+  const appendSkill = useAppStore((s) => s.appendSkill);
 
   const borderColor = skillType === "gcd" ? "var(--gcd-color)" : "var(--ability-color)";
+
+  const onClick = useCallback(() => {
+    appendSkill(skill.id, skillType);
+  }, [skill.id, skillType, appendSkill]);
 
   const onDragStart = useCallback(
     (e: React.DragEvent) => {
@@ -30,7 +35,8 @@ export function SkillIcon({ skill, skillType }: Props) {
       draggable
       onDragStart={onDragStart}
       onDragEnd={onDragEnd}
-      className="flex flex-col items-center rounded-lg p-1.5 cursor-grab active:cursor-grabbing transition-all group"
+      onClick={onClick}
+      className="flex flex-col items-center rounded-lg p-1.5 cursor-pointer active:cursor-grabbing transition-all group"
       style={{ background: "transparent" }}
       onMouseEnter={(e) => { e.currentTarget.style.background = "var(--bg-surface-hover)"; }}
       onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
