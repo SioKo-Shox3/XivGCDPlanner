@@ -13,20 +13,27 @@ export function Header() {
 
   return (
     <header
-      className="flex items-center gap-5 px-5 py-2.5 border-b"
-      style={{ background: "var(--bg-secondary)", borderColor: "var(--border)" }}
+      className="flex items-center gap-4 px-4 h-12 flex-shrink-0 border-b"
+      style={{ background: "var(--bg-elevated)", borderColor: "var(--border)" }}
     >
-      <h1 className="text-base font-semibold tracking-wide whitespace-nowrap" style={{ color: "var(--accent)" }}>
-        XIV GCD Planner
-      </h1>
+      {/* Logo */}
+      <div className="flex items-center gap-2 mr-1">
+        <div className="w-6 h-6 rounded flex items-center justify-center text-[10px] font-black"
+          style={{ background: "var(--accent)", color: "#fff" }}>
+          XIV
+        </div>
+        <span className="text-[13px] font-semibold tracking-wide whitespace-nowrap" style={{ color: "var(--text-primary)" }}>
+          GCD Planner
+        </span>
+      </div>
 
-      <div className="w-px h-5 mx-1" style={{ background: "var(--border-strong)" }} />
+      <div className="w-px h-5" style={{ background: "var(--border-strong)" }} />
 
-      <div className="flex items-center gap-1.5">
-        <label className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>ジョブ</label>
+      {/* Job selector */}
+      <div className="flex items-center gap-2">
+        <span className="ctrl-label">ジョブ</span>
         <select
-          className="rounded-md px-2.5 py-1 text-[12px] border transition-colors focus:outline-none"
-          style={{ background: "var(--bg-surface)", color: "var(--text-primary)", borderColor: "var(--border-strong)" }}
+          className="ctrl"
           value={selectedJobId ?? ""}
           onChange={(e) => selectJob(e.target.value)}
         >
@@ -37,11 +44,11 @@ export function Header() {
         </select>
       </div>
 
-      <div className="flex items-center gap-1.5">
-        <label className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>タイムライン</label>
+      {/* Timeline selector */}
+      <div className="flex items-center gap-2">
+        <span className="ctrl-label">タイムライン</span>
         <select
-          className="rounded-md px-2.5 py-1 text-[12px] border transition-colors focus:outline-none"
-          style={{ background: "var(--bg-surface)", color: "var(--text-primary)", borderColor: "var(--border-strong)" }}
+          className="ctrl"
           value={selectedTimelineId ?? ""}
           onChange={(e) => selectTimeline(e.target.value)}
         >
@@ -52,12 +59,13 @@ export function Header() {
         </select>
       </div>
 
-      <div className="flex items-center gap-1.5">
-        <label className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>SS</label>
+      {/* Spell Speed */}
+      <div className="flex items-center gap-2">
+        <span className="ctrl-label">SS</span>
         <input
           type="number"
-          className="w-[72px] rounded-md px-2.5 py-1 text-[12px] border transition-colors focus:outline-none tabular-nums"
-          style={{ background: "var(--bg-surface)", color: "var(--text-primary)", borderColor: "var(--border-strong)" }}
+          className="ctrl"
+          style={{ width: 68 }}
           value={spellSpeed}
           min={400}
           max={4000}
@@ -65,14 +73,9 @@ export function Header() {
         />
       </div>
 
-      <div className="ml-auto">
-        <button
-          className="rounded-md px-3.5 py-1 text-[12px] font-medium transition-all cursor-pointer"
-          style={{ background: "var(--accent-subtle)", color: "var(--accent)", border: "1px solid rgba(233,69,96,0.25)" }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "#fff"; }}
-          onMouseLeave={(e) => { e.currentTarget.style.background = "var(--accent-subtle)"; e.currentTarget.style.color = "var(--accent)"; }}
-          onClick={clearPlacements}
-        >
+      {/* Spacer + Action */}
+      <div className="ml-auto flex items-center gap-2">
+        <button className="btn btn-danger" onClick={clearPlacements}>
           クリア
         </button>
       </div>

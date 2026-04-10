@@ -80,8 +80,12 @@ export function TimelineCanvas() {
 
   if (!selectedJob || !selectedTimeline) {
     return (
-      <div className="flex items-center justify-center h-full" style={{ color: "var(--text-muted)" }}>
-        <p className="text-[13px] font-medium">ジョブとタイムラインを選択してください</p>
+      <div className="flex flex-col items-center justify-center h-full gap-3 opacity-40">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <polyline points="15,5 22,12 15,19"/>
+        </svg>
+        <p className="text-[13px] font-medium" style={{ color: "var(--text-muted)" }}>ジョブとタイムラインを選択してください</p>
       </div>
     );
   }

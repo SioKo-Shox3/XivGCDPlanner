@@ -30,15 +30,17 @@ export function SkillIcon({ skill, skillType }: Props) {
       draggable
       onDragStart={onDragStart}
       onDragEnd={onDragEnd}
-      className="flex flex-col items-center rounded-md p-1 cursor-grab active:cursor-grabbing transition-all hover:scale-105 hover:bg-white/5"
+      className="flex flex-col items-center rounded-lg p-1.5 cursor-grab active:cursor-grabbing transition-all group"
+      style={{ background: "transparent" }}
+      onMouseEnter={(e) => { e.currentTarget.style.background = "var(--bg-surface-hover)"; }}
+      onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
       title={`${skill.name}\n${"potency" in skill ? `威力: ${skill.potency}` : `リキャスト: ${"recastTime" in skill ? (skill as AbilitySkillDef).recastTime : "?"}s`}\n${skill.description}`}
     >
       <div
-        className="w-11 h-11 rounded-md border flex items-center justify-center overflow-hidden"
+        className="w-10 h-10 rounded-md flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105"
         style={{
-          borderColor: `color-mix(in srgb, ${borderColor} 50%, transparent)`,
           background: "var(--bg-surface)",
-          boxShadow: "var(--shadow-sm)",
+          boxShadow: `inset 0 0 0 1px ${borderColor}33, var(--shadow-sm)`,
         }}
       >
         {skill.icon ? (
@@ -52,12 +54,13 @@ export function SkillIcon({ skill, skillType }: Props) {
             }}
           />
         ) : null}
-        <span className={skill.icon ? "hidden" : ""} style={{ fontSize: "9px", textAlign: "center", color: "var(--text-secondary)", fontWeight: 500 }}>
+        <span className={skill.icon ? "hidden" : ""}
+          style={{ fontSize: "9px", textAlign: "center", color: "var(--text-secondary)", fontWeight: 600, lineHeight: 1.2 }}>
           {skill.name.slice(0, 4)}
         </span>
       </div>
-      <span className="text-[9px] mt-1 text-center leading-tight w-full truncate px-0.5 font-medium"
-        style={{ color: "var(--text-secondary)" }}>
+      <span className="text-[9px] mt-1 text-center leading-tight w-full truncate px-0.5"
+        style={{ color: "var(--text-muted)", fontWeight: 500 }}>
         {skill.name}
       </span>
     </div>

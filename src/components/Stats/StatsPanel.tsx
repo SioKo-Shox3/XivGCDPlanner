@@ -42,30 +42,30 @@ export function StatsPanel() {
   const errorCount = validationResult?.errors.length ?? 0;
 
   return (
-    <div className="flex items-center h-full px-5 gap-6">
+    <div className="flex items-center h-full px-5 gap-5">
       {/* Stats */}
-      <div className="flex gap-5">
-        <StatItem label="スキル数" value={placements.length} />
+      <div className="flex items-center gap-4">
+        <StatItem label="スキル" value={placements.length} />
         <StatItem label="GCD" value={placements.filter((p) => p.skillType === "gcd").length} accent="var(--gcd-color)" />
         <StatItem label="アビリティ" value={placements.filter((p) => p.skillType === "ability").length} accent="var(--ability-color)" />
         {stats && (
           <>
-            <div className="w-px self-stretch my-2" style={{ background: "var(--border)" }} />
+            <div className="w-px self-stretch my-2" style={{ background: "var(--border-strong)" }} />
             <StatItem label="総威力" value={stats.totalPotency} />
-            <StatItem label="推定DPS" value={stats.estimatedDps.toFixed(1)} accent="var(--accent)" />
-            <StatItem label="GCD稼働率" value={`${(stats.gcdUptime * 100).toFixed(1)}%`} />
+            <StatItem label="DPS" value={stats.estimatedDps.toFixed(1)} accent="var(--accent)" />
+            <StatItem label="稼働率" value={`${(stats.gcdUptime * 100).toFixed(1)}%`} />
           </>
         )}
       </div>
 
       {/* Validation status */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center">
         {errorCount > 0 ? (
-          <span className="text-[11px] font-medium px-2.5 py-1 rounded-md" style={{ background: "rgba(239,68,68,0.12)", color: "var(--error-color)", border: "1px solid rgba(239,68,68,0.2)" }}>
+          <span className="badge badge-error">
             ⚠ {errorCount} 件のエラー
           </span>
         ) : placements.length > 0 ? (
-          <span className="text-[11px] font-medium px-2.5 py-1 rounded-md" style={{ background: "rgba(16,185,129,0.1)", color: "var(--ability-color)", border: "1px solid rgba(16,185,129,0.2)" }}>
+          <span className="badge badge-success">
             ✓ 有効
           </span>
         ) : null}
@@ -73,16 +73,16 @@ export function StatsPanel() {
 
       {/* Zoom */}
       <div className="ml-auto flex items-center gap-2.5">
-        <span className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>ズーム</span>
+        <span className="ctrl-label">ズーム</span>
         <input
           type="range"
           min={10}
           max={200}
           value={pps}
           onChange={(e) => setPixelsPerSecond(Number(e.target.value))}
-          className="w-28"
+          className="w-24"
         />
-        <span className="text-[11px] tabular-nums w-8" style={{ color: "var(--text-secondary)" }}>{pps}</span>
+        <span className="text-[11px] tabular-nums w-7 text-right" style={{ color: "var(--text-secondary)" }}>{pps}</span>
       </div>
     </div>
   );
@@ -90,9 +90,9 @@ export function StatsPanel() {
 
 function StatItem({ label, value, accent }: { label: string; value: string | number; accent?: string }) {
   return (
-    <div className="flex flex-col items-center gap-0.5">
-      <span className="text-[10px] font-medium tracking-wide" style={{ color: "var(--text-muted)" }}>{label}</span>
-      <span className="text-[13px] font-semibold tabular-nums" style={{ color: accent ?? "var(--text-primary)" }}>{value}</span>
+    <div className="flex flex-col items-center">
+      <span className="text-[9px] font-medium uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>{label}</span>
+      <span className="text-[14px] font-semibold tabular-nums leading-tight" style={{ color: accent ?? "var(--text-primary)" }}>{value}</span>
     </div>
   );
 }
