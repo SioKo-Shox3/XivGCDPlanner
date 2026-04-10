@@ -1,0 +1,252 @@
+{
+  "id": "drg",
+  "name": "竜騎士",
+  "role": "melee",
+  "icon": "icons/jobs/drg.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 75,
+        "name": "トゥルースラスト",
+        "castTime": 0,
+        "potency": 230,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000310_hr1.tex&format=png",
+        "description": "対象に物理攻撃。威力：230"
+      },
+      {
+        "id": 16479,
+        "name": "竜眼雷電",
+        "castTime": 0,
+        "potency": 320,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002592_hr1.tex&format=png",
+        "description": "対象に物理攻撃。威力：320 「竜眼」効果中にトゥルースラストから変化。天竜眼を付与。"
+      },
+      {
+        "id": 36954,
+        "name": "スラストラッシュ",
+        "castTime": 0,
+        "potency": 340,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002076_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：トゥルースラスト／竜眼雷電 コンボ時威力：340"
+      },
+      {
+        "id": 36955,
+        "name": "スパイラルブロウ",
+        "castTime": 0,
+        "potency": 300,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002077_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：トゥルースラスト／竜眼雷電 コンボ時威力：300 竜槍（与ダメ+10%）を付与。"
+      },
+      {
+        "id": 25771,
+        "name": "ヘヴンスラスト",
+        "castTime": 0,
+        "potency": 460,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002595_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：スラストラッシュ コンボ時威力：460"
+      },
+      {
+        "id": 25772,
+        "name": "桜華繚乱",
+        "castTime": 0,
+        "potency": 340,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002596_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：スパイラルブロウ コンボ時背面威力：340 継続ダメージ威力45を付与。"
+      },
+      {
+        "id": 3554,
+        "name": "竜牙竜爪",
+        "castTime": 0,
+        "potency": 340,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002582_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：ヘヴンスラスト コンボ時側面威力：340"
+      },
+      {
+        "id": 3556,
+        "name": "竜尾大車輪",
+        "castTime": 0,
+        "potency": 340,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002584_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：桜華繚乱 コンボ時背面威力：340"
+      },
+      {
+        "id": 36952,
+        "name": "雲蒸竜変",
+        "castTime": 0,
+        "potency": 460,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002599_hr1.tex&format=png",
+        "description": "対象に物理攻撃。威力：460 コンボ条件：竜牙竜爪／竜尾大車輪 竜眼を付与。"
+      },
+      {
+        "id": 90,
+        "name": "ピアシングタロン",
+        "castTime": 0,
+        "potency": 200,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000315_hr1.tex&format=png",
+        "description": "対象に遠隔物理攻撃。威力：200 効果アップ時威力：350"
+      },
+      {
+        "id": 86,
+        "name": "ドゥームスパイク",
+        "castTime": 0,
+        "potency": 110,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000306_hr1.tex&format=png",
+        "description": "前方直線範囲物理攻撃。威力：110"
+      },
+      {
+        "id": 7397,
+        "name": "ソニックスラスト",
+        "castTime": 0,
+        "potency": 120,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002586_hr1.tex&format=png",
+        "description": "前方直線範囲物理攻撃。コンボ条件：ドゥームスパイク／竜眼蒼穹 コンボ時威力：120 竜槍を付与。"
+      },
+      {
+        "id": 16477,
+        "name": "クルザントーメント",
+        "castTime": 0,
+        "potency": 150,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002590_hr1.tex&format=png",
+        "description": "前方直線範囲物理攻撃。コンボ条件：ソニックスラスト コンボ時威力：150 竜眼を付与。"
+      },
+      {
+        "id": 25770,
+        "name": "竜眼蒼穹",
+        "castTime": 0,
+        "potency": 130,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002594_hr1.tex&format=png",
+        "description": "前方直線範囲物理攻撃。威力：130 「竜眼」効果中にドゥームスパイクから変化。天竜眼を付与。"
+      }
+    ],
+    "ability": [
+      {
+        "id": 83,
+        "name": "ライフサージ",
+        "recastTime": 40,
+        "maxCharges": 2,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000304_hr1.tex&format=png",
+        "description": "次の1回のWSが必ずクリティカルヒットし、HPを吸収する。効果時間：5秒"
+      },
+      {
+        "id": 85,
+        "name": "ランスチャージ",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000309_hr1.tex&format=png",
+        "description": "与ダメージ10%上昇。効果時間：20秒"
+      },
+      {
+        "id": 16478,
+        "name": "ハイジャンプ",
+        "recastTime": 30,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002591_hr1.tex&format=png",
+        "description": "対象にジャンプで近づきつつ物理攻撃。威力：400 ミラージュダイブ実行可を付与。"
+      },
+      {
+        "id": 7399,
+        "name": "ミラージュダイブ",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002588_hr1.tex&format=png",
+        "description": "対象に物理攻撃。威力：380 ジャンプ、ハイジャンプ後に実行可。"
+      },
+      {
+        "id": 96,
+        "name": "ドラゴンダイブ",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002578_hr1.tex&format=png",
+        "description": "対象にジャンプ範囲物理攻撃。威力：500 ドラゴンライズ実行可を付与。"
+      },
+      {
+        "id": 36953,
+        "name": "ドラゴンライズ",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002075_hr1.tex&format=png",
+        "description": "対象と周囲に範囲物理攻撃。威力：550 ドラゴンダイブ後に実行可。"
+      },
+      {
+        "id": 3557,
+        "name": "バトルリタニー",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002585_hr1.tex&format=png",
+        "description": "自身とPTメンバーのクリ率10%上昇。効果時間：20秒"
+      },
+      {
+        "id": 3555,
+        "name": "ゲイルスコグル",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002583_hr1.tex&format=png",
+        "description": "前方直線範囲物理攻撃。威力：280 紅の竜血状態（与ダメ+15%）に移行。ナーストレンド実行可を付与。"
+      },
+      {
+        "id": 7400,
+        "name": "ナーストレンド",
+        "recastTime": 2,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002589_hr1.tex&format=png",
+        "description": "前方直線範囲物理攻撃。威力：720 紅の竜血中に実行可。"
+      },
+      {
+        "id": 16480,
+        "name": "スターダイバー",
+        "recastTime": 30,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002593_hr1.tex&format=png",
+        "description": "対象にジャンプ範囲物理攻撃。威力：840 紅の竜血中に実行可。スタークロッサー実行可を付与。"
+      },
+      {
+        "id": 36956,
+        "name": "スタークロッサー",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002078_hr1.tex&format=png",
+        "description": "対象と周囲に範囲物理攻撃。威力：1000 スターダイバー後に実行可。"
+      },
+      {
+        "id": 25773,
+        "name": "天竜点睛",
+        "recastTime": 10,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002597_hr1.tex&format=png",
+        "description": "前方直線範囲物理攻撃。威力：440 天竜眼2スタック時に実行可。"
+      },
+      {
+        "id": 36951,
+        "name": "ウィンググライド",
+        "recastTime": 60,
+        "maxCharges": 2,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002598_hr1.tex&format=png",
+        "description": "対象の目前まで素早く移動する。"
+      },
+      {
+        "id": 94,
+        "name": "イルーシブジャンプ",
+        "recastTime": 30,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002577_hr1.tex&format=png",
+        "description": "15m後方にジャンプ。ピアシングタロン効果アップを付与。"
+      },
+      {
+        "id": 7546,
+        "name": "トゥルーノース",
+        "recastTime": 45,
+        "maxCharges": 2,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000830_hr1.tex&format=png",
+        "description": "方向指定を無視して成功させる。効果時間：10秒"
+      },
+      {
+        "id": 7549,
+        "name": "牽制",
+        "recastTime": 90,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000828_hr1.tex&format=png",
+        "description": "対象の与物理ダメ10%、与魔法ダメ5%減少。効果時間：15秒"
+      }
+    ]
+  }
+}
