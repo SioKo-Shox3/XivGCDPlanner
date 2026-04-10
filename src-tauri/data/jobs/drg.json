@@ -1,0 +1,252 @@
+{
+  "id": "drg",
+  "name": "竜騎士",
+  "role": "melee",
+  "icon": "icons/jobs/drg.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 75,
+        "name": "トゥルースラスト",
+        "castTime": 0,
+        "potency": 230,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：230"
+      },
+      {
+        "id": 36955,
+        "name": "竜眼雷電",
+        "castTime": 0,
+        "potency": 320,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：320 「竜眼」効果中にトゥルースラストから変化。天竜眼を付与。"
+      },
+      {
+        "id": 36957,
+        "name": "スラストラッシュ",
+        "castTime": 0,
+        "potency": 340,
+        "icon": "",
+        "description": "対象に物理攻撃。コンボ条件：トゥルースラスト／竜眼雷電 コンボ時威力：340"
+      },
+      {
+        "id": 36958,
+        "name": "スパイラルブロウ",
+        "castTime": 0,
+        "potency": 300,
+        "icon": "",
+        "description": "対象に物理攻撃。コンボ条件：トゥルースラスト／竜眼雷電 コンボ時威力：300 竜槍（与ダメ+10%）を付与。"
+      },
+      {
+        "id": 25772,
+        "name": "ヘヴンスラスト",
+        "castTime": 0,
+        "potency": 460,
+        "icon": "",
+        "description": "対象に物理攻撃。コンボ条件：スラストラッシュ コンボ時威力：460"
+      },
+      {
+        "id": 36956,
+        "name": "桜華繚乱",
+        "castTime": 0,
+        "potency": 340,
+        "icon": "",
+        "description": "対象に物理攻撃。コンボ条件：スパイラルブロウ コンボ時背面威力：340 継続ダメージ威力45を付与。"
+      },
+      {
+        "id": 3554,
+        "name": "竜牙竜爪",
+        "castTime": 0,
+        "potency": 340,
+        "icon": "",
+        "description": "対象に物理攻撃。コンボ条件：ヘヴンスラスト コンボ時側面威力：340"
+      },
+      {
+        "id": 3556,
+        "name": "竜尾大車輪",
+        "castTime": 0,
+        "potency": 340,
+        "icon": "",
+        "description": "対象に物理攻撃。コンボ条件：桜華繚乱 コンボ時背面威力：340"
+      },
+      {
+        "id": 3559,
+        "name": "雲蒸竜変",
+        "castTime": 0,
+        "potency": 460,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：460 コンボ条件：竜牙竜爪／竜尾大車輪 竜眼を付与。"
+      },
+      {
+        "id": 87,
+        "name": "ピアシングタロン",
+        "castTime": 0,
+        "potency": 200,
+        "icon": "",
+        "description": "対象に遠隔物理攻撃。威力：200 効果アップ時威力：350"
+      },
+      {
+        "id": 86,
+        "name": "ドゥームスパイク",
+        "castTime": 0,
+        "potency": 110,
+        "icon": "",
+        "description": "前方直線範囲物理攻撃。威力：110"
+      },
+      {
+        "id": 7397,
+        "name": "ソニックスラスト",
+        "castTime": 0,
+        "potency": 120,
+        "icon": "",
+        "description": "前方直線範囲物理攻撃。コンボ条件：ドゥームスパイク／竜眼蒼穹 コンボ時威力：120 竜槍を付与。"
+      },
+      {
+        "id": 25770,
+        "name": "クルザントーメント",
+        "castTime": 0,
+        "potency": 150,
+        "icon": "",
+        "description": "前方直線範囲物理攻撃。コンボ条件：ソニックスラスト コンボ時威力：150 竜眼を付与。"
+      },
+      {
+        "id": 36959,
+        "name": "竜眼蒼穹",
+        "castTime": 0,
+        "potency": 130,
+        "icon": "",
+        "description": "前方直線範囲物理攻撃。威力：130 「竜眼」効果中にドゥームスパイクから変化。天竜眼を付与。"
+      }
+    ],
+    "ability": [
+      {
+        "id": 85,
+        "name": "ライフサージ",
+        "recastTime": 40.0,
+        "maxCharges": 2,
+        "icon": "",
+        "description": "次の1回のWSが必ずクリティカルヒットし、HPを吸収する。効果時間：5秒"
+      },
+      {
+        "id": 83,
+        "name": "ランスチャージ",
+        "recastTime": 60.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "与ダメージ10%上昇。効果時間：20秒"
+      },
+      {
+        "id": 16478,
+        "name": "ハイジャンプ",
+        "recastTime": 30.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "対象にジャンプで近づきつつ物理攻撃。威力：400 ミラージュダイブ実行可を付与。"
+      },
+      {
+        "id": 16479,
+        "name": "ミラージュダイブ",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "対象に物理攻撃。威力：380 ジャンプ、ハイジャンプ後に実行可。"
+      },
+      {
+        "id": 92,
+        "name": "ドラゴンダイブ",
+        "recastTime": 120.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "対象にジャンプ範囲物理攻撃。威力：500 ドラゴンライズ実行可を付与。"
+      },
+      {
+        "id": 36960,
+        "name": "ドラゴンライズ",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "対象と周囲に範囲物理攻撃。威力：550 ドラゴンダイブ後に実行可。"
+      },
+      {
+        "id": 3557,
+        "name": "バトルリタニー",
+        "recastTime": 120.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "自身とPTメンバーのクリ率10%上昇。効果時間：20秒"
+      },
+      {
+        "id": 3555,
+        "name": "ゲイルスコグル",
+        "recastTime": 60.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "前方直線範囲物理攻撃。威力：280 紅の竜血状態（与ダメ+15%）に移行。ナーストレンド実行可を付与。"
+      },
+      {
+        "id": 7399,
+        "name": "ナーストレンド",
+        "recastTime": 2.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "前方直線範囲物理攻撃。威力：720 紅の竜血中に実行可。"
+      },
+      {
+        "id": 16480,
+        "name": "スターダイバー",
+        "recastTime": 30.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "対象にジャンプ範囲物理攻撃。威力：840 紅の竜血中に実行可。スタークロッサー実行可を付与。"
+      },
+      {
+        "id": 36961,
+        "name": "スタークロッサー",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "対象と周囲に範囲物理攻撃。威力：1000 スターダイバー後に実行可。"
+      },
+      {
+        "id": 25771,
+        "name": "天竜点睛",
+        "recastTime": 10.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "前方直線範囲物理攻撃。威力：440 天竜眼2スタック時に実行可。"
+      },
+      {
+        "id": 16477,
+        "name": "ウィンググライド",
+        "recastTime": 60.0,
+        "maxCharges": 2,
+        "icon": "",
+        "description": "対象の目前まで素早く移動する。"
+      },
+      {
+        "id": 94,
+        "name": "イルーシブジャンプ",
+        "recastTime": 30.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "15m後方にジャンプ。ピアシングタロン効果アップを付与。"
+      },
+      {
+        "id": 7548,
+        "name": "トゥルーノース",
+        "recastTime": 45.0,
+        "maxCharges": 2,
+        "icon": "",
+        "description": "方向指定を無視して成功させる。効果時間：10秒"
+      },
+      {
+        "id": 7549,
+        "name": "牽制",
+        "recastTime": 90.0,
+        "maxCharges": 1,
+        "icon": "",
+        "description": "対象の与物理ダメ10%、与魔法ダメ5%減少。効果時間：15秒"
+      }
+    ]
+  }
+}
