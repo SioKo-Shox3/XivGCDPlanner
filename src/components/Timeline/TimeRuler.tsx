@@ -10,7 +10,7 @@ export function TimeRuler({ duration, pps }: Props) {
   }
 
   return (
-    <div className="relative h-6 border-b border-white/10" style={{ background: "var(--bg-secondary)" }}>
+    <div className="relative h-7 border-b" style={{ background: "var(--bg-secondary)", borderColor: "var(--border)" }}>
       {marks.map(({ time, major }) => (
         <div
           key={time}
@@ -20,13 +20,13 @@ export function TimeRuler({ duration, pps }: Props) {
           <div
             className="border-l"
             style={{
-              height: major ? 16 : 8,
-              borderColor: major ? "rgba(255,255,255,0.4)" : "rgba(255,255,255,0.15)",
-              marginTop: major ? 0 : 8,
+              height: major ? 18 : 9,
+              borderColor: major ? "rgba(255,255,255,0.3)" : "rgba(255,255,255,0.08)",
+              marginTop: major ? 0 : 9,
             }}
           />
           {major && (
-            <span className="absolute top-0 text-[10px] ml-1" style={{ color: "var(--text-secondary)" }}>
+            <span className="absolute top-1 text-[10px] font-medium tabular-nums ml-1.5" style={{ color: "var(--text-muted)" }}>
               {formatTime(time)}
             </span>
           )}

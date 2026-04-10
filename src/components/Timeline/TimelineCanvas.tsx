@@ -80,8 +80,8 @@ export function TimelineCanvas() {
 
   if (!selectedJob || !selectedTimeline) {
     return (
-      <div className="flex items-center justify-center h-full" style={{ color: "var(--text-secondary)" }}>
-        <p>ジョブとタイムラインを選択してください</p>
+      <div className="flex items-center justify-center h-full" style={{ color: "var(--text-muted)" }}>
+        <p className="text-[13px] font-medium">ジョブとタイムラインを選択してください</p>
       </div>
     );
   }
@@ -102,16 +102,16 @@ export function TimelineCanvas() {
         <TimeRuler duration={duration} pps={pps} />
 
         {/* Boss events track */}
-        <div className="relative h-8" style={{ background: "rgba(255,255,255,0.02)" }}>
+        <div className="relative h-8" style={{ background: "rgba(255,255,255,0.015)" }}>
           {selectedTimeline.events.map((evt, i) => (
             <BossEventMarker key={i} event={evt} pps={pps} />
           ))}
         </div>
 
         {/* GCD track */}
-        <div className="relative h-16 border-t border-white/5" style={{ background: "rgba(59,130,246,0.05)" }}>
-          <span className="absolute left-1 top-0.5 text-[10px] pointer-events-none z-10"
-            style={{ color: "var(--gcd-color)", opacity: 0.5 }}>GCD</span>
+        <div className="relative h-16 border-t" style={{ background: "rgba(59,130,246,0.03)", borderColor: "var(--border)" }}>
+          <span className="absolute left-1.5 top-0.5 text-[9px] font-semibold tracking-wider uppercase pointer-events-none z-10"
+            style={{ color: "var(--gcd-color)", opacity: 0.4 }}>GCD</span>
           {gcdPlacements.map((p) => {
             const skill = selectedJob.skills.gcd.find((s) => s.id === p.skillId);
             if (!skill) return null;
@@ -132,9 +132,9 @@ export function TimelineCanvas() {
         </div>
 
         {/* Ability track */}
-        <div className="relative h-16 border-t border-white/5" style={{ background: "rgba(16,185,129,0.05)" }}>
-          <span className="absolute left-1 top-0.5 text-[10px] pointer-events-none z-10"
-            style={{ color: "var(--ability-color)", opacity: 0.5 }}>アビリティ</span>
+        <div className="relative h-16 border-t" style={{ background: "rgba(16,185,129,0.03)", borderColor: "var(--border)" }}>
+          <span className="absolute left-1.5 top-0.5 text-[9px] font-semibold tracking-wider uppercase pointer-events-none z-10"
+            style={{ color: "var(--ability-color)", opacity: 0.4 }}>ABILITY</span>
           {abilityPlacements.map((p) => {
             const skill = selectedJob.skills.ability.find((s) => s.id === p.skillId);
             if (!skill) return null;

@@ -8,16 +8,16 @@ export function AppLayout() {
     <div className="flex flex-col h-screen">
       <Header />
       <div className="flex flex-1 overflow-hidden">
-        <aside className="w-72 flex-shrink-0 border-r border-white/10 overflow-y-auto"
-          style={{ background: "var(--bg-secondary)" }}>
+        <aside className="w-64 flex-shrink-0 border-r overflow-y-auto"
+          style={{ background: "var(--bg-secondary)", borderColor: "var(--border)" }}>
           <SkillPalette />
         </aside>
         <main className="flex-1 flex flex-col overflow-hidden">
           <div className="flex-1 overflow-hidden">
             <TimelineCanvas />
           </div>
-          <div className="h-28 flex-shrink-0 border-t border-white/10"
-            style={{ background: "var(--bg-secondary)" }}>
+          <div className="h-24 flex-shrink-0 border-t"
+            style={{ background: "var(--bg-secondary)", borderColor: "var(--border)" }}>
             <StatsPanel />
           </div>
         </main>

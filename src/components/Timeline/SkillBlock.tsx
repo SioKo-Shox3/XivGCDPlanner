@@ -66,15 +66,16 @@ export function SkillBlock({ placement, name, widthSeconds, castTime, pps, color
 
   return (
     <div
-      className="absolute top-2 bottom-2 rounded cursor-move flex flex-col overflow-hidden select-none transition-shadow"
+      className="absolute top-1.5 bottom-1.5 rounded-md cursor-move flex flex-col overflow-hidden select-none"
       style={{
         left,
         width: Math.max(width, 8),
         background: bgColor,
-        border: `1.5px solid ${borderCol}`,
-        boxShadow: isSelected ? `0 0 8px ${borderCol}` : undefined,
-        opacity: dragging ? 0.8 : 1,
+        border: `1px solid ${borderCol}`,
+        boxShadow: isSelected ? `0 0 10px ${borderCol}40, 0 0 4px ${borderCol}20` : "var(--shadow-sm)",
+        opacity: dragging ? 0.75 : 1,
         zIndex: isSelected ? 20 : 10,
+        transition: "box-shadow 0.15s, opacity 0.1s",
       }}
       onMouseDown={onMouseDown}
       onContextMenu={onContextMenu}
@@ -83,21 +84,21 @@ export function SkillBlock({ placement, name, widthSeconds, castTime, pps, color
       {/* Cast time section */}
       {castTime != null && castTime > 0 && (
         <div
-          className="absolute top-0 bottom-0 left-0"
+          className="absolute top-0 bottom-0 left-0 rounded-l-md"
           style={{
             width: (castTime / widthSeconds) * 100 + "%",
-            background: `color-mix(in srgb, ${color} 50%, transparent)`,
-            borderRight: `1px solid ${color}`,
+            background: `color-mix(in srgb, ${color} 40%, transparent)`,
+            borderRight: `1px solid color-mix(in srgb, ${color} 60%, transparent)`,
           }}
         />
       )}
       <div className="flex-1 flex items-center justify-center relative z-10">
-        <span className="text-[10px] font-medium text-center leading-tight px-0.5 truncate">
+        <span className="text-[9px] font-medium text-center leading-tight px-0.5 truncate" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
           {name}
         </span>
       </div>
       {hasError && (
-        <div className="absolute bottom-0 left-0 right-0 h-1" style={{ background: "var(--error-color)" }} />
+        <div className="absolute bottom-0 left-0 right-0 h-0.5" style={{ background: "var(--error-color)" }} />
       )}
     </div>
   );

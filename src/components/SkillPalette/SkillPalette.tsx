@@ -6,20 +6,22 @@ export function SkillPalette() {
 
   if (!selectedJob) {
     return (
-      <div className="p-4 text-center" style={{ color: "var(--text-secondary)" }}>
-        <p className="text-sm">ジョブを選択してください</p>
+      <div className="flex flex-col items-center justify-center h-48 gap-2">
+        <div className="text-2xl" style={{ color: "var(--text-muted)" }}>⚔</div>
+        <p className="text-[12px]" style={{ color: "var(--text-muted)" }}>ジョブを選択してください</p>
       </div>
     );
   }
 
   return (
     <div className="p-3">
-      <h2 className="text-sm font-bold mb-3" style={{ color: "var(--text-secondary)" }}>
+      <h2 className="text-[11px] font-semibold tracking-wider uppercase mb-3 px-0.5" style={{ color: "var(--text-muted)" }}>
         {selectedJob.name}
       </h2>
 
       <section className="mb-4">
-        <h3 className="text-xs font-semibold mb-2 px-1" style={{ color: "var(--gcd-color)" }}>
+        <h3 className="text-[10px] font-semibold tracking-wider uppercase mb-2 px-0.5 flex items-center gap-1.5" style={{ color: "var(--gcd-color)" }}>
+          <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ background: "var(--gcd-color)" }} />
           ウェポンスキル / 魔法
         </h3>
         <div className="grid grid-cols-4 gap-1.5">
@@ -29,8 +31,11 @@ export function SkillPalette() {
         </div>
       </section>
 
+      <div className="my-3 border-t" style={{ borderColor: "var(--border)" }} />
+
       <section>
-        <h3 className="text-xs font-semibold mb-2 px-1" style={{ color: "var(--ability-color)" }}>
+        <h3 className="text-[10px] font-semibold tracking-wider uppercase mb-2 px-0.5 flex items-center gap-1.5" style={{ color: "var(--ability-color)" }}>
+          <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ background: "var(--ability-color)" }} />
           アビリティ
         </h3>
         <div className="grid grid-cols-4 gap-1.5">

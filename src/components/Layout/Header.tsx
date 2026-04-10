@@ -13,18 +13,20 @@ export function Header() {
 
   return (
     <header
-      className="flex items-center gap-4 px-4 py-2 border-b border-white/10"
-      style={{ background: "var(--bg-secondary)" }}
+      className="flex items-center gap-5 px-5 py-2.5 border-b"
+      style={{ background: "var(--bg-secondary)", borderColor: "var(--border)" }}
     >
-      <h1 className="text-lg font-bold whitespace-nowrap" style={{ color: "var(--accent)" }}>
+      <h1 className="text-base font-semibold tracking-wide whitespace-nowrap" style={{ color: "var(--accent)" }}>
         XIV GCD Planner
       </h1>
 
-      <div className="flex items-center gap-2 ml-4">
-        <label className="text-xs" style={{ color: "var(--text-secondary)" }}>ジョブ</label>
+      <div className="w-px h-5 mx-1" style={{ background: "var(--border-strong)" }} />
+
+      <div className="flex items-center gap-1.5">
+        <label className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>ジョブ</label>
         <select
-          className="rounded px-2 py-1 text-sm border border-white/20 focus:outline-none focus:border-blue-400"
-          style={{ background: "var(--bg-surface)", color: "var(--text-primary)" }}
+          className="rounded-md px-2.5 py-1 text-[12px] border transition-colors focus:outline-none"
+          style={{ background: "var(--bg-surface)", color: "var(--text-primary)", borderColor: "var(--border-strong)" }}
           value={selectedJobId ?? ""}
           onChange={(e) => selectJob(e.target.value)}
         >
@@ -35,11 +37,11 @@ export function Header() {
         </select>
       </div>
 
-      <div className="flex items-center gap-2">
-        <label className="text-xs" style={{ color: "var(--text-secondary)" }}>タイムライン</label>
+      <div className="flex items-center gap-1.5">
+        <label className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>タイムライン</label>
         <select
-          className="rounded px-2 py-1 text-sm border border-white/20 focus:outline-none focus:border-blue-400"
-          style={{ background: "var(--bg-surface)", color: "var(--text-primary)" }}
+          className="rounded-md px-2.5 py-1 text-[12px] border transition-colors focus:outline-none"
+          style={{ background: "var(--bg-surface)", color: "var(--text-primary)", borderColor: "var(--border-strong)" }}
           value={selectedTimelineId ?? ""}
           onChange={(e) => selectTimeline(e.target.value)}
         >
@@ -50,12 +52,12 @@ export function Header() {
         </select>
       </div>
 
-      <div className="flex items-center gap-2">
-        <label className="text-xs" style={{ color: "var(--text-secondary)" }}>SS</label>
+      <div className="flex items-center gap-1.5">
+        <label className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>SS</label>
         <input
           type="number"
-          className="w-20 rounded px-2 py-1 text-sm border border-white/20 focus:outline-none focus:border-blue-400"
-          style={{ background: "var(--bg-surface)", color: "var(--text-primary)" }}
+          className="w-[72px] rounded-md px-2.5 py-1 text-[12px] border transition-colors focus:outline-none tabular-nums"
+          style={{ background: "var(--bg-surface)", color: "var(--text-primary)", borderColor: "var(--border-strong)" }}
           value={spellSpeed}
           min={400}
           max={4000}
@@ -65,10 +67,10 @@ export function Header() {
 
       <div className="ml-auto">
         <button
-          className="rounded px-3 py-1 text-sm font-medium transition-colors cursor-pointer"
-          style={{ background: "var(--accent)", color: "#fff" }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-hover)")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
+          className="rounded-md px-3.5 py-1 text-[12px] font-medium transition-all cursor-pointer"
+          style={{ background: "var(--accent-subtle)", color: "var(--accent)", border: "1px solid rgba(233,69,96,0.25)" }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "#fff"; }}
+          onMouseLeave={(e) => { e.currentTarget.style.background = "var(--accent-subtle)"; e.currentTarget.style.color = "var(--accent)"; }}
           onClick={clearPlacements}
         >
           クリア

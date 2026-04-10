@@ -42,16 +42,17 @@ export function StatsPanel() {
   const errorCount = validationResult?.errors.length ?? 0;
 
   return (
-    <div className="flex items-center h-full px-4 gap-6 text-sm">
+    <div className="flex items-center h-full px-5 gap-6">
       {/* Stats */}
-      <div className="flex gap-4">
+      <div className="flex gap-5">
         <StatItem label="スキル数" value={placements.length} />
-        <StatItem label="GCD" value={placements.filter((p) => p.skillType === "gcd").length} />
-        <StatItem label="アビリティ" value={placements.filter((p) => p.skillType === "ability").length} />
+        <StatItem label="GCD" value={placements.filter((p) => p.skillType === "gcd").length} accent="var(--gcd-color)" />
+        <StatItem label="アビリティ" value={placements.filter((p) => p.skillType === "ability").length} accent="var(--ability-color)" />
         {stats && (
           <>
+            <div className="w-px self-stretch my-2" style={{ background: "var(--border)" }} />
             <StatItem label="総威力" value={stats.totalPotency} />
-            <StatItem label="推定DPS" value={stats.estimatedDps.toFixed(1)} />
+            <StatItem label="推定DPS" value={stats.estimatedDps.toFixed(1)} accent="var(--accent)" />
             <StatItem label="GCD稼働率" value={`${(stats.gcdUptime * 100).toFixed(1)}%`} />
           </>
         )}
@@ -60,38 +61,38 @@ export function StatsPanel() {
       {/* Validation status */}
       <div className="flex items-center gap-1">
         {errorCount > 0 ? (
-          <span className="text-xs px-2 py-0.5 rounded" style={{ background: "rgba(239,68,68,0.2)", color: "var(--error-color)" }}>
+          <span className="text-[11px] font-medium px-2.5 py-1 rounded-md" style={{ background: "rgba(239,68,68,0.12)", color: "var(--error-color)", border: "1px solid rgba(239,68,68,0.2)" }}>
             ⚠ {errorCount} 件のエラー
           </span>
         ) : placements.length > 0 ? (
-          <span className="text-xs px-2 py-0.5 rounded" style={{ background: "rgba(16,185,129,0.2)", color: "var(--ability-color)" }}>
+          <span className="text-[11px] font-medium px-2.5 py-1 rounded-md" style={{ background: "rgba(16,185,129,0.1)", color: "var(--ability-color)", border: "1px solid rgba(16,185,129,0.2)" }}>
             ✓ 有効
           </span>
         ) : null}
       </div>
 
       {/* Zoom */}
-      <div className="ml-auto flex items-center gap-2">
-        <span className="text-xs" style={{ color: "var(--text-secondary)" }}>ズーム</span>
+      <div className="ml-auto flex items-center gap-2.5">
+        <span className="text-[11px] font-medium" style={{ color: "var(--text-muted)" }}>ズーム</span>
         <input
           type="range"
           min={10}
           max={200}
           value={pps}
           onChange={(e) => setPixelsPerSecond(Number(e.target.value))}
-          className="w-24 accent-[var(--accent)]"
+          className="w-28"
         />
-        <span className="text-xs w-8" style={{ color: "var(--text-secondary)" }}>{pps}</span>
+        <span className="text-[11px] tabular-nums w-8" style={{ color: "var(--text-secondary)" }}>{pps}</span>
       </div>
     </div>
   );
 }
 
-function StatItem({ label, value }: { label: string; value: string | number }) {
+function StatItem({ label, value, accent }: { label: string; value: string | number; accent?: string }) {
   return (
-    <div className="flex flex-col items-center">
-      <span className="text-[10px]" style={{ color: "var(--text-secondary)" }}>{label}</span>
-      <span className="text-sm font-bold">{value}</span>
+    <div className="flex flex-col items-center gap-0.5">
+      <span className="text-[10px] font-medium tracking-wide" style={{ color: "var(--text-muted)" }}>{label}</span>
+      <span className="text-[13px] font-semibold tabular-nums" style={{ color: accent ?? "var(--text-primary)" }}>{value}</span>
     </div>
   );
 }

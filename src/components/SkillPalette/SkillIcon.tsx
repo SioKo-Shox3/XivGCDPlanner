@@ -30,14 +30,15 @@ export function SkillIcon({ skill, skillType }: Props) {
       draggable
       onDragStart={onDragStart}
       onDragEnd={onDragEnd}
-      className="flex flex-col items-center rounded cursor-grab active:cursor-grabbing transition-transform hover:scale-105"
+      className="flex flex-col items-center rounded-md p-1 cursor-grab active:cursor-grabbing transition-all hover:scale-105 hover:bg-white/5"
       title={`${skill.name}\n${"potency" in skill ? `威力: ${skill.potency}` : `リキャスト: ${"recastTime" in skill ? (skill as AbilitySkillDef).recastTime : "?"}s`}\n${skill.description}`}
     >
       <div
-        className="w-12 h-12 rounded border-2 flex items-center justify-center text-xs font-bold overflow-hidden"
+        className="w-11 h-11 rounded-md border flex items-center justify-center overflow-hidden"
         style={{
-          borderColor,
+          borderColor: `color-mix(in srgb, ${borderColor} 50%, transparent)`,
           background: "var(--bg-surface)",
+          boxShadow: "var(--shadow-sm)",
         }}
       >
         {skill.icon ? (
@@ -51,11 +52,11 @@ export function SkillIcon({ skill, skillType }: Props) {
             }}
           />
         ) : null}
-        <span className={skill.icon ? "hidden" : ""} style={{ fontSize: "10px", textAlign: "center" }}>
+        <span className={skill.icon ? "hidden" : ""} style={{ fontSize: "9px", textAlign: "center", color: "var(--text-secondary)", fontWeight: 500 }}>
           {skill.name.slice(0, 4)}
         </span>
       </div>
-      <span className="text-[10px] mt-0.5 text-center leading-tight w-full truncate px-0.5"
+      <span className="text-[9px] mt-1 text-center leading-tight w-full truncate px-0.5 font-medium"
         style={{ color: "var(--text-secondary)" }}>
         {skill.name}
       </span>
