@@ -36,13 +36,27 @@ jobs:
       - name: Install frontend dependencies
         run: npm ci
 
-      - name: Build and release
-        uses: tauri-apps/tauri-action@v0
+      - name: Build Tauri app
+        run: npx tauri build
+
+      - name: Package portable zip
+        shell: pwsh
+        run: |
+          $releaseDir = "src-tauri/target/release"
+          $stagingDir = "XivGCDPlanner"
+          New-Item -ItemType Directory -Path $stagingDir -Force
+          Copy-Item "$releaseDir/XivGCDPlanner.exe" $stagingDir/
+          Copy-Item -Recurse "src-tauri/data" "$stagingDir/data"
+          Compress-Archive -Path "$stagingDir/*" -DestinationPath "XivGCDPlanner-${{ github.ref_name }}-windows-x64.zip"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "XivGCDPlanner ${{ github.ref_name }}"
+          body: |
+            ## ダウンロード
+            zipを展開して `XivGCDPlanner.exe` を実行してください。
+            インストール不要です。
+          files: XivGCDPlanner-${{ github.ref_name }}-windows-x64.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tagName: ${{ github.ref_name }}
-          releaseName: "XivGCDPlanner ${{ github.ref_name }}"
-          releaseBody: "See the assets for the Windows installer (.exe / .msi)."
-          releaseDraft: false
-          prerelease: false
