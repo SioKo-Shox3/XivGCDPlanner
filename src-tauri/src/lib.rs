@@ -102,24 +102,43 @@ pub fn run() {
                 )?;
             }
 
-            // Resolve data directory
-            // In dev mode, resource_dir points to target/debug which doesn't have our data,
-            // so we fall back to src-tauri/data/ relative to the manifest directory.
-            let resource_dir = app
-                .handle()
-                .path()
-                .resource_dir()
-                .unwrap_or_else(|_| PathBuf::from("."));
-
+            // Resolve data directory – try multiple locations:
+            // 1. Bundled resource dir (NSIS / MSI install)
+            // 2. Next to the executable (portable zip distribution)
+            // 3. Dev fallback: src-tauri/data/ via CARGO_MANIFEST_DIR
             let data_dir = {
-                let bundled = resource_dir.join("data");
-                if bundled.join("jobs").exists() {
-                    bundled
-                } else {
-                    // Dev fallback: Cargo.toml lives in src-tauri/, data is src-tauri/data/
-                    let manifest = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-                    manifest.join("data")
+                let mut found: Option<PathBuf> = None;
+
+                // 1. Tauri resource_dir (installed mode)
+                if let Ok(res) = app.handle().path().resource_dir() {
+                    let candidate = res.join("data");
+                    if candidate.join("jobs").exists() {
+                        found = Some(candidate);
+                    }
                 }
+
+                // 2. Next to the executable (portable mode)
+                if found.is_none() {
+                    if let Ok(exe) = std::env::current_exe() {
+                        if let Some(dir) = exe.parent() {
+                            let candidate = dir.join("data");
+                            if candidate.join("jobs").exists() {
+                                found = Some(candidate);
+                            }
+                        }
+                    }
+                }
+
+                // 3. Dev fallback
+                if found.is_none() {
+                    let manifest = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+                    let candidate = manifest.join("data");
+                    if candidate.join("jobs").exists() {
+                        found = Some(candidate);
+                    }
+                }
+
+                found.unwrap_or_else(|| PathBuf::from("data"))
             };
             let save_dir = app
                 .handle()
@@ -148,4 +167,3 @@ pub fn run() {
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
-
