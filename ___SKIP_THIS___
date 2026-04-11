@@ -1,0 +1,50 @@
+#[cfg_attr(mobile, tauri::mobile_entry_point)]
+pub fn run() {
+    tauri::Builder::default()
+        .setup(|app| {
+            if cfg!(debug_assertions) {
+                app.handle().plugin(
+                    tauri_plugin_log::Builder::default()
+                        .level(log::LevelFilter::Info)
+                        .build(),
+                )?;
+            }
+
+            // Resolve data directory – try multiple locations:
+            // 1. Bundled resource dir (NSIS / MSI install)
+            // 2. Next to the executable (portable zip distribution)
+            // 3. Dev fallback: src-tauri/data/ via CARGO_MANIFEST_DIR
+            let data_dir = {
+                let mut found: Option<PathBuf> = None;
+
+                // 1. Tauri resource_dir (installed mode)
+                if let Ok(res) = app.handle().path().resource_dir() {
+                    let candidate = res.join("data");
+                    if candidate.join("jobs").exists() {
+                        found = Some(candidate);
+                    }
+                }
+
+                // 2. Next to the executable (portable mode)
+                if found.is_none() {
+                    if let Ok(exe) = std::env::current_exe() {
+                        if let Some(dir) = exe.parent() {
+                            let candidate = dir.join("data");
+                            if candidate.join("jobs").exists() {
+                                found = Some(candidate);
+                            }
+                        }
+                    }
+                }
+
+                // 3. Dev fallback
+                if found.is_none() {
+                    let manifest = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+                    let candidate = manifest.join("data");
+                    if candidate.join("jobs").exists() {
+                        found = Some(candidate);
+                    }
+                }
+
+                found.unwrap_or_else(|| PathBuf::from("data"))
+            };
