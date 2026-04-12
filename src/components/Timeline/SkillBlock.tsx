@@ -5,6 +5,7 @@ import type { SkillPlacement } from "@/types";
 interface Props {
   placement: SkillPlacement;
   name: string;
+  icon?: string;
   widthSeconds: number;
   castTime?: number;
   pps: number;
@@ -12,7 +13,7 @@ interface Props {
   error?: string;
 }
 
-export function SkillBlock({ placement, name, widthSeconds, castTime, pps, color, error }: Props) {
+export function SkillBlock({ placement, name, icon, widthSeconds, castTime, pps, color, error }: Props) {
   const removePlacement = useAppStore((s) => s.removePlacement);
   const movePlacement = useAppStore((s) => s.movePlacement);
   const selectPlacement = useAppStore((s) => s.selectPlacement);
@@ -92,8 +93,17 @@ export function SkillBlock({ placement, name, widthSeconds, castTime, pps, color
           }}
         />
       )}
-      <div className="flex-1 flex items-center justify-center relative z-10">
-        <span className="text-[9px] font-medium text-center leading-tight px-0.5 truncate" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
+      <div className="flex-1 flex items-center justify-center relative z-10 gap-0.5 px-0.5">
+        {icon && (
+          <img
+            src={icon}
+            alt={name}
+            className="w-5 h-5 flex-shrink-0 rounded-sm"
+            draggable={false}
+            style={{ imageRendering: "auto", filter: "drop-shadow(0 1px 1px rgba(0,0,0,0.4))" }}
+          />
+        )}
+        <span className="text-[9px] font-medium text-center leading-tight truncate" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
           {name}
         </span>
       </div>

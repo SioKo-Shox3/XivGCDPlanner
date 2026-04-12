@@ -119,12 +119,58 @@ export const useAppStore = create<AppState>((set, get) => ({
       validationResult: null,
     })),
   movePlacement: (id, newTime) =>
-    set((s) => ({
-      placements: s.placements
-        .map((p) => (p.id === id ? { ...p, time: newTime } : p))
-        .sort((a, b) => a.time - b.time),
-      validationResult: null,
-    })),
+    set((s) => {
+      const target = s.placements.find((p) => p.id === id);
+      if (!target) return s;
+
+      // Apply the move
+      let updated = s.placements.map((p) => (p.id === id ? { ...p, time: newTime } : p));
+
+      // GCD repulsion: push overlapping GCDs apart
+      if (target.skillType === "gcd") {
+        const gcdTime = calculateGcdTime(2.5, s.spellSpeed);
+        const gcds = updated.filter((p) => p.skillType === "gcd").sort((a, b) => a.time - b.time);
+        const nonGcds = updated.filter((p) => p.skillType !== "gcd");
+
+        const movedIdx = gcds.findIndex((p) => p.id === id);
+        // Push right: ensure each subsequent GCD doesn't overlap
+        for (let i = movedIdx + 1; i < gcds.length; i++) {
+          const minTime = Math.round((gcds[i - 1].time + gcdTime) * 100) / 100;
+          if (gcds[i].time < minTime) {
+            gcds[i] = { ...gcds[i], time: minTime };
+          } else break;
+        }
+        // Push left: ensure each preceding GCD doesn't overlap
+        for (let i = movedIdx - 1; i >= 0; i--) {
+          const maxTime = Math.round((gcds[i + 1].time - gcdTime) * 100) / 100;
+          if (gcds[i].time > maxTime) {
+            gcds[i] = { ...gcds[i], time: Math.max(0, maxTime) };
+          } else break;
+        }
+
+        // If left GCDs hit 0 boundary, clamp moved GCD so it doesn't overlap
+        if (movedIdx > 0) {
+          const leftEnd = Math.round((gcds[movedIdx - 1].time + gcdTime) * 100) / 100;
+          if (gcds[movedIdx].time < leftEnd) {
+            gcds[movedIdx] = { ...gcds[movedIdx], time: leftEnd };
+            // Re-push right from corrected position
+            for (let i = movedIdx + 1; i < gcds.length; i++) {
+              const minTime = Math.round((gcds[i - 1].time + gcdTime) * 100) / 100;
+              if (gcds[i].time < minTime) {
+                gcds[i] = { ...gcds[i], time: minTime };
+              } else break;
+            }
+          }
+        }
+
+        updated = [...gcds, ...nonGcds];
+      }
+
+      return {
+        placements: updated.sort((a, b) => a.time - b.time),
+        validationResult: null,
+      };
+    }),
   clearPlacements: () => set({ placements: [], validationResult: null, stats: null }),
 
   setValidationResult: (r) => set({ validationResult: r }),
