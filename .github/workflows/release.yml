@@ -45,7 +45,7 @@ jobs:
           $releaseDir = "src-tauri/target/release"
           $stagingDir = "XivGCDPlanner"
           New-Item -ItemType Directory -Path $stagingDir -Force
-          Copy-Item "$releaseDir/XivGCDPlanner.exe" $stagingDir/
+          Copy-Item "$releaseDir/xiv-gcd-planner.exe" "$stagingDir/XivGCDPlanner.exe"
           Copy-Item -Recurse "src-tauri/data" "$stagingDir/data"
           Compress-Archive -Path "$stagingDir/*" -DestinationPath "XivGCDPlanner-${{ github.ref_name }}-windows-x64.zip"
 
