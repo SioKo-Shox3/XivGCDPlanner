@@ -125,6 +125,7 @@ export function TimelineCanvas() {
                 key={p.id}
                 placement={p}
                 name={skill.name}
+                icon={skill.icon}
                 widthSeconds={gcdTime}
                 castTime={skill.castTime < gcdTime ? skill.castTime : undefined}
                 pps={pps}
@@ -147,6 +148,7 @@ export function TimelineCanvas() {
                 key={p.id}
                 placement={p}
                 name={skill.name}
+                icon={skill.icon}
                 widthSeconds={0.7}
                 pps={pps}
                 color="var(--ability-color)"
