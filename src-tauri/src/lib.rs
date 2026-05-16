@@ -1,4 +1,3 @@
-mod cactbot_parser;
 mod data;
 mod engine;
 mod models;
@@ -11,7 +10,6 @@ use tauri::{Manager, State};
 struct AppData {
     data_dir: PathBuf,
     save_dir: PathBuf,
-    user_timelines_dir: PathBuf,
     jobs: Vec<JobDef>,
     timelines: Vec<BossTimelineDef>,
 }
@@ -29,34 +27,9 @@ fn load_jobs(state: State<AppState>) -> Result<Vec<JobDef>, String> {
 #[tauri::command]
 fn load_timelines(state: State<AppState>) -> Result<Vec<BossTimelineDef>, String> {
     let mut data = state.0.lock().map_err(|e| e.to_string())?;
-    let mut timelines = data::load_timelines_from_dir(&data.data_dir)?;
-    // Merge user-imported timelines, avoiding duplicates by id
-    let user_timelines = data::load_timelines_from_dir(&data.user_timelines_dir)
-        .unwrap_or_default();
-    let built_in_ids: std::collections::HashSet<String> =
-        timelines.iter().map(|t| t.id.clone()).collect();
-    for t in user_timelines {
-        if !built_in_ids.contains(&t.id) {
-            timelines.push(t);
-        }
-    }
-    timelines.sort_by(|a, b| a.name.cmp(&b.name));
+    let timelines = data::load_timelines_from_dir(&data.data_dir)?;
     data.timelines = timelines.clone();
     Ok(timelines)
-}
-
-#[tauri::command]
-fn parse_cactbot_timeline(
-    state: State<AppState>,
-    id: String,
-    name: String,
-    content: String,
-) -> Result<BossTimelineDef, String> {
-    let data = state.0.lock().map_err(|e| e.to_string())?;
-    let timeline = cactbot_parser::parse(&id, &name, &content)?;
-    // Persist to user_timelines_dir so it survives restarts
-    data::save_timeline_to_dir(&data.user_timelines_dir, &timeline)?;
-    Ok(timeline)
 }
 
 #[tauri::command]
@@ -93,19 +66,12 @@ fn calculate_stats(
 }
 
 #[tauri::command]
-fn list_saves(state: State<AppState>) -> Result<Vec<SaveFileEntry>, String> {
-    let data = state.0.lock().map_err(|e| e.to_string())?;
-    data::list_save_files(&data.save_dir)
-}
-
-#[tauri::command]
 fn save_rotation(
     state: State<AppState>,
     name: String,
     job_id: String,
     timeline_id: String,
     spell_speed: u32,
-    level: u32,
     placements: Vec<SkillPlacement>,
 ) -> Result<String, String> {
     let data = state.0.lock().map_err(|e| e.to_string())?;
@@ -114,7 +80,6 @@ fn save_rotation(
         job_id,
         timeline_id,
         spell_speed,
-        level,
         placements,
     };
     data::save_rotation_file(&data.save_dir, &plan)
@@ -182,17 +147,9 @@ pub fn run() {
                 .unwrap_or_else(|_| PathBuf::from("./saves"))
                 .join("rotations");
 
-            let user_timelines_dir = app
-                .handle()
-                .path()
-                .app_data_dir()
-                .unwrap_or_else(|_| PathBuf::from("./user_timelines"))
-                .join("user_timelines");
-
             app.manage(AppState(Mutex::new(AppData {
                 data_dir,
                 save_dir,
-                user_timelines_dir,
                 jobs: Vec::new(),
                 timelines: Vec::new(),
             })));
@@ -206,8 +163,6 @@ pub fn run() {
             calculate_stats,
             save_rotation,
             load_rotation,
-            list_saves,
-            parse_cactbot_timeline,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

@@ -17,7 +17,6 @@ interface AppState {
   // Selections
   selectedJobId: string | null;
   selectedTimelineId: string | null;
-  selectedLevel: number;
   spellSpeed: number;
 
   // Rotation state
@@ -40,7 +39,6 @@ interface AppState {
   selectJob: (jobId: string) => void;
   selectTimeline: (timelineId: string) => void;
   setSpellSpeed: (ss: number) => void;
-  setLevel: (level: number) => void;
 
   // Actions - rotation editing
   addPlacement: (p: SkillPlacement) => void;
@@ -58,12 +56,6 @@ interface AppState {
   setScrollLeft: (sl: number) => void;
   selectPlacement: (id: string | null) => void;
 
-  // Actions - timeline management
-  addTimeline: (t: BossTimelineDef) => void;
-
-  // Actions - save/load
-  loadPlan: (plan: { jobId: string; timelineId: string; spellSpeed: number; level: number; placements: SkillPlacement[] }) => void;
-
   // Actions - drag
   startDrag: (skillId: number, skillType: "gcd" | "ability") => void;
   endDrag: () => void;
@@ -78,7 +70,6 @@ export const useAppStore = create<AppState>((set, get) => ({
   timelines: [],
   selectedJobId: null,
   selectedTimelineId: null,
-  selectedLevel: 100,
   spellSpeed: 400,
   placements: [],
   validationResult: null,
@@ -93,22 +84,12 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   setJobs: (jobs) => set({ jobs }),
   setTimelines: (timelines) => set({ timelines }),
-  addTimeline: (t) =>
-    set((s) => ({
-      timelines: s.timelines.some((x) => x.id === t.id)
-        ? s.timelines
-        : [...s.timelines, t],
-    })),
 
   selectJob: (jobId) =>
     set({ selectedJobId: jobId, placements: [], validationResult: null, stats: null }),
   selectTimeline: (timelineId) =>
     set({ selectedTimelineId: timelineId, placements: [], validationResult: null, stats: null }),
   setSpellSpeed: (ss) => set({ spellSpeed: ss }),
-  setLevel: (level) => {
-    if (!Number.isFinite(level)) return;
-    set({ selectedLevel: Math.max(1, Math.min(100, level)) });
-  },
 
   addPlacement: (p) =>
     set((s) => ({ placements: [...s.placements, p].sort((a, b) => a.time - b.time) })),
@@ -166,13 +147,6 @@ export const useAppStore = create<AppState>((set, get) => ({
             gcds[i] = { ...gcds[i], time: Math.max(0, maxTime) };
           } else break;
         }
-        // Forward pass: fix spacing when blocks were clamped at 0 boundary
-        for (let i = 1; i < movedIdx; i++) {
-          const minTime = Math.round((gcds[i - 1].time + gcdTime) * 100) / 100;
-          if (gcds[i].time < minTime) {
-            gcds[i] = { ...gcds[i], time: minTime };
-          }
-        }
 
         // If left GCDs hit 0 boundary, clamp moved GCD so it doesn't overlap
         if (movedIdx > 0) {
@@ -208,18 +182,6 @@ export const useAppStore = create<AppState>((set, get) => ({
   selectPlacement: (id) =>
     set((s) => ({ view: { ...s.view, selectedPlacementId: id } })),
 
-  loadPlan: (plan) =>
-    set({
-      selectedJobId: plan.jobId,
-      selectedTimelineId: plan.timelineId,
-      spellSpeed: plan.spellSpeed,
-      selectedLevel: Math.max(1, Math.min(100, plan.level ?? 100)),
-      placements: [...plan.placements].sort((a, b) => a.time - b.time),
-      validationResult: null,
-      stats: null,
-    }),
-
-  // Actions - drag
   startDrag: (skillId, skillType) => set({ draggingSkillId: skillId, draggingSkillType: skillType }),
   endDrag: () => set({ draggingSkillId: null, draggingSkillType: null }),
 
