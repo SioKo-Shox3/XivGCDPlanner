@@ -11,7 +11,40 @@
         "castTime": 0,
         "potency": 230,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000310_hr1.tex&format=png",
-        "description": "対象に物理攻撃。威力：230"
+        "description": "対象に物理攻撃。威力：230",
+        "level": 1
+      },
+      {
+        "id": 78,
+        "name": "ボーパルスラスト",
+        "castTime": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000312_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：トゥルースラスト コンボ時威力：280",
+        "level": 4
+      },
+      {
+        "id": 87,
+        "name": "ディセムボウル",
+        "castTime": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000317_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：トゥルースラスト コンボ時威力：280 竜槍を付与。",
+        "level": 18
+      },
+      {
+        "id": 84,
+        "name": "フルスラスト",
+        "castTime": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000314_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：ボーパルスラスト コンボ時威力：400",
+        "level": 26
+      },
+      {
+        "id": 88,
+        "name": "桜華狂咲",
+        "castTime": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000308_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：ディセムボウル コンボ時威力：310 出血DoT効果を付与。",
+        "level": 50
       },
       {
         "id": 16479,
@@ -19,7 +52,8 @@
         "castTime": 0,
         "potency": 320,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002592_hr1.tex&format=png",
-        "description": "対象に物理攻撃。威力：320 「竜眼」効果中にトゥルースラストから変化。天竜眼を付与。"
+        "description": "対象に物理攻撃。威力：320 「竜眼」効果中にトゥルースラストから変化。天竜眼を付与。",
+        "level": 76
       },
       {
         "id": 36954,
@@ -27,7 +61,9 @@
         "castTime": 0,
         "potency": 340,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002076_hr1.tex&format=png",
-        "description": "対象に物理攻撃。コンボ条件：トゥルースラスト／竜眼雷電 コンボ時威力：340"
+        "description": "対象に物理攻撃。コンボ条件：トゥルースラスト／竜眼雷電 コンボ時威力：340",
+        "level": 96,
+        "replacesId": 78
       },
       {
         "id": 36955,
@@ -35,7 +71,9 @@
         "castTime": 0,
         "potency": 300,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002077_hr1.tex&format=png",
-        "description": "対象に物理攻撃。コンボ条件：トゥルースラスト／竜眼雷電 コンボ時威力：300 竜槍（与ダメ+10%）を付与。"
+        "description": "対象に物理攻撃。コンボ条件：トゥルースラスト／竜眼雷電 コンボ時威力：300 竜槍（与ダメ+10%）を付与。",
+        "level": 96,
+        "replacesId": 87
       },
       {
         "id": 25771,
@@ -43,7 +81,9 @@
         "castTime": 0,
         "potency": 460,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002595_hr1.tex&format=png",
-        "description": "対象に物理攻撃。コンボ条件：スラストラッシュ コンボ時威力：460"
+        "description": "対象に物理攻撃。コンボ条件：スラストラッシュ コンボ時威力：460",
+        "level": 86,
+        "replacesId": 84
       },
       {
         "id": 25772,
@@ -51,7 +91,9 @@
         "castTime": 0,
         "potency": 340,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002596_hr1.tex&format=png",
-        "description": "対象に物理攻撃。コンボ条件：スパイラルブロウ コンボ時背面威力：340 継続ダメージ威力45を付与。"
+        "description": "対象に物理攻撃。コンボ条件：スパイラルブロウ コンボ時背面威力：340 継続ダメージ威力45を付与。",
+        "level": 86,
+        "replacesId": 88
       },
       {
         "id": 3554,
@@ -59,7 +101,8 @@
         "castTime": 0,
         "potency": 340,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002582_hr1.tex&format=png",
-        "description": "対象に物理攻撃。コンボ条件：ヘヴンスラスト コンボ時側面威力：340"
+        "description": "対象に物理攻撃。コンボ条件：ヘヴンスラスト コンボ時側面威力：340",
+        "level": 56
       },
       {
         "id": 3556,
@@ -67,7 +110,8 @@
         "castTime": 0,
         "potency": 340,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002584_hr1.tex&format=png",
-        "description": "対象に物理攻撃。コンボ条件：桜華繚乱 コンボ時背面威力：340"
+        "description": "対象に物理攻撃。コンボ条件：桜華繚乱 コンボ時背面威力：340",
+        "level": 58
       },
       {
         "id": 36952,
@@ -75,7 +119,8 @@
         "castTime": 0,
         "potency": 460,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002599_hr1.tex&format=png",
-        "description": "対象に物理攻撃。威力：460 コンボ条件：竜牙竜爪／竜尾大車輪 竜眼を付与。"
+        "description": "対象に物理攻撃。威力：460 コンボ条件：竜牙竜爪／竜尾大車輪 竜眼を付与。",
+        "level": 64
       },
       {
         "id": 90,
@@ -83,7 +128,8 @@
         "castTime": 0,
         "potency": 200,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000315_hr1.tex&format=png",
-        "description": "対象に遠隔物理攻撃。威力：200 効果アップ時威力：350"
+        "description": "対象に遠隔物理攻撃。威力：200 効果アップ時威力：350",
+        "level": 15
       },
       {
         "id": 86,
@@ -91,7 +137,8 @@
         "castTime": 0,
         "potency": 110,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000306_hr1.tex&format=png",
-        "description": "前方直線範囲物理攻撃。威力：110"
+        "description": "前方直線範囲物理攻撃。威力：110",
+        "level": 40
       },
       {
         "id": 7397,
@@ -99,7 +146,8 @@
         "castTime": 0,
         "potency": 120,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002586_hr1.tex&format=png",
-        "description": "前方直線範囲物理攻撃。コンボ条件：ドゥームスパイク／竜眼蒼穹 コンボ時威力：120 竜槍を付与。"
+        "description": "前方直線範囲物理攻撃。コンボ条件：ドゥームスパイク／竜眼蒼穹 コンボ時威力：120 竜槍を付与。",
+        "level": 62
       },
       {
         "id": 16477,
@@ -107,7 +155,8 @@
         "castTime": 0,
         "potency": 150,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002590_hr1.tex&format=png",
-        "description": "前方直線範囲物理攻撃。コンボ条件：ソニックスラスト コンボ時威力：150 竜眼を付与。"
+        "description": "前方直線範囲物理攻撃。コンボ条件：ソニックスラスト コンボ時威力：150 竜眼を付与。",
+        "level": 72
       },
       {
         "id": 25770,
@@ -115,7 +164,8 @@
         "castTime": 0,
         "potency": 130,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002594_hr1.tex&format=png",
-        "description": "前方直線範囲物理攻撃。威力：130 「竜眼」効果中にドゥームスパイクから変化。天竜眼を付与。"
+        "description": "前方直線範囲物理攻撃。威力：130 「竜眼」効果中にドゥームスパイクから変化。天竜眼を付与。",
+        "level": 82
       }
     ],
     "ability": [
@@ -125,7 +175,8 @@
         "recastTime": 40,
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000304_hr1.tex&format=png",
-        "description": "次の1回のWSが必ずクリティカルヒットし、HPを吸収する。効果時間：5秒"
+        "description": "次の1回のWSが必ずクリティカルヒットし、HPを吸収する。効果時間：5秒",
+        "level": 6
       },
       {
         "id": 85,
@@ -133,7 +184,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000309_hr1.tex&format=png",
-        "description": "与ダメージ10%上昇。効果時間：20秒"
+        "description": "与ダメージ10%上昇。効果時間：20秒",
+        "level": 30
       },
       {
         "id": 16478,
@@ -141,7 +193,8 @@
         "recastTime": 30,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002591_hr1.tex&format=png",
-        "description": "対象にジャンプで近づきつつ物理攻撃。威力：400 ミラージュダイブ実行可を付与。"
+        "description": "対象にジャンプで近づきつつ物理攻撃。威力：400 ミラージュダイブ実行可を付与。",
+        "level": 74
       },
       {
         "id": 7399,
@@ -149,7 +202,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002588_hr1.tex&format=png",
-        "description": "対象に物理攻撃。威力：380 ジャンプ、ハイジャンプ後に実行可。"
+        "description": "対象に物理攻撃。威力：380 ジャンプ、ハイジャンプ後に実行可。",
+        "level": 68
       },
       {
         "id": 96,
@@ -157,7 +211,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002578_hr1.tex&format=png",
-        "description": "対象にジャンプ範囲物理攻撃。威力：500 ドラゴンライズ実行可を付与。"
+        "description": "対象にジャンプ範囲物理攻撃。威力：500 ドラゴンライズ実行可を付与。",
+        "level": 50
       },
       {
         "id": 36953,
@@ -165,7 +220,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002075_hr1.tex&format=png",
-        "description": "対象と周囲に範囲物理攻撃。威力：550 ドラゴンダイブ後に実行可。"
+        "description": "対象と周囲に範囲物理攻撃。威力：550 ドラゴンダイブ後に実行可。",
+        "level": 92
       },
       {
         "id": 3557,
@@ -173,7 +229,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002585_hr1.tex&format=png",
-        "description": "自身とPTメンバーのクリ率10%上昇。効果時間：20秒"
+        "description": "自身とPTメンバーのクリ率10%上昇。効果時間：20秒",
+        "level": 52
       },
       {
         "id": 3555,
@@ -181,7 +238,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002583_hr1.tex&format=png",
-        "description": "前方直線範囲物理攻撃。威力：280 紅の竜血状態（与ダメ+15%）に移行。ナーストレンド実行可を付与。"
+        "description": "前方直線範囲物理攻撃。威力：280 紅の竜血状態（与ダメ+15%）に移行。ナーストレンド実行可を付与。",
+        "level": 60
       },
       {
         "id": 7400,
@@ -189,7 +247,8 @@
         "recastTime": 2,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002589_hr1.tex&format=png",
-        "description": "前方直線範囲物理攻撃。威力：720 紅の竜血中に実行可。"
+        "description": "前方直線範囲物理攻撃。威力：720 紅の竜血中に実行可。",
+        "level": 70
       },
       {
         "id": 16480,
@@ -197,7 +256,8 @@
         "recastTime": 30,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002593_hr1.tex&format=png",
-        "description": "対象にジャンプ範囲物理攻撃。威力：840 紅の竜血中に実行可。スタークロッサー実行可を付与。"
+        "description": "対象にジャンプ範囲物理攻撃。威力：840 紅の竜血中に実行可。スタークロッサー実行可を付与。",
+        "level": 80
       },
       {
         "id": 36956,
@@ -205,7 +265,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002078_hr1.tex&format=png",
-        "description": "対象と周囲に範囲物理攻撃。威力：1000 スターダイバー後に実行可。"
+        "description": "対象と周囲に範囲物理攻撃。威力：1000 スターダイバー後に実行可。",
+        "level": 100
       },
       {
         "id": 25773,
@@ -213,7 +274,8 @@
         "recastTime": 10,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002597_hr1.tex&format=png",
-        "description": "前方直線範囲物理攻撃。威力：440 天竜眼2スタック時に実行可。"
+        "description": "前方直線範囲物理攻撃。威力：440 天竜眼2スタック時に実行可。",
+        "level": 90
       },
       {
         "id": 36951,
@@ -221,7 +283,8 @@
         "recastTime": 60,
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002598_hr1.tex&format=png",
-        "description": "対象の目前まで素早く移動する。"
+        "description": "対象の目前まで素早く移動する。",
+        "level": 45
       },
       {
         "id": 94,
@@ -229,7 +292,8 @@
         "recastTime": 30,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002577_hr1.tex&format=png",
-        "description": "15m後方にジャンプ。ピアシングタロン効果アップを付与。"
+        "description": "15m後方にジャンプ。ピアシングタロン効果アップを付与。",
+        "level": 35
       },
       {
         "id": 7546,
@@ -237,7 +301,8 @@
         "recastTime": 45,
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000830_hr1.tex&format=png",
-        "description": "方向指定を無視して成功させる。効果時間：10秒"
+        "description": "方向指定を無視して成功させる。効果時間：10秒",
+        "level": 50
       },
       {
         "id": 7549,
@@ -245,7 +310,8 @@
         "recastTime": 90,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000828_hr1.tex&format=png",
-        "description": "対象の与物理ダメ10%、与魔法ダメ5%減少。効果時間：15秒"
+        "description": "対象の与物理ダメ10%、与魔法ダメ5%減少。効果時間：15秒",
+        "level": 22
       }
     ]
   }

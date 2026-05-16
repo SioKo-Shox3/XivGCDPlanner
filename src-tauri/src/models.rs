@@ -8,9 +8,14 @@ pub struct GcdSkillDef {
     pub name: String,
     #[serde(rename = "castTime")]
     pub cast_time: f64,
+    #[serde(default)]
     pub potency: u32,
     pub icon: String,
     pub description: String,
+    #[serde(default)]
+    pub level: Option<u32>,
+    #[serde(rename = "replacesId", default)]
+    pub replaces_id: Option<u32>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -23,6 +28,10 @@ pub struct AbilitySkillDef {
     pub max_charges: u32,
     pub icon: String,
     pub description: String,
+    #[serde(default)]
+    pub level: Option<u32>,
+    #[serde(rename = "replacesId", default)]
+    pub replaces_id: Option<u32>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

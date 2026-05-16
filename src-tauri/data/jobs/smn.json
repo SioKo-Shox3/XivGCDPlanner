@@ -11,7 +11,8 @@
         "castTime": 1.5,
         "potency": 400,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002682_hr1.tex",
-        "description": "対象に無属性魔法攻撃。威力：400"
+        "description": "対象に無属性魔法攻撃。威力：400",
+        "level": 54
       },
       {
         "id": 7426,
@@ -19,7 +20,8 @@
         "castTime": 0,
         "potency": 520,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002686_hr1.tex",
-        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：520"
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：520",
+        "level": 62
       },
       {
         "id": 7427,
@@ -27,7 +29,8 @@
         "castTime": 0,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002691_hr1.tex",
-        "description": "デミ・バハムートを顕現し、ルインガをアストラルインパルスに変化させる。"
+        "description": "デミ・バハムートを顕現し、ルインガをアストラルインパルスに変化させる。",
+        "level": 70
       },
       {
         "id": 25820,
@@ -35,7 +38,8 @@
         "castTime": 0,
         "potency": 500,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002757_hr1.tex",
-        "description": "対象に無属性魔法攻撃。威力：500"
+        "description": "対象に無属性魔法攻撃。威力：500",
+        "level": 58
       },
       {
         "id": 25831,
@@ -43,7 +47,8 @@
         "castTime": 0,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002765_hr1.tex",
-        "description": "デミ・フェニックスを顕現し、ルインガを霊泉の炎に変化させる。"
+        "description": "デミ・フェニックスを顕現し、ルインガを霊泉の炎に変化させる。",
+        "level": 80
       },
       {
         "id": 25835,
@@ -51,7 +56,8 @@
         "castTime": 0,
         "potency": 560,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002769_hr1.tex",
-        "description": "対象に急接近して火属性範囲魔法攻撃。威力：560"
+        "description": "対象に急接近して火属性範囲魔法攻撃。威力：560",
+        "level": 86
       },
       {
         "id": 25885,
@@ -59,7 +65,8 @@
         "castTime": 0,
         "potency": 560,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002779_hr1.tex",
-        "description": "対象とその周囲の敵に火属性範囲魔法攻撃。威力：560"
+        "description": "対象とその周囲の敵に火属性範囲魔法攻撃。威力：560",
+        "level": 86
       },
       {
         "id": 25837,
@@ -67,7 +74,8 @@
         "castTime": 3,
         "potency": 520,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002771_hr1.tex",
-        "description": "対象とその周囲の敵に風属性範囲魔法攻撃。威力：520"
+        "description": "対象とその周囲の敵に風属性範囲魔法攻撃。威力：520",
+        "level": 86
       },
       {
         "id": 36992,
@@ -75,7 +83,8 @@
         "castTime": 0,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002782_hr1.tex",
-        "description": "ソルバハムートを顕現し、ルインガをアンブラルインパルスに変化させる。"
+        "description": "ソルバハムートを顕現し、ルインガをアンブラルインパルスに変化させる。",
+        "level": 100
       },
       {
         "id": 36994,
@@ -83,7 +92,8 @@
         "castTime": 0,
         "potency": 640,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002784_hr1.tex",
-        "description": "対象に無属性魔法攻撃。威力：640"
+        "description": "対象に無属性魔法攻撃。威力：640",
+        "level": 100
       }
     ],
     "ability": [
@@ -93,7 +103,8 @@
         "recastTime": 60,
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002750_hr1.tex",
-        "description": "自身に最大HPの20%分ダメージを軽減するバリアを張る。"
+        "description": "自身に最大HPの20%分ダメージを軽減するバリアを張る。",
+        "level": 2
       },
       {
         "id": 25801,
@@ -101,7 +112,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002780_hr1.tex",
-        "description": "自身と周囲のパーティメンバーの与ダメージを5%上昇させる。効果時間：20秒"
+        "description": "自身と周囲のパーティメンバーの与ダメージを5%上昇させる。効果時間：20秒",
+        "level": 66
       },
       {
         "id": 16508,
@@ -109,7 +121,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000514_hr1.tex",
-        "description": "対象に無属性魔法攻撃を行い、エーテルフローを2スタック付与する。"
+        "description": "対象に無属性魔法攻撃を行い、エーテルフローを2スタック付与する。",
+        "level": 10
       },
       {
         "id": 7429,
@@ -117,7 +130,8 @@
         "recastTime": 20,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002693_hr1.tex",
-        "description": "デミ・バハムートに「アク・モーン」を実行させる。"
+        "description": "デミ・バハムートに「アク・モーン」を実行させる。",
+        "level": 70
       },
       {
         "id": 36990,
@@ -125,7 +139,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002699_hr1.tex",
-        "description": "対象に無属性魔法攻撃。威力：500"
+        "description": "対象に無属性魔法攻撃。威力：500",
+        "level": 92
       },
       {
         "id": 36991,
@@ -133,7 +148,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002781_hr1.tex",
-        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：700"
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：700",
+        "level": 96
       },
       {
         "id": 36997,
@@ -141,7 +157,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002787_hr1.tex",
-        "description": "自身と周囲のパーティメンバーのHPを回復する。回復力：500"
+        "description": "自身と周囲のパーティメンバーのHPを回復する。回復力：500",
+        "level": 100
       },
       {
         "id": 36998,
@@ -149,7 +166,8 @@
         "recastTime": 20,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002788_hr1.tex",
-        "description": "ソルバハムートに「エクソダス」を実行させる。"
+        "description": "ソルバハムートに「エクソダス」を実行させる。",
+        "level": 100
       }
     ]
   }

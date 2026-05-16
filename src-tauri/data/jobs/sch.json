@@ -11,7 +11,8 @@
         "castTime": 1.5,
         "potency": 150,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000501_hr1.tex",
-        "description": "対象に無属性魔法攻撃。威力：150"
+        "description": "対象に無属性魔法攻撃。威力：150",
+        "level": 1
       },
       {
         "id": 17870,
@@ -19,7 +20,8 @@
         "castTime": 0,
         "potency": 220,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000502_hr1.tex",
-        "description": "対象に無属性魔法攻撃。威力：220"
+        "description": "対象に無属性魔法攻撃。威力：220",
+        "level": 38
       },
       {
         "id": 16540,
@@ -27,7 +29,8 @@
         "castTime": 0,
         "potency": 40,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002820_hr1.tex",
-        "description": "対象に継続ダメージを付与する。威力：40"
+        "description": "対象に継続ダメージを付与する。威力：40",
+        "level": 72
       },
       {
         "id": 25865,
@@ -35,7 +38,8 @@
         "castTime": 1.5,
         "potency": 310,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002875_hr1.tex",
-        "description": "対象に無属性魔法攻撃。威力：310"
+        "description": "対象に無属性魔法攻撃。威力：310",
+        "level": 82
       },
       {
         "id": 25866,
@@ -43,7 +47,8 @@
         "castTime": 0,
         "potency": 180,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002876_hr1.tex",
-        "description": "自身の周囲の敵に範囲魔法攻撃。威力：180"
+        "description": "自身の周囲の敵に範囲魔法攻撃。威力：180",
+        "level": 82
       },
       {
         "id": 190,
@@ -51,7 +56,8 @@
         "castTime": 1.5,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000518_hr1.tex",
-        "description": "対象のHPを回復する。"
+        "description": "対象のHPを回復する。",
+        "level": 4
       },
       {
         "id": 185,
@@ -59,7 +65,8 @@
         "castTime": 2,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002801_hr1.tex",
-        "description": "対象を回復し、バリアを付与する。"
+        "description": "対象を回復し、バリアを付与する。",
+        "level": 30
       },
       {
         "id": 186,
@@ -67,7 +74,8 @@
         "castTime": 2,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002802_hr1.tex",
-        "description": "範囲回復とバリア付与を同時に行う。"
+        "description": "範囲回復とバリア付与を同時に行う。",
+        "level": 35
       }
     ],
     "ability": [
@@ -77,7 +85,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000510_hr1.tex",
-        "description": "エーテルフロースタックを回復し、MPを回復する。"
+        "description": "エーテルフロースタックを回復し、MPを回復する。",
+        "level": 45
       },
       {
         "id": 167,
@@ -85,7 +94,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000514_hr1.tex",
-        "description": "対象に無属性攻撃を行い、MPを回復する。"
+        "description": "対象に無属性攻撃を行い、MPを回復する。",
+        "level": 45
       },
       {
         "id": 188,
@@ -93,7 +103,8 @@
         "recastTime": 30,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002804_hr1.tex",
-        "description": "設置した陣内のパーティメンバーの被ダメージを軽減する。"
+        "description": "設置した陣内のパーティメンバーの被ダメージを軽減する。",
+        "level": 50
       },
       {
         "id": 189,
@@ -101,7 +112,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002805_hr1.tex",
-        "description": "対象のHPを即座に回復する。"
+        "description": "対象のHPを即座に回復する。",
+        "level": 45
       },
       {
         "id": 3583,
@@ -109,7 +121,8 @@
         "recastTime": 30,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002806_hr1.tex",
-        "description": "周囲のパーティメンバーのHPを回復する。"
+        "description": "周囲のパーティメンバーのHPを回復する。",
+        "level": 52
       },
       {
         "id": 3585,
@@ -117,7 +130,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002808_hr1.tex",
-        "description": "鼓舞激励の策などのバリア効果を周囲に展開する。"
+        "description": "鼓舞激励の策などのバリア効果を周囲に展開する。",
+        "level": 56
       },
       {
         "id": 3587,
@@ -125,7 +139,8 @@
         "recastTime": 180,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002810_hr1.tex",
-        "description": "フェアリーを一時退避させ、エーテルフロースタックを回復する。"
+        "description": "フェアリーを一時退避させ、エーテルフロースタックを回復する。",
+        "level": 60
       },
       {
         "id": 7436,
@@ -133,7 +148,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002815_hr1.tex",
-        "description": "対象に被クリティカル率上昇効果を付与する。"
+        "description": "対象に被クリティカル率上昇効果を付与する。",
+        "level": 66
       },
       {
         "id": 16542,
@@ -141,7 +157,8 @@
         "recastTime": 90,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002822_hr1.tex",
-        "description": "次の一部回復魔法を必ずクリティカルにする。"
+        "description": "次の一部回復魔法を必ずクリティカルにする。",
+        "level": 74
       },
       {
         "id": 25868,
@@ -149,7 +166,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002878_hr1.tex",
-        "description": "パーティメンバーに移動速度上昇と被ダメージ軽減を付与する。"
+        "description": "パーティメンバーに移動速度上昇と被ダメージ軽減を付与する。",
+        "level": 90
       }
     ]
   }

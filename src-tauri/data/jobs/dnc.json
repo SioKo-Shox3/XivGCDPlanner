@@ -11,7 +11,8 @@
         "castTime": 0,
         "potency": 220,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003451_hr1.tex",
-        "description": "対象に物理攻撃。威力：220 コンボの起点。"
+        "description": "対象に物理攻撃。威力：220 コンボの起点。",
+        "level": 1
       },
       {
         "id": 15990,
@@ -19,7 +20,8 @@
         "castTime": 0,
         "potency": 280,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003452_hr1.tex",
-        "description": "対象に物理攻撃。コンボ時威力：280"
+        "description": "対象に物理攻撃。コンボ時威力：280",
+        "level": 2
       },
       {
         "id": 15991,
@@ -27,7 +29,8 @@
         "castTime": 0,
         "potency": 280,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003460_hr1.tex",
-        "description": "対象に物理攻撃。威力：280 対称投擲効果中に実行可能。"
+        "description": "対象に物理攻撃。威力：280 対称投擲効果中に実行可能。",
+        "level": 20
       },
       {
         "id": 15992,
@@ -35,7 +38,8 @@
         "castTime": 0,
         "potency": 340,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003464_hr1.tex",
-        "description": "対象に物理攻撃。威力：340 非対称投擲効果中に実行可能。"
+        "description": "対象に物理攻撃。威力：340 非対称投擲効果中に実行可能。",
+        "level": 40
       },
       {
         "id": 16005,
@@ -43,7 +47,8 @@
         "castTime": 0,
         "potency": 520,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003476_hr1.tex",
-        "description": "対象とその周囲に範囲物理攻撃。威力：520 エスプリ50で実行可能。"
+        "description": "対象とその周囲に範囲物理攻撃。威力：520 エスプリ50で実行可能。",
+        "level": 76
       },
       {
         "id": 25790,
@@ -51,7 +56,8 @@
         "castTime": 0,
         "potency": 600,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003480_hr1.tex",
-        "description": "自身の周囲に範囲物理攻撃。威力：600 テクニカルフィニッシュ後に実行可能。"
+        "description": "自身の周囲に範囲物理攻撃。威力：600 テクニカルフィニッシュ後に実行可能。",
+        "level": 82
       },
       {
         "id": 25792,
@@ -59,7 +65,8 @@
         "castTime": 0,
         "potency": 600,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003482_hr1.tex",
-        "description": "対象に向かって前方直線範囲物理攻撃。威力：600 攻めのタンゴ後に実行可能。"
+        "description": "対象に向かって前方直線範囲物理攻撃。威力：600 攻めのタンゴ後に実行可能。",
+        "level": 90
       },
       {
         "id": 36983,
@@ -67,7 +74,8 @@
         "castTime": 0,
         "potency": 540,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003483_hr1.tex",
-        "description": "対象とその周囲に範囲物理攻撃。威力：540 スタンダードフィニッシュ後に実行可能。"
+        "description": "対象とその周囲に範囲物理攻撃。威力：540 スタンダードフィニッシュ後に実行可能。",
+        "level": 92
       },
       {
         "id": 36984,
@@ -75,7 +83,8 @@
         "castTime": 0,
         "potency": 850,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003484_hr1.tex",
-        "description": "自身の周囲に範囲物理攻撃。威力：850 フラリッシュ後に実行可能。"
+        "description": "自身の周囲に範囲物理攻撃。威力：850 フラリッシュ後に実行可能。",
+        "level": 96
       },
       {
         "id": 15997,
@@ -83,7 +92,8 @@
         "castTime": 0,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003454_hr1.tex",
-        "description": "ダンスモードに移行し、スタンダードフィニッシュへ変化する。"
+        "description": "ダンスモードに移行し、スタンダードフィニッシュへ変化する。",
+        "level": 15
       },
       {
         "id": 15998,
@@ -91,7 +101,8 @@
         "castTime": 0,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003473_hr1.tex",
-        "description": "ダンスモードに移行し、テクニカルフィニッシュへ変化する。"
+        "description": "ダンスモードに移行し、テクニカルフィニッシュへ変化する。",
+        "level": 70
       }
     ],
     "ability": [
@@ -101,7 +112,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003471_hr1.tex",
-        "description": "自身とクローズドポジション対象のクリティカル発動率とダイレクトヒット発動率を上昇させる。"
+        "description": "自身とクローズドポジション対象のクリティカル発動率とダイレクトヒット発動率を上昇させる。",
+        "level": 62
       },
       {
         "id": 16013,
@@ -109,7 +121,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003475_hr1.tex",
-        "description": "各種派生アクション実行可とフィニシングムーブ実行可を付与する。"
+        "description": "各種派生アクション実行可とフィニシングムーブ実行可を付与する。",
+        "level": 72
       },
       {
         "id": 16007,
@@ -117,7 +130,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003462_hr1.tex",
-        "description": "対象に物理攻撃。威力：180 幻扇消費で実行する。"
+        "description": "対象に物理攻撃。威力：180 幻扇消費で実行する。",
+        "level": 30
       },
       {
         "id": 16009,
@@ -125,7 +139,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003472_hr1.tex",
-        "description": "対象とその周囲に範囲物理攻撃。威力：220 扇の舞い【急】実行可中に使用する。"
+        "description": "対象とその周囲に範囲物理攻撃。威力：220 扇の舞い【急】実行可中に使用する。",
+        "level": 66
       },
       {
         "id": 25791,
@@ -133,7 +148,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003481_hr1.tex",
-        "description": "対象に向かって前方扇範囲物理攻撃。威力：460 フラリッシュ後に実行可能。"
+        "description": "対象に向かって前方扇範囲物理攻撃。威力：460 フラリッシュ後に実行可能。",
+        "level": 86
       },
       {
         "id": 16006,
@@ -141,7 +157,8 @@
         "recastTime": 30,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003470_hr1.tex",
-        "description": "パーティメンバーひとりをダンスパートナーにする。再使用で解除する。"
+        "description": "パーティメンバーひとりをダンスパートナーにする。再使用で解除する。",
+        "level": 60
       },
       {
         "id": 16015,
@@ -149,7 +166,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003468_hr1.tex",
-        "description": "自身と周囲のパーティメンバーのHPを回復する。"
+        "description": "自身と周囲のパーティメンバーのHPを回復する。",
+        "level": 52
       },
       {
         "id": 16012,
@@ -157,7 +175,8 @@
         "recastTime": 90,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003469_hr1.tex",
-        "description": "自身と周囲のパーティメンバーの被ダメージを軽減する。効果時間：15秒"
+        "description": "自身と周囲のパーティメンバーの被ダメージを軽減する。効果時間：15秒",
+        "level": 56
       },
       {
         "id": 16014,
@@ -165,7 +184,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003477_hr1.tex",
-        "description": "自身を中心にインプロビゼーションを行い、時間経過で回復とシールド効果を高める。"
+        "description": "自身を中心にインプロビゼーションを行い、時間経過で回復とシールド効果を高める。",
+        "level": 80
       }
     ]
   }

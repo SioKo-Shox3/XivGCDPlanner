@@ -11,7 +11,8 @@
         "castTime": 1.5,
         "potency": 330,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003680_hr1.tex",
-        "description": "対象に無属性魔法攻撃。威力：330"
+        "description": "対象に無属性魔法攻撃。威力：330",
+        "level": 82
       },
       {
         "id": 24290,
@@ -19,7 +20,8 @@
         "castTime": 0,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003658_hr1.tex",
-        "description": "特定の魔法を変化させる。"
+        "description": "特定の魔法を変化させる。",
+        "level": 30
       },
       {
         "id": 24314,
@@ -27,7 +29,8 @@
         "castTime": 0,
         "potency": 70,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003682_hr1.tex",
-        "description": "対象に継続ダメージを付与する。威力：70"
+        "description": "対象に継続ダメージを付与する。威力：70",
+        "level": 82
       },
       {
         "id": 24315,
@@ -35,7 +38,8 @@
         "castTime": 0,
         "potency": 170,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003683_hr1.tex",
-        "description": "自身の周囲の敵に範囲魔法攻撃。威力：170"
+        "description": "自身の周囲の敵に範囲魔法攻撃。威力：170",
+        "level": 82
       },
       {
         "id": 24316,
@@ -43,7 +47,8 @@
         "castTime": 0,
         "potency": 330,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003684_hr1.tex",
-        "description": "対象とその周囲の敵に範囲魔法攻撃。威力：330"
+        "description": "対象とその周囲の敵に範囲魔法攻撃。威力：330",
+        "level": 82
       },
       {
         "id": 24313,
@@ -51,7 +56,8 @@
         "castTime": 0,
         "potency": 600,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003681_hr1.tex",
-        "description": "対象とその周囲の敵に範囲魔法攻撃。威力：600"
+        "description": "対象とその周囲の敵に範囲魔法攻撃。威力：600",
+        "level": 82
       },
       {
         "id": 24284,
@@ -59,7 +65,8 @@
         "castTime": 1.5,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003652_hr1.tex",
-        "description": "対象のHPを回復する。"
+        "description": "対象のHPを回復する。",
+        "level": 2
       },
       {
         "id": 24286,
@@ -67,7 +74,8 @@
         "castTime": 2,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003654_hr1.tex",
-        "description": "自身と周囲のパーティメンバーのHPを回復する。"
+        "description": "自身と周囲のパーティメンバーのHPを回復する。",
+        "level": 10
       },
       {
         "id": 24292,
@@ -75,7 +83,8 @@
         "castTime": 0,
         "potency": 0,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003660_hr1.tex",
-        "description": "範囲回復とバリア付与を行う。"
+        "description": "範囲回復とバリア付与を行う。",
+        "level": 30
       },
       {
         "id": 24318,
@@ -83,7 +92,8 @@
         "castTime": 1.5,
         "potency": 330,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003686_hr1.tex",
-        "description": "直線範囲の敵に魔法攻撃を行い、味方を回復する。威力：330"
+        "description": "直線範囲の敵に魔法攻撃を行い、味方を回復する。威力：330",
+        "level": 90
       }
     ],
     "ability": [
@@ -93,7 +103,8 @@
         "recastTime": 90,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003662_hr1.tex",
-        "description": "カルディアによる回復量を上昇させる。"
+        "description": "カルディアによる回復量を上昇させる。",
+        "level": 35
       },
       {
         "id": 24296,
@@ -101,7 +112,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003664_hr1.tex",
-        "description": "対象のHPを即座に回復する。"
+        "description": "対象のHPを即座に回復する。",
+        "level": 45
       },
       {
         "id": 24300,
@@ -109,7 +121,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003668_hr1.tex",
-        "description": "次に使用する一部回復魔法の効果を上昇させる。"
+        "description": "次に使用する一部回復魔法の効果を上昇させる。",
+        "level": 56
       },
       {
         "id": 24309,
@@ -117,7 +130,8 @@
         "recastTime": 90,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003677_hr1.tex",
-        "description": "アダーガルを1つ得る。"
+        "description": "アダーガルを1つ得る。",
+        "level": 74
       },
       {
         "id": 24310,
@@ -125,7 +139,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003678_hr1.tex",
-        "description": "周囲のパーティメンバーに回復と軽減を付与する。"
+        "description": "周囲のパーティメンバーに回復と軽減を付与する。",
+        "level": 76
       },
       {
         "id": 24311,
@@ -133,7 +148,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003679_hr1.tex",
-        "description": "範囲に多重バリアを付与する。"
+        "description": "範囲に多重バリアを付与する。",
+        "level": 80
       },
       {
         "id": 24317,
@@ -141,7 +157,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003685_hr1.tex",
-        "description": "対象のHP回復量を上昇させる。"
+        "description": "対象のHP回復量を上昇させる。",
+        "level": 86
       },
       {
         "id": 37033,
@@ -149,7 +166,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003688_hr1.tex",
-        "description": "対象とその周囲の敵に範囲攻撃を行う。"
+        "description": "対象とその周囲の敵に範囲攻撃を行う。",
+        "level": 92
       },
       {
         "id": 37035,
@@ -157,7 +175,8 @@
         "recastTime": 180,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003690_hr1.tex",
-        "description": "カルディアの効果を全体化し、回復支援を強化する。"
+        "description": "カルディアの効果を全体化し、回復支援を強化する。",
+        "level": 100
       }
     ]
   }

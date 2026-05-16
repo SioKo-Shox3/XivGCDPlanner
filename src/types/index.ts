@@ -10,6 +10,10 @@ export interface GcdSkillDef {
   potency: number;
   icon: string;
   description: string;
+  /** The character level at which this skill is learned */
+  level?: number;
+  /** The skill ID that this skill replaces (for upgraded skills) */
+  replacesId?: number;
 }
 
 export interface AbilitySkillDef {
@@ -19,6 +23,10 @@ export interface AbilitySkillDef {
   maxCharges: number;
   icon: string;
   description: string;
+  /** The character level at which this skill is learned */
+  level?: number;
+  /** The skill ID that this skill replaces (for upgraded skills) */
+  replacesId?: number;
 }
 
 export interface JobDef {

@@ -1,8 +1,26 @@
 import { useAppStore } from "@/stores/timelineStore";
 import { SkillIcon } from "./SkillIcon";
+import type { GcdSkillDef, AbilitySkillDef } from "@/types";
+
+function filterSkillsByLevel<T extends GcdSkillDef | AbilitySkillDef>(
+  skills: T[],
+  level: number
+): T[] {
+  // Collect IDs of skills that are replaced at or below the selected level.
+  // Only consider replacement skills that have an explicit level (data integrity guard).
+  const replacedIds = new Set(
+    skills
+      .filter((s) => s.replacesId !== undefined && s.level !== undefined && s.level <= level)
+      .map((s) => s.replacesId as number)
+  );
+  return skills.filter(
+    (s) => (s.level ?? 1) <= level && !replacedIds.has(s.id)
+  );
+}
 
 export function SkillPalette() {
   const selectedJob = useAppStore((s) => s.jobs.find((j) => j.id === s.selectedJobId));
+  const selectedLevel = useAppStore((s) => s.selectedLevel);
 
   if (!selectedJob) {
     return (
@@ -28,7 +46,7 @@ export function SkillPalette() {
           ウェポンスキル / 魔法
         </h3>
         <div className="grid grid-cols-4 gap-1">
-          {selectedJob.skills.gcd.map((skill) => (
+          {filterSkillsByLevel(selectedJob.skills.gcd, selectedLevel).map((skill) => (
             <SkillIcon key={skill.id} skill={skill} skillType="gcd" />
           ))}
         </div>
@@ -42,7 +60,7 @@ export function SkillPalette() {
           アビリティ
         </h3>
         <div className="grid grid-cols-4 gap-1">
-          {selectedJob.skills.ability.map((skill) => (
+          {filterSkillsByLevel(selectedJob.skills.ability, selectedLevel).map((skill) => (
             <SkillIcon key={skill.id} skill={skill} skillType="ability" />
           ))}
         </div>

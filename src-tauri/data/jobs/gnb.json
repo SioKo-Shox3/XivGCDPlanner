@@ -11,7 +11,8 @@
         "castTime": 0,
         "potency": 300,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003401_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：300"
+        "description": "対象に物理攻撃。 威力：300",
+        "level": 1
       },
       {
         "id": 16139,
@@ -19,7 +20,8 @@
         "castTime": 0,
         "potency": 380,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003403_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：240 コンボ条件：キーンエッジ コンボ時威力：380 コンボボーナス：自身のＨＰを回復する。 回復力：200 さらに、自身に一定量のダメージを防ぐバリアを張る。 このバリアは回復量の100％分のダメージを軽減する。 効果時間：30秒"
+        "description": "対象に物理攻撃。 威力：240 コンボ条件：キーンエッジ コンボ時威力：380 コンボボーナス：自身のＨＰを回復する。 回復力：200 さらに、自身に一定量のダメージを防ぐバリアを張る。 このバリアは回復量の100％分のダメージを軽減する。 効果時間：30秒",
+        "level": 4
       },
       {
         "id": 16145,
@@ -27,7 +29,8 @@
         "castTime": 0,
         "potency": 460,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003409_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：240 コンボ条件：ブルータルシェル コンボ時威力：460 コンボボーナス：自身に「ソイル」を付与する。"
+        "description": "対象に物理攻撃。 威力：240 コンボ条件：ブルータルシェル コンボ時威力：460 コンボボーナス：自身に「ソイル」を付与する。",
+        "level": 26
       },
       {
         "id": 16153,
@@ -35,7 +38,8 @@
         "castTime": 0,
         "potency": 300,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003417_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：300 追加効果：対象に継続ダメージを付与する。 威力：60 効果時間：30秒 発動条件：「ソニックブレイク実行可」効果中"
+        "description": "対象に物理攻撃。 威力：300 追加効果：対象に継続ダメージを付与する。 威力：60 効果時間：30秒 発動条件：「ソニックブレイク実行可」効果中",
+        "level": 54
       },
       {
         "id": 16146,
@@ -43,7 +47,8 @@
         "castTime": 0,
         "potency": 500,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003410_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：500 追加効果：自身に「ジャギュラーリップ実行可」を付与する。 効果時間：10秒 この効果はウェポンスキルを実行すると解除される。 発動条件：「ソイル」 このウェポンスキルは固有のリキャストタイマーを持つ。"
+        "description": "対象に物理攻撃。 威力：500 追加効果：自身に「ジャギュラーリップ実行可」を付与する。 効果時間：10秒 この効果はウェポンスキルを実行すると解除される。 発動条件：「ソイル」 このウェポンスキルは固有のリキャストタイマーを持つ。",
+        "level": 60
       },
       {
         "id": 16147,
@@ -51,7 +56,8 @@
         "castTime": 0,
         "potency": 560,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003411_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：560 コンボ条件：ビートファング 追加効果：自身に「アブドメンテアー実行可」を付与する。 効果時間：10秒 この効果はウェポンスキルを実行すると解除される。 発動条件：コンボ条件を満たした場合のみ"
+        "description": "対象に物理攻撃。 威力：560 コンボ条件：ビートファング 追加効果：自身に「アブドメンテアー実行可」を付与する。 効果時間：10秒 この効果はウェポンスキルを実行すると解除される。 発動条件：コンボ条件を満たした場合のみ",
+        "level": 60
       },
       {
         "id": 16150,
@@ -59,7 +65,8 @@
         "castTime": 0,
         "potency": 620,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003414_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：620 コンボ条件：サベッジクロウ 追加効果：自身に「アイガウジ実行可」を付与する。 効果時間：10秒 この効果はウェポンスキルを実行すると解除される。 発動条件：コンボ条件を満たした場合のみ"
+        "description": "対象に物理攻撃。 威力：620 コンボ条件：サベッジクロウ 追加効果：自身に「アイガウジ実行可」を付与する。 効果時間：10秒 この効果はウェポンスキルを実行すると解除される。 発動条件：コンボ条件を満たした場合のみ",
+        "level": 60
       },
       {
         "id": 16162,
@@ -67,7 +74,8 @@
         "castTime": 0,
         "potency": 460,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003426_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：460 追加効果：自身に「ハイパーヴェロシティ実行可」を付与する。 効果時間：10秒 この効果はウェポンスキルを実行すると解除される。 発動条件：「ソイル」"
+        "description": "対象に物理攻撃。 威力：460 追加効果：自身に「ハイパーヴェロシティ実行可」を付与する。 効果時間：10秒 この効果はウェポンスキルを実行すると解除される。 発動条件：「ソイル」",
+        "level": 30
       },
       {
         "id": 25760,
@@ -75,7 +83,8 @@
         "castTime": 0,
         "potency": 1200,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003432_hr1.tex&format=png",
-        "description": "自身の周囲の敵に範囲物理攻撃。 威力：1200 2体目以降の対象への威力は15％減少する。 発動条件：「ソイル」2 このウェポンスキルは固有のリキャストタイマーを持つ。"
+        "description": "自身の周囲の敵に範囲物理攻撃。 威力：1200 2体目以降の対象への威力は15％減少する。 発動条件：「ソイル」2 このウェポンスキルは固有のリキャストタイマーを持つ。",
+        "level": 90
       },
       {
         "id": 36937,
@@ -83,7 +92,8 @@
         "castTime": 0,
         "potency": 800,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003437_hr1.tex&format=png",
-        "description": "対象とその周囲の敵に範囲物理攻撃。 威力：800 2体目以降の対象への威力は60％減少する。 発動条件：「ハートコンボ実行可」効果中"
+        "description": "対象とその周囲の敵に範囲物理攻撃。 威力：800 2体目以降の対象への威力は60％減少する。 発動条件：「ハートコンボ実行可」効果中",
+        "level": 100
       },
       {
         "id": 36938,
@@ -91,7 +101,8 @@
         "castTime": 0,
         "potency": 1000,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003438_hr1.tex&format=png",
-        "description": "対象とその周囲の敵に範囲物理攻撃。 威力：1000 2体目以降の対象への威力は60％減少する。 コンボ条件：ライズ・オブ・ハート"
+        "description": "対象とその周囲の敵に範囲物理攻撃。 威力：1000 2体目以降の対象への威力は60％減少する。 コンボ条件：ライズ・オブ・ハート",
+        "level": 100
       },
       {
         "id": 36939,
@@ -99,7 +110,8 @@
         "castTime": 0,
         "potency": 1200,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003439_hr1.tex&format=png",
-        "description": "対象とその周囲の敵に範囲物理攻撃。 威力：1200 2体目以降の対象への威力は60％減少する。 コンボ条件：ルーラー・オブ・ハート"
+        "description": "対象とその周囲の敵に範囲物理攻撃。 威力：1200 2体目以降の対象への威力は60％減少する。 コンボ条件：ルーラー・オブ・ハート",
+        "level": 100
       }
     ],
     "ability": [
@@ -109,7 +121,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003402_hr1.tex&format=png",
-        "description": "一定時間、自身の与ダメージを20％上昇させる。 効果時間：20秒 追加効果：自身に「ソニックブレイク実行可」を付与する。 効果時間：30秒"
+        "description": "一定時間、自身の与ダメージを20％上昇させる。 効果時間：20秒 追加効果：自身に「ソニックブレイク実行可」を付与する。 効果時間：30秒",
+        "level": 2
       },
       {
         "id": 16151,
@@ -117,7 +130,8 @@
         "recastTime": 60,
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003415_hr1.tex&format=png",
-        "description": "対象のＨＰを継続回復する。 回復力：200 効果時間：18秒 最大チャージ数：2"
+        "description": "対象のＨＰを継続回復する。 回復力：200 効果時間：18秒 最大チャージ数：2",
+        "level": 45
       },
       {
         "id": 16156,
@@ -125,7 +139,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003420_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：240 発動条件：「ジャギュラーリップ実行可」効果中"
+        "description": "対象に物理攻撃。 威力：240 発動条件：「ジャギュラーリップ実行可」効果中",
+        "level": 70
       },
       {
         "id": 16157,
@@ -133,7 +148,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003421_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：280 発動条件：「アブドメンテアー実行可」効果中"
+        "description": "対象に物理攻撃。 威力：280 発動条件：「アブドメンテアー実行可」効果中",
+        "level": 70
       },
       {
         "id": 16158,
@@ -141,7 +157,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003422_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：320 発動条件：「アイガウジ実行可」効果中"
+        "description": "対象に物理攻撃。 威力：320 発動条件：「アイガウジ実行可」効果中",
+        "level": 70
       },
       {
         "id": 16159,
@@ -149,7 +166,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003423_hr1.tex&format=png",
-        "description": "自身の周囲の敵に範囲物理攻撃。 威力：150 追加効果：対象に継続ダメージを付与する。 威力：60 効果時間：15秒"
+        "description": "自身の周囲の敵に範囲物理攻撃。 威力：150 追加効果：対象に継続ダメージを付与する。 威力：60 効果時間：15秒",
+        "level": 62
       },
       {
         "id": 16161,
@@ -157,7 +175,8 @@
         "recastTime": 25,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003425_hr1.tex&format=png",
-        "description": "自身またはパーティメンバーひとりを対象とする。 対象の被ダメージを15％軽減する。 効果時間：7秒 追加効果：パーティメンバーを対象として実行した場合、自身に「ブルータルシェル」が付与されていれば、その効果を対象にも付与する。 効果時間：30秒"
+        "description": "自身またはパーティメンバーひとりを対象とする。 対象の被ダメージを15％軽減する。 効果時間：7秒 追加効果：パーティメンバーを対象として実行した場合、自身に「ブルータルシェル」が付与されていれば、その効果を対象にも付与する。 効果時間：30秒",
+        "level": 68
       },
       {
         "id": 16164,
@@ -165,7 +184,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003428_hr1.tex&format=png",
-        "description": "敵単体を対象とする。 自身に 3 スタックの「ソイル」を付与する。 追加効果：自身に「ハートコンボ実行可」を付与する。 効果時間：30秒"
+        "description": "敵単体を対象とする。 自身に 3 スタックの「ソイル」を付与する。 追加効果：自身に「ハートコンボ実行可」を付与する。 効果時間：30秒",
+        "level": 76
       },
       {
         "id": 16165,
@@ -173,7 +193,8 @@
         "recastTime": 30,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003429_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：800"
+        "description": "対象に物理攻撃。 威力：800",
+        "level": 80
       },
       {
         "id": 25759,
@@ -181,7 +202,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003431_hr1.tex&format=png",
-        "description": "対象に物理攻撃。 威力：220 発動条件：「ハイパーヴェロシティ実行可」効果中"
+        "description": "対象に物理攻撃。 威力：220 発動条件：「ハイパーヴェロシティ実行可」効果中",
+        "level": 86
       }
     ]
   }

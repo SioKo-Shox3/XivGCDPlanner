@@ -17,6 +17,7 @@ interface AppState {
   // Selections
   selectedJobId: string | null;
   selectedTimelineId: string | null;
+  selectedLevel: number;
   spellSpeed: number;
 
   // Rotation state
@@ -39,6 +40,7 @@ interface AppState {
   selectJob: (jobId: string) => void;
   selectTimeline: (timelineId: string) => void;
   setSpellSpeed: (ss: number) => void;
+  setLevel: (level: number) => void;
 
   // Actions - rotation editing
   addPlacement: (p: SkillPlacement) => void;
@@ -70,6 +72,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   timelines: [],
   selectedJobId: null,
   selectedTimelineId: null,
+  selectedLevel: 100,
   spellSpeed: 400,
   placements: [],
   validationResult: null,
@@ -90,6 +93,10 @@ export const useAppStore = create<AppState>((set, get) => ({
   selectTimeline: (timelineId) =>
     set({ selectedTimelineId: timelineId, placements: [], validationResult: null, stats: null }),
   setSpellSpeed: (ss) => set({ spellSpeed: ss }),
+  setLevel: (level) => {
+    if (!Number.isFinite(level)) return;
+    set({ selectedLevel: Math.max(1, Math.min(100, level)) });
+  },
 
   addPlacement: (p) =>
     set((s) => ({ placements: [...s.placements, p].sort((a, b) => a.time - b.time) })),

@@ -9,147 +9,165 @@
         "id": 24373,
         "name": "スライス",
         "castTime": 0,
-        "potency": 420.0,
+        "potency": 420,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003601_hr1.tex",
-        "description": "対象に物理攻撃。威力：420。基本コンボ始動。"
+        "description": "対象に物理攻撃。威力：420。基本コンボ始動。",
+        "level": 1
       },
       {
         "id": 24374,
         "name": "ワクシングスライス",
         "castTime": 0,
-        "potency": 500.0,
+        "potency": 500,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003602_hr1.tex",
-        "description": "対象に物理攻撃。コンボ時威力：500。"
+        "description": "対象に物理攻撃。コンボ時威力：500。",
+        "level": 5
       },
       {
         "id": 24375,
         "name": "インファナルスライス",
         "castTime": 0,
-        "potency": 600.0,
+        "potency": 600,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003603_hr1.tex",
-        "description": "対象に物理攻撃。コンボ時威力：600。"
+        "description": "対象に物理攻撃。コンボ時威力：600。",
+        "level": 30
       },
       {
         "id": 24378,
         "name": "シャドウ・オブ・デス",
         "castTime": 0,
-        "potency": 300.0,
+        "potency": 300,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003606_hr1.tex",
-        "description": "対象に物理攻撃。デスデザインを付与する。"
+        "description": "対象に物理攻撃。デスデザインを付与する。",
+        "level": 10
       },
       {
         "id": 24380,
         "name": "ソウルスライス",
         "castTime": 0,
-        "potency": 520.0,
+        "potency": 520,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003608_hr1.tex",
-        "description": "対象に物理攻撃。威力：520。ソウルゲージを50上昇。"
+        "description": "対象に物理攻撃。威力：520。ソウルゲージを50上昇。",
+        "level": 60
       },
       {
         "id": 24382,
         "name": "ジビトゥ",
         "castTime": 0,
-        "potency": 620.0,
+        "potency": 620,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003610_hr1.tex",
-        "description": "対象に物理攻撃。威力：620。側面で強化。"
+        "description": "対象に物理攻撃。威力：620。側面で強化。",
+        "level": 70
       },
       {
         "id": 24383,
         "name": "ギャロウズ",
         "castTime": 0,
-        "potency": 620.0,
+        "potency": 620,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003611_hr1.tex",
-        "description": "対象に物理攻撃。威力：620。背面で強化。"
+        "description": "対象に物理攻撃。威力：620。背面で強化。",
+        "level": 70
       },
       {
         "id": 24385,
         "name": "プレンティフルハーベスト",
         "castTime": 0,
-        "potency": 1000.0,
+        "potency": 1000,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003613_hr1.tex",
-        "description": "前方直線範囲物理攻撃。最大威力：1000。"
+        "description": "前方直線範囲物理攻撃。最大威力：1000。",
+        "level": 88
       },
       {
         "id": 24398,
         "name": "コムニオ",
         "castTime": 0,
-        "potency": 1100.0,
+        "potency": 1100,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003626_hr1.tex",
-        "description": "対象と周囲に無属性範囲魔法攻撃。威力：1100。"
+        "description": "対象と周囲に無属性範囲魔法攻撃。威力：1100。",
+        "level": 90
       },
       {
         "id": 36973,
         "name": "ペルフェクティオ",
         "castTime": 0,
-        "potency": 1300.0,
+        "potency": 1300,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003638_hr1.tex",
-        "description": "対象と周囲に範囲物理攻撃。威力：1300。"
+        "description": "対象と周囲に範囲物理攻撃。威力：1300。",
+        "level": 100
       },
       {
         "id": 24388,
         "name": "ハーベストムーン",
         "castTime": 0,
-        "potency": 800.0,
+        "potency": 800,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003616_hr1.tex",
-        "description": "対象と周囲に無属性範囲魔法攻撃。威力：800。"
+        "description": "対象と周囲に無属性範囲魔法攻撃。威力：800。",
+        "level": 82
       }
     ],
     "ability": [
       {
         "id": 24405,
         "name": "アルケインサークル",
-        "recastTime": 120.0,
+        "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003633_hr1.tex",
-        "description": "自身と周囲のパーティメンバーの与ダメージを3%上昇させる。"
+        "description": "自身と周囲のパーティメンバーの与ダメージを3%上昇させる。",
+        "level": 72
       },
       {
         "id": 24393,
         "name": "グラトニー",
-        "recastTime": 60.0,
+        "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003621_hr1.tex",
-        "description": "対象と周囲に無属性範囲魔法攻撃を行い、処刑人を付与する。"
+        "description": "対象と周囲に無属性範囲魔法攻撃を行い、処刑人を付与する。",
+        "level": 76
       },
       {
         "id": 24394,
         "name": "レムールシュラウド",
-        "recastTime": 15.0,
+        "recastTime": 15,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003622_hr1.tex",
-        "description": "レムール状態になり、バースト連携を開始する。"
+        "description": "レムール状態になり、バースト連携を開始する。",
+        "level": 80
       },
       {
         "id": 24399,
         "name": "レムールスライス",
-        "recastTime": 1.0,
+        "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003627_hr1.tex",
-        "description": "対象に物理攻撃。威力：280。ヴォイドソウル消費。"
+        "description": "対象に物理攻撃。威力：280。ヴォイドソウル消費。",
+        "level": 86
       },
       {
         "id": 36969,
         "name": "サクリフィキウム",
-        "recastTime": 1.0,
+        "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003634_hr1.tex",
-        "description": "対象と周囲に無属性範囲魔法攻撃。威力：530。"
+        "description": "対象と周囲に無属性範囲魔法攻撃。威力：530。",
+        "level": 92
       },
       {
         "id": 24401,
         "name": "ヘルズイングレス",
-        "recastTime": 20.0,
+        "recastTime": 20,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003629_hr1.tex",
-        "description": "15m前方へ素早く移動し、リターン実行可を付与する。"
+        "description": "15m前方へ素早く移動し、リターン実行可を付与する。",
+        "level": 20
       },
       {
         "id": 24404,
         "name": "アルケインクレスト",
-        "recastTime": 30.0,
+        "recastTime": 30,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003632_hr1.tex",
-        "description": "自身に最大HP10%分のバリアを付与する。"
+        "description": "自身に最大HP10%分のバリアを付与する。",
+        "level": 40
       }
     ]
   }

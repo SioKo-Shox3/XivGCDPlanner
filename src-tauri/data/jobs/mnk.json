@@ -9,147 +9,165 @@
         "id": 53,
         "name": "連撃",
         "castTime": 0,
-        "potency": 220.0,
+        "potency": 220,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000208_hr1.tex",
-        "description": "対象に物理攻撃。威力：220。クリティカル確定の基本WS。"
+        "description": "対象に物理攻撃。威力：220。クリティカル確定の基本WS。",
+        "level": 1
       },
       {
         "id": 74,
         "name": "双竜脚",
         "castTime": 0,
-        "potency": 320.0,
+        "potency": 320,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002528_hr1.tex",
-        "description": "対象に物理攻撃。威力：320。壱の功力を付与する。"
+        "description": "対象に物理攻撃。威力：320。壱の功力を付与する。",
+        "level": 50
       },
       {
         "id": 54,
         "name": "正拳突き",
         "castTime": 0,
-        "potency": 300.0,
+        "potency": 300,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000209_hr1.tex",
-        "description": "対象に物理攻撃。威力：300。コンボ2段目。"
+        "description": "対象に物理攻撃。威力：300。コンボ2段目。",
+        "level": 4
       },
       {
         "id": 61,
         "name": "双掌打",
         "castTime": 0,
-        "potency": 420.0,
+        "potency": 420,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000213_hr1.tex",
-        "description": "対象に物理攻撃。威力：420。弐の功力を付与する。"
+        "description": "対象に物理攻撃。威力：420。弐の功力を付与する。",
+        "level": 18
       },
       {
         "id": 56,
         "name": "崩拳",
         "castTime": 0,
-        "potency": 330.0,
+        "potency": 330,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000210_hr1.tex",
-        "description": "対象に物理攻撃。威力：330。側面時威力アップ。"
+        "description": "対象に物理攻撃。威力：330。側面時威力アップ。",
+        "level": 6
       },
       {
         "id": 66,
         "name": "破砕拳",
         "castTime": 0,
-        "potency": 420.0,
+        "potency": 420,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000204_hr1.tex",
-        "description": "対象に物理攻撃。威力：420。背面時威力アップ。"
+        "description": "対象に物理攻撃。威力：420。背面時威力アップ。",
+        "level": 30
       },
       {
         "id": 25765,
         "name": "天宙脚",
         "castTime": 0,
-        "potency": 600.0,
+        "potency": 600,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002977_hr1.tex",
-        "description": "対象に物理攻撃。威力：600。必殺技の単体派生。"
+        "description": "対象に物理攻撃。威力：600。必殺技の単体派生。",
+        "level": 60
       },
       {
         "id": 25768,
         "name": "鳳凰の舞",
         "castTime": 0,
-        "potency": 900.0,
+        "potency": 900,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002980_hr1.tex",
-        "description": "自身周囲に範囲物理攻撃。威力：900。必殺技の範囲派生。"
+        "description": "自身周囲に範囲物理攻撃。威力：900。必殺技の範囲派生。",
+        "level": 86
       },
       {
         "id": 25769,
         "name": "夢幻闘舞",
         "castTime": 0,
-        "potency": 1500.0,
+        "potency": 1500,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002981_hr1.tex",
-        "description": "対象と周囲に範囲物理攻撃。威力：1500。主要フィニッシャー。"
+        "description": "対象と周囲に範囲物理攻撃。威力：1500。主要フィニッシャー。",
+        "level": 90
       },
       {
         "id": 36948,
         "name": "真空波",
         "castTime": 0,
-        "potency": 900.0,
+        "potency": 900,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002985_hr1.tex",
-        "description": "自身周囲に範囲物理攻撃。威力：900。必殺技の同チャクラ派生。"
+        "description": "自身周囲に範囲物理攻撃。威力：900。必殺技の同チャクラ派生。",
+        "level": 92
       },
       {
         "id": 36949,
         "name": "絶空拳",
         "castTime": 0,
-        "potency": 900.0,
+        "potency": 900,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002986_hr1.tex",
-        "description": "前方直線範囲物理攻撃。威力：900。疾風の極意後の追撃。"
+        "description": "前方直線範囲物理攻撃。威力：900。疾風の極意後の追撃。",
+        "level": 96
       },
       {
         "id": 36950,
         "name": "乾坤闘気弾",
         "castTime": 0,
-        "potency": 1200.0,
+        "potency": 1200,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002987_hr1.tex",
-        "description": "対象と周囲に範囲物理攻撃。威力：1200。紅蓮の極意後の追撃。"
+        "description": "対象と周囲に範囲物理攻撃。威力：1200。紅蓮の極意後の追撃。",
+        "level": 100
       }
     ],
     "ability": [
       {
         "id": 69,
         "name": "踏鳴",
-        "recastTime": 40.0,
+        "recastTime": 40,
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000217_hr1.tex",
-        "description": "型条件を無視してWSを実行できる。主要回し始動。"
+        "description": "型条件を無視してWSを実行できる。主要回し始動。",
+        "level": 50
       },
       {
         "id": 7395,
         "name": "紅蓮の極意",
-        "recastTime": 60.0,
+        "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002541_hr1.tex",
-        "description": "自身の与ダメージを15%上昇させる。"
+        "description": "自身の与ダメージを15%上昇させる。",
+        "level": 68
       },
       {
         "id": 7396,
         "name": "桃園結義",
-        "recastTime": 120.0,
+        "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002542_hr1.tex",
-        "description": "自身と周囲のPTメンバーの与ダメージを5%上昇させる。"
+        "description": "自身と周囲のPTメンバーの与ダメージを5%上昇させる。",
+        "level": 70
       },
       {
         "id": 25766,
         "name": "疾風の極意",
-        "recastTime": 90.0,
+        "recastTime": 90,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002978_hr1.tex",
-        "description": "オートアタック間隔を短縮し、絶空拳実行可を付与する。"
+        "description": "オートアタック間隔を短縮し、絶空拳実行可を付与する。",
+        "level": 72
       },
       {
         "id": 25762,
         "name": "抜重歩法",
-        "recastTime": 30.0,
+        "recastTime": 30,
         "maxCharges": 3,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002975_hr1.tex",
-        "description": "対象の目前まで素早く移動する。"
+        "description": "対象の目前まで素早く移動する。",
+        "level": 35
       },
       {
         "id": 25763,
         "name": "空鳴拳",
-        "recastTime": 1.0,
+        "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000207_hr1.tex",
-        "description": "前方直線範囲物理攻撃。威力：100。闘気を消費する。"
+        "description": "前方直線範囲物理攻撃。威力：100。闘気を消費する。",
+        "level": 40
       }
     ]
   }

@@ -6,9 +6,11 @@ export function Header() {
   const selectedJobId = useAppStore((s) => s.selectedJobId);
   const selectedTimelineId = useAppStore((s) => s.selectedTimelineId);
   const spellSpeed = useAppStore((s) => s.spellSpeed);
+  const selectedLevel = useAppStore((s) => s.selectedLevel);
   const selectJob = useAppStore((s) => s.selectJob);
   const selectTimeline = useAppStore((s) => s.selectTimeline);
   const setSpellSpeed = useAppStore((s) => s.setSpellSpeed);
+  const setLevel = useAppStore((s) => s.setLevel);
   const clearPlacements = useAppStore((s) => s.clearPlacements);
 
   return (
@@ -70,6 +72,20 @@ export function Header() {
           min={400}
           max={4000}
           onChange={(e) => setSpellSpeed(Number(e.target.value))}
+        />
+      </div>
+
+      {/* Level */}
+      <div className="flex items-center gap-2">
+        <span className="ctrl-label">Lv</span>
+        <input
+          type="number"
+          className="ctrl"
+          style={{ width: 58 }}
+          value={selectedLevel}
+          min={1}
+          max={100}
+          onChange={(e) => setLevel(Number(e.target.value))}
         />
       </div>
 

@@ -11,7 +11,8 @@
         "castTime": 1.5,
         "potency": 490,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003801_hr1.tex",
-        "description": "対象に火属性魔法攻撃。威力：490"
+        "description": "対象に火属性魔法攻撃。威力：490",
+        "level": 1
       },
       {
         "id": 34652,
@@ -19,7 +20,8 @@
         "castTime": 1.5,
         "potency": 570,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003803_hr1.tex",
-        "description": "対象に水属性魔法攻撃。威力：570"
+        "description": "対象に水属性魔法攻撃。威力：570",
+        "level": 15
       },
       {
         "id": 34653,
@@ -27,7 +29,8 @@
         "castTime": 2.3,
         "potency": 860,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003804_hr1.tex",
-        "description": "対象に氷属性魔法攻撃。威力：860"
+        "description": "対象に氷属性魔法攻撃。威力：860",
+        "level": 60
       },
       {
         "id": 34654,
@@ -35,7 +38,8 @@
         "castTime": 2.3,
         "potency": 900,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003805_hr1.tex",
-        "description": "対象に土属性魔法攻撃。威力：900"
+        "description": "対象に土属性魔法攻撃。威力：900",
+        "level": 60
       },
       {
         "id": 34655,
@@ -43,7 +47,8 @@
         "castTime": 2.3,
         "potency": 940,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003806_hr1.tex",
-        "description": "対象に雷属性魔法攻撃。威力：940"
+        "description": "対象に雷属性魔法攻撃。威力：940",
+        "level": 60
       },
       {
         "id": 34662,
@@ -51,7 +56,8 @@
         "castTime": 0,
         "potency": 570,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003813_hr1.tex",
-        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：570"
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：570",
+        "level": 80
       },
       {
         "id": 34663,
@@ -59,7 +65,8 @@
         "castTime": 0,
         "potency": 940,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003814_hr1.tex",
-        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：940"
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：940",
+        "level": 90
       },
       {
         "id": 34678,
@@ -67,7 +74,8 @@
         "castTime": 0,
         "potency": 560,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003829_hr1.tex",
-        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：560"
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：560",
+        "level": 50
       },
       {
         "id": 34679,
@@ -75,7 +83,8 @@
         "castTime": 0,
         "potency": 580,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003830_hr1.tex",
-        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：580"
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：580",
+        "level": 86
       },
       {
         "id": 34680,
@@ -83,7 +92,8 @@
         "castTime": 0,
         "potency": 600,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003831_hr1.tex",
-        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：600"
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：600",
+        "level": 86
       },
       {
         "id": 34688,
@@ -91,7 +101,8 @@
         "castTime": 4,
         "potency": 1000,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003838_hr1.tex",
-        "description": "対象に向かって前方直線範囲無属性魔法攻撃。威力：1000"
+        "description": "対象に向かって前方直線範囲無属性魔法攻撃。威力：1000",
+        "level": 92
       },
       {
         "id": 34681,
@@ -99,7 +110,8 @@
         "castTime": 0,
         "potency": 1100,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003832_hr1.tex",
-        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：1100"
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：1100",
+        "level": 100
       }
     ],
     "ability": [
@@ -109,7 +121,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003826_hr1.tex",
-        "description": "自身と周囲のパーティメンバーの与ダメージを5%上昇させる。効果時間：20秒"
+        "description": "自身と周囲のパーティメンバーの与ダメージを5%上昇させる。効果時間：20秒",
+        "level": 70
       },
       {
         "id": 34683,
@@ -117,7 +130,8 @@
         "recastTime": 1,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003833_hr1.tex",
-        "description": "自身に3スタックの「サブトラクティブパレット」を付与する。"
+        "description": "自身に3スタックの「サブトラクティブパレット」を付与する。",
+        "level": 60
       },
       {
         "id": 34684,
@@ -125,7 +139,8 @@
         "recastTime": 20,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003834_hr1.tex",
-        "description": "自身の15m前方に向かって素早く移動する。"
+        "description": "自身の15m前方に向かって素早く移動する。",
+        "level": 20
       },
       {
         "id": 34670,
@@ -133,7 +148,8 @@
         "recastTime": 40,
         "maxCharges": 3,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003821_hr1.tex",
-        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：800"
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：800",
+        "level": 30
       },
       {
         "id": 34671,
@@ -141,7 +157,8 @@
         "recastTime": 40,
         "maxCharges": 3,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003822_hr1.tex",
-        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：800"
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：800",
+        "level": 30
       },
       {
         "id": 34674,
@@ -149,7 +166,8 @@
         "recastTime": 60,
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003825_hr1.tex",
-        "description": "自身に3スタックの「ハンマーコンボ実行可」を付与する。"
+        "description": "自身に3スタックの「ハンマーコンボ実行可」を付与する。",
+        "level": 50
       },
       {
         "id": 34676,
@@ -157,7 +175,8 @@
         "recastTime": 30,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003827_hr1.tex",
-        "description": "対象に向かって前方直線範囲無属性魔法攻撃。威力：1000"
+        "description": "対象に向かって前方直線範囲無属性魔法攻撃。威力：1000",
+        "level": 30
       },
       {
         "id": 34677,
@@ -165,7 +184,8 @@
         "recastTime": 30,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003828_hr1.tex",
-        "description": "対象に向かって前方直線範囲無属性魔法攻撃。威力：1100"
+        "description": "対象に向かって前方直線範囲無属性魔法攻撃。威力：1100",
+        "level": 96
       }
     ]
   }

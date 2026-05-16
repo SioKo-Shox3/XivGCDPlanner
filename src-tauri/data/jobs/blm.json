@@ -11,7 +11,8 @@
         "castTime": 2.5,
         "potency": 180,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000451_hr1.tex",
-        "description": "対象に火属性魔法攻撃。威力：180"
+        "description": "対象に火属性魔法攻撃。威力：180",
+        "level": 2
       },
       {
         "id": 142,
@@ -19,7 +20,8 @@
         "castTime": 2.5,
         "potency": 180,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000454_hr1.tex",
-        "description": "対象に氷属性魔法攻撃。威力：180"
+        "description": "対象に氷属性魔法攻撃。威力：180",
+        "level": 1
       },
       {
         "id": 144,
@@ -27,7 +29,8 @@
         "castTime": 2.5,
         "potency": 30,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000457_hr1.tex",
-        "description": "対象に雷属性魔法攻撃。威力：30 + 継続ダメージ"
+        "description": "対象に雷属性魔法攻撃。威力：30 + 継続ダメージ",
+        "level": 6
       },
       {
         "id": 147,
@@ -35,7 +38,8 @@
         "castTime": 3,
         "potency": 260,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000452_hr1.tex",
-        "description": "対象に火属性魔法攻撃。威力：260"
+        "description": "対象に火属性魔法攻撃。威力：260",
+        "level": 18
       },
       {
         "id": 25793,
@@ -43,7 +47,8 @@
         "castTime": 3,
         "potency": 260,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002668_hr1.tex",
-        "description": "対象に氷属性魔法攻撃。威力：260"
+        "description": "対象に氷属性魔法攻撃。威力：260",
+        "level": 12
       },
       {
         "id": 3577,
@@ -51,7 +56,8 @@
         "castTime": 2.8,
         "potency": 310,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002660_hr1.tex",
-        "description": "対象に火属性魔法攻撃。威力：310"
+        "description": "対象に火属性魔法攻撃。威力：310",
+        "level": 60
       },
       {
         "id": 25797,
@@ -59,7 +65,8 @@
         "castTime": 2.5,
         "potency": 500,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002672_hr1.tex",
-        "description": "対象に無属性魔法攻撃。威力：500"
+        "description": "対象に無属性魔法攻撃。威力：500",
+        "level": 90
       },
       {
         "id": 162,
@@ -67,7 +74,8 @@
         "castTime": 4,
         "potency": 220,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002652_hr1.tex",
-        "description": "自身周囲に火属性範囲魔法攻撃。威力：220"
+        "description": "自身周囲に火属性範囲魔法攻撃。威力：220",
+        "level": 50
       },
       {
         "id": 159,
@@ -75,7 +83,8 @@
         "castTime": 2.8,
         "potency": 120,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002653_hr1.tex",
-        "description": "対象とその周囲に氷属性範囲魔法攻撃。威力：120"
+        "description": "対象とその周囲に氷属性範囲魔法攻撃。威力：120",
+        "level": 40
       },
       {
         "id": 36989,
@@ -83,7 +92,8 @@
         "castTime": 3,
         "potency": 400,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002151_hr1.tex",
-        "description": "対象に無属性魔法攻撃。威力：400"
+        "description": "対象に無属性魔法攻撃。威力：400",
+        "level": 100
       }
     ],
     "ability": [
@@ -93,7 +103,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000865_hr1.tex",
-        "description": "自身のMPを継続回復する。"
+        "description": "自身のMPを継続回復する。",
+        "level": 14
       },
       {
         "id": 7561,
@@ -101,7 +112,8 @@
         "recastTime": 60,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000866_hr1.tex",
-        "description": "次に実行する魔法の詠唱時間を無しにする。"
+        "description": "次に実行する魔法の詠唱時間を無しにする。",
+        "level": 18
       },
       {
         "id": 7421,
@@ -109,7 +121,8 @@
         "recastTime": 60,
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002663_hr1.tex",
-        "description": "次に実行する3回までの魔法の詠唱時間を無しにする。"
+        "description": "次に実行する3回までの魔法の詠唱時間を無しにする。",
+        "level": 66
       },
       {
         "id": 158,
@@ -117,7 +130,8 @@
         "recastTime": 100,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002651_hr1.tex",
-        "description": "自身のMPを全回復する。"
+        "description": "自身のMPを全回復する。",
+        "level": 30
       },
       {
         "id": 3573,
@@ -125,7 +139,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002656_hr1.tex",
-        "description": "自身の足元に黒魔紋を生成する。効果時間中、自身の AA速度と魔法の詠唱時間を15%短縮。"
+        "description": "自身の足元に黒魔紋を生成する。効果時間中、自身の AA速度と魔法の詠唱時間を15%短縮。",
+        "level": 52
       },
       {
         "id": 25796,
@@ -133,7 +148,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002671_hr1.tex",
-        "description": "ポリグロットを1つ付与する。"
+        "description": "ポリグロットを1つ付与する。",
+        "level": 86
       }
     ]
   }

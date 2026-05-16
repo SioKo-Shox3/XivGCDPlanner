@@ -6,12 +6,38 @@
   "skills": {
     "gcd": [
       {
+        "id": 2873,
+        "name": "クリーンショット",
+        "castTime": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003004_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：スラッグショット コンボ時威力：400",
+        "level": 26
+      },
+      {
+        "id": 2868,
+        "name": "スラッグショット",
+        "castTime": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003002_hr1.tex&format=png",
+        "description": "対象に物理攻撃。コンボ条件：スプリットショット コンボ時威力：320",
+        "level": 2
+      },
+      {
+        "id": 2866,
+        "name": "スプリットショット",
+        "castTime": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003001_hr1.tex&format=png",
+        "description": "対象に物理攻撃。威力：180",
+        "level": 1
+      },
+      {
         "id": 7411,
         "name": "ヒートスプリットショット",
         "castTime": 0,
         "potency": 200,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003031_hr1.tex",
-        "description": "対象に物理攻撃。威力：200 コンボの起点。ヒートを上昇させる。"
+        "description": "対象に物理攻撃。威力：200 コンボの起点。ヒートを上昇させる。",
+        "level": 54,
+        "replacesId": 2866
       },
       {
         "id": 7412,
@@ -19,7 +45,9 @@
         "castTime": 0,
         "potency": 320,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003032_hr1.tex",
-        "description": "対象に物理攻撃。コンボ時威力：320 ヒートを上昇させる。"
+        "description": "対象に物理攻撃。コンボ時威力：320 ヒートを上昇させる。",
+        "level": 60,
+        "replacesId": 2868
       },
       {
         "id": 7413,
@@ -27,7 +55,9 @@
         "castTime": 0,
         "potency": 420,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003033_hr1.tex",
-        "description": "対象に物理攻撃。コンボ時威力：420 バッテリーを上昇させる。"
+        "description": "対象に物理攻撃。コンボ時威力：420 バッテリーを上昇させる。",
+        "level": 64,
+        "replacesId": 2873
       },
       {
         "id": 16498,
@@ -35,7 +65,8 @@
         "castTime": 0,
         "potency": 660,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003043_hr1.tex",
-        "description": "対象に物理攻撃。威力：660 固有リキャストを持つ。"
+        "description": "対象に物理攻撃。威力：660 固有リキャストを持つ。",
+        "level": 58
       },
       {
         "id": 16500,
@@ -43,7 +74,8 @@
         "castTime": 0,
         "potency": 660,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003045_hr1.tex",
-        "description": "対象に物理攻撃。威力：660 バッテリーを20上昇させる。"
+        "description": "対象に物理攻撃。威力：660 バッテリーを20上昇させる。",
+        "level": 76
       },
       {
         "id": 25788,
@@ -51,7 +83,8 @@
         "castTime": 0,
         "potency": 660,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003048_hr1.tex",
-        "description": "前方直線範囲物理攻撃。威力：660 エクスカベーター実行可を付与する。"
+        "description": "前方直線範囲物理攻撃。威力：660 エクスカベーター実行可を付与する。",
+        "level": 90
       },
       {
         "id": 36981,
@@ -59,7 +92,8 @@
         "castTime": 0,
         "potency": 660,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003500_hr1.tex",
-        "description": "対象とその周囲に範囲物理攻撃。威力：660 回転のこぎり後に実行可能。"
+        "description": "対象とその周囲に範囲物理攻撃。威力：660 回転のこぎり後に実行可能。",
+        "level": 96
       },
       {
         "id": 36982,
@@ -67,7 +101,8 @@
         "castTime": 0,
         "potency": 900,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003049_hr1.tex",
-        "description": "対象とその周囲に範囲物理攻撃。威力：900 必ずクリティカルかつダイレクトヒットする。"
+        "description": "対象とその周囲に範囲物理攻撃。威力：900 必ずクリティカルかつダイレクトヒットする。",
+        "level": 100
       },
       {
         "id": 7410,
@@ -75,7 +110,8 @@
         "castTime": 0,
         "potency": 240,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003030_hr1.tex",
-        "description": "対象に物理攻撃。威力：240 オーバーヒート中に実行でき、ダブルチェックとチェックメイトのリキャストを短縮する。"
+        "description": "対象に物理攻撃。威力：240 オーバーヒート中に実行でき、ダブルチェックとチェックメイトのリキャストを短縮する。",
+        "level": 35
       }
     ],
     "ability": [
@@ -85,7 +121,8 @@
         "recastTime": 55,
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003022_hr1.tex",
-        "description": "次に実行する一部ウェポンスキルを必ずクリティカルかつダイレクトヒットさせる。"
+        "description": "次に実行する一部ウェポンスキルを必ずクリティカルかつダイレクトヒットさせる。",
+        "level": 10
       },
       {
         "id": 2878,
@@ -93,7 +130,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003018_hr1.tex",
-        "description": "対象にワイルドファイアを付与し、ウェポンスキル命中回数に応じたダメージを与える。"
+        "description": "対象にワイルドファイアを付与し、ウェポンスキル命中回数に応じたダメージを与える。",
+        "level": 45
       },
       {
         "id": 7414,
@@ -101,7 +139,8 @@
         "recastTime": 120,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003034_hr1.tex",
-        "description": "ヒートを50上昇させ、自身にフルメタルバースト実行可を付与する。"
+        "description": "ヒートを50上昇させ、自身にフルメタルバースト実行可を付与する。",
+        "level": 66
       },
       {
         "id": 17209,
@@ -109,7 +148,8 @@
         "recastTime": 10,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003041_hr1.tex",
-        "description": "オーバーヒート状態へ移行し、ヒートブラストを連打できるようにする。"
+        "description": "オーバーヒート状態へ移行し、ヒートブラストを連打できるようにする。",
+        "level": 30
       },
       {
         "id": 16501,
@@ -117,7 +157,8 @@
         "recastTime": 6,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003501_hr1.tex",
-        "description": "オートマトン・クイーンを起動する。バッテリー量に応じて攻撃威力が変化する。"
+        "description": "オートマトン・クイーンを起動する。バッテリー量に応じて攻撃威力が変化する。",
+        "level": 80
       },
       {
         "id": 36979,
@@ -125,7 +166,8 @@
         "recastTime": 1,
         "maxCharges": 3,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003507_hr1.tex",
-        "description": "対象に物理攻撃を行う。ガウスラウンドから変化する。"
+        "description": "対象に物理攻撃を行う。ガウスラウンドから変化する。",
+        "level": 92
       },
       {
         "id": 36980,
@@ -133,7 +175,8 @@
         "recastTime": 1,
         "maxCharges": 3,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003508_hr1.tex",
-        "description": "対象とその周囲に範囲物理攻撃を行う。リコシェットから変化する。"
+        "description": "対象とその周囲に範囲物理攻撃を行う。リコシェットから変化する。",
+        "level": 92
       },
       {
         "id": 16889,
@@ -141,7 +184,8 @@
         "recastTime": 90,
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003040_hr1.tex",
-        "description": "自身と周囲のパーティメンバーの被ダメージを軽減する。効果時間：15秒"
+        "description": "自身と周囲のパーティメンバーの被ダメージを軽減する。効果時間：15秒",
+        "level": 56
       }
     ]
   }
