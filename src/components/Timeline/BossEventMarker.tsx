@@ -35,11 +35,10 @@ export function BossEventMarker({ event, pps }: Props) {
   const fullName = typeFullNames[event.type] ?? "ギミック";
   const left = event.time * pps;
   const width = event.castTime ? event.castTime * pps : 2;
-  const hasBar = Math.max(width, 2) > 18;
 
   return (
     <div
-      className="absolute top-1 bottom-1 rounded-sm flex items-center overflow-hidden cursor-default"
+      className="absolute top-1 bottom-1 rounded-sm flex items-center cursor-default"
       style={{
         left,
         width: Math.max(width, 2),
@@ -48,11 +47,9 @@ export function BossEventMarker({ event, pps }: Props) {
       }}
       title={`[${fullName}] ${event.name} (${event.time}s)${event.castTime ? ` 詠唱: ${event.castTime}s` : ""}${event.description ? "\n" + event.description : ""}`}
     >
-      {hasBar && (
-        <span className="text-[9px] px-1 whitespace-nowrap truncate leading-none" style={{ color }}>
-          <span className="opacity-70">[{label}]</span>{" "}{event.name}
-        </span>
-      )}
+      <span className="text-[9px] px-1 whitespace-nowrap leading-none pointer-events-none" style={{ color }}>
+        <span className="opacity-70">[{label}]</span>{" "}{event.name}
+      </span>
     </div>
   );
 }
