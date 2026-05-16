@@ -58,6 +58,9 @@ interface AppState {
   setScrollLeft: (sl: number) => void;
   selectPlacement: (id: string | null) => void;
 
+  // Actions - save/load
+  loadPlan: (plan: { jobId: string; timelineId: string; spellSpeed: number; level: number; placements: SkillPlacement[] }) => void;
+
   // Actions - drag
   startDrag: (skillId: number, skillType: "gcd" | "ability") => void;
   endDrag: () => void;
@@ -196,6 +199,18 @@ export const useAppStore = create<AppState>((set, get) => ({
   selectPlacement: (id) =>
     set((s) => ({ view: { ...s.view, selectedPlacementId: id } })),
 
+  loadPlan: (plan) =>
+    set({
+      selectedJobId: plan.jobId,
+      selectedTimelineId: plan.timelineId,
+      spellSpeed: plan.spellSpeed,
+      selectedLevel: Math.max(1, Math.min(100, plan.level ?? 100)),
+      placements: [...plan.placements].sort((a, b) => a.time - b.time),
+      validationResult: null,
+      stats: null,
+    }),
+
+  // Actions - drag
   startDrag: (skillId, skillType) => set({ draggingSkillId: skillId, draggingSkillType: skillType }),
   endDrag: () => set({ draggingSkillId: null, draggingSkillType: null }),
 

@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useAppStore } from "@/stores/timelineStore";
+import { SaveLoadDialog } from "./SaveLoadDialog";
 
 export function Header() {
   const jobs = useAppStore((s) => s.jobs);
@@ -12,6 +14,8 @@ export function Header() {
   const setSpellSpeed = useAppStore((s) => s.setSpellSpeed);
   const setLevel = useAppStore((s) => s.setLevel);
   const clearPlacements = useAppStore((s) => s.clearPlacements);
+
+  const [dialog, setDialog] = useState<"save" | "load" | null>(null);
 
   return (
     <header
@@ -89,12 +93,22 @@ export function Header() {
         />
       </div>
 
-      {/* Spacer + Action */}
+      {/* Spacer + Actions */}
       <div className="ml-auto flex items-center gap-2">
+        <button className="btn btn-ghost" onClick={() => setDialog("load")}>
+          ロード
+        </button>
+        <button className="btn btn-ghost" onClick={() => setDialog("save")}>
+          セーブ
+        </button>
         <button className="btn btn-danger" onClick={clearPlacements}>
           クリア
         </button>
       </div>
+
+      {dialog && (
+        <SaveLoadDialog mode={dialog} onClose={() => setDialog(null)} />
+      )}
     </header>
   );
 }

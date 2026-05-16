@@ -118,5 +118,19 @@ pub struct RotationPlan {
     pub timeline_id: String,
     #[serde(rename = "spellSpeed")]
     pub spell_speed: u32,
+    #[serde(default = "default_level")]
+    pub level: u32,
     pub placements: Vec<SkillPlacement>,
+}
+
+fn default_level() -> u32 {
+    100
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct SaveFileEntry {
+    pub name: String,
+    pub path: String,
+    #[serde(rename = "savedAt")]
+    pub saved_at: String,
 }

@@ -87,11 +87,11 @@ export interface RotationStats {
 }
 
 export interface RotationPlan {
-  id: string;
   name: string;
   jobId: string;
   timelineId: string;
   spellSpeed: number;
+  level: number;
   placements: SkillPlacement[];
 }
 

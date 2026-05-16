@@ -5,6 +5,7 @@ import type {
   SkillPlacement,
   ValidationResult,
   RotationStats,
+  RotationPlan,
 } from "@/types";
 
 export async function loadJobs(): Promise<JobDef[]> {
@@ -46,6 +47,7 @@ export async function saveRotation(
   jobId: string,
   timelineId: string,
   spellSpeed: number,
+  level: number,
   placements: SkillPlacement[]
 ): Promise<string> {
   return invoke<string>("save_rotation", {
@@ -53,18 +55,23 @@ export async function saveRotation(
     jobId,
     timelineId,
     spellSpeed,
+    level,
     placements,
   });
 }
 
-export async function loadRotation(path: string): Promise<{
-  name: string;
-  jobId: string;
-  timelineId: string;
-  spellSpeed: number;
-  placements: SkillPlacement[];
-}> {
+export async function loadRotation(path: string): Promise<RotationPlan> {
   return invoke("load_rotation", { path });
+}
+
+export interface SaveFileEntry {
+  name: string;
+  path: string;
+  savedAt: string;
+}
+
+export async function listSaves(): Promise<SaveFileEntry[]> {
+  return invoke<SaveFileEntry[]>("list_saves");
 }
 
 export function calculateGcdTime(baseGcd: number, spellSpeed: number): number {

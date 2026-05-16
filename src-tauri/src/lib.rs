@@ -66,12 +66,19 @@ fn calculate_stats(
 }
 
 #[tauri::command]
+fn list_saves(state: State<AppState>) -> Result<Vec<SaveFileEntry>, String> {
+    let data = state.0.lock().map_err(|e| e.to_string())?;
+    data::list_save_files(&data.save_dir)
+}
+
+#[tauri::command]
 fn save_rotation(
     state: State<AppState>,
     name: String,
     job_id: String,
     timeline_id: String,
     spell_speed: u32,
+    level: u32,
     placements: Vec<SkillPlacement>,
 ) -> Result<String, String> {
     let data = state.0.lock().map_err(|e| e.to_string())?;
@@ -80,6 +87,7 @@ fn save_rotation(
         job_id,
         timeline_id,
         spell_speed,
+        level,
         placements,
     };
     data::save_rotation_file(&data.save_dir, &plan)
@@ -163,6 +171,7 @@ pub fn run() {
             calculate_stats,
             save_rotation,
             load_rotation,
+            list_saves,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
