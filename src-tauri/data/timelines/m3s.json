@@ -1,32 +1,291 @@
 {
   "id": "m3s",
   "name": "ライトヘビー級零式 3層",
-  "duration": 620,
+  "duration": 705,
   "events": [
-    { "time": 10.0, "name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 26.0, "name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 42.0, "name": "ボム・スラップ",           "type": "mechanic",   "castTime": 6.0, "description": "爆弾メカニクス" },
-    { "time": 62.0, "name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 80.0, "name": "ブロースラッガー",         "type": "mechanic",   "castTime": 8.0, "description": "乱打メカニクス" },
-    { "time": 99.0, "name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 120.0,"name": "ダブルコード",             "type": "mechanic",   "castTime": 7.0, "description": "縄メカニクス" },
-    { "time": 143.0,"name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 163.0,"name": "ボム・スラップ",           "type": "mechanic",   "castTime": 7.0, "description": "爆弾メカニクス（強化版）" },
-    { "time": 187.0,"name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 208.0,"name": "ブロースラッガー",         "type": "mechanic",   "castTime": 10.0,"description": "乱打メカニクス（強化版）" },
-    { "time": 237.0,"name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 258.0,"name": "ダブルコード",             "type": "mechanic",   "castTime": 9.0, "description": "縄メカニクス（強化版）" },
-    { "time": 287.0,"name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 307.0,"name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 340.0,"name": "ボム・スラップ",           "type": "mechanic",   "castTime": 6.0, "description": "爆弾メカニクス" },
-    { "time": 365.0,"name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 388.0,"name": "ブロースラッガー",         "type": "mechanic",   "castTime": 8.0, "description": "乱打メカニクス" },
-    { "time": 418.0,"name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 448.0,"name": "ダブルコード",             "type": "mechanic",   "castTime": 9.0, "description": "縄メカニクス" },
-    { "time": 478.0,"name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 507.0,"name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 540.0,"name": "ボム・スラップ",           "type": "mechanic",   "castTime": 6.0, "description": "爆弾メカニクス" },
-    { "time": 570.0,"name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 600.0,"name": "時間切れ",                 "type": "enrage",     "castTime": 10.0,"description": "時間切れ" }
+    {
+      "time": 11.5,
+      "name": "Brutal Impact x4",
+      "type": "raidwide",
+      "castTime": 3.2
+    },
+    {
+      "time": 20.9,
+      "name": "Knuckle Sandwich x4",
+      "type": "tankbuster",
+      "castTime": 3.0
+    },
+    {
+      "time": 37.0,
+      "name": "Quadruple Lariat/Octuple Lariat (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 37.7,
+      "name": "Quadruple Lariat/Octuple Lariat (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 47.8,
+      "name": "Octoboom Dive/Quadroboom Dive (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 48.7,
+      "name": "Octoboom Dive/Quadroboom Dive (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 60.0,
+      "name": "Brutal Impact x4",
+      "type": "raidwide",
+      "castTime": 3.2
+    },
+    {
+      "time": 76.4,
+      "name": "Barbarous Barrage",
+      "type": "raidwide"
+    },
+    {
+      "time": 87.5,
+      "name": "Explosion",
+      "type": "mechanic"
+    },
+    {
+      "time": 95.5,
+      "name": "Murderous Mist",
+      "type": "raidwide"
+    },
+    {
+      "time": 109.3,
+      "name": "Doping Draught",
+      "type": "mechanic"
+    },
+    {
+      "time": 142.9,
+      "name": "Quadruple Lariat/Octuple Lariat (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 143.7,
+      "name": "Quadruple Lariat/Octuple Lariat (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 153.8,
+      "name": "Octoboom Dive/Quadroboom Dive (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 154.7,
+      "name": "Octoboom Dive/Quadroboom Dive (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 166.3,
+      "name": "Brutal Impact x6",
+      "type": "raidwide",
+      "castTime": 5.2
+    },
+    {
+      "time": 177.6,
+      "name": "Knuckle Sandwich x6",
+      "type": "tankbuster",
+      "castTime": 5.1
+    },
+    {
+      "time": 195.4,
+      "name": "Tag Team",
+      "type": "mechanic"
+    },
+    {
+      "time": 204.6,
+      "name": "Chain Deathmatch",
+      "type": "tankbuster"
+    },
+    {
+      "time": 225.7,
+      "name": "Quadruple Lariat/Octuple Lariat (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 226.5,
+      "name": "Quadruple Lariat/Octuple Lariat (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 233.6,
+      "name": "Brutal Impact x6",
+      "type": "raidwide",
+      "castTime": 5.2
+    },
+    {
+      "time": 253.0,
+      "name": "Final Fusedown",
+      "type": "mechanic"
+    },
+    {
+      "time": 265.1,
+      "name": "Self-Destruct",
+      "type": "mechanic"
+    },
+    {
+      "time": 265.2,
+      "name": "Explosion",
+      "type": "mechanic"
+    },
+    {
+      "time": 277.2,
+      "name": "Octoboom Dive/Quadroboom Dive (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 278.0,
+      "name": "Octoboom Dive/Quadroboom Dive (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 297.0,
+      "name": "Fusefield",
+      "type": "mechanic"
+    },
+    {
+      "time": 303.1,
+      "name": "Bombarian Flame",
+      "type": "raidwide"
+    },
+    {
+      "time": 305.3,
+      "name": "Mana Explosion x8",
+      "type": "raidwide",
+      "castTime": 30.0
+    },
+    {
+      "time": 353.7,
+      "name": "Knuckle Sandwich x6",
+      "type": "tankbuster",
+      "castTime": 5.1
+    },
+    {
+      "time": 370.8,
+      "name": "Doping Draught",
+      "type": "mechanic"
+    },
+    {
+      "time": 389.9,
+      "name": "Octoboom Bombarian Special/Quadroboom Bombarian Special",
+      "type": "mechanic"
+    },
+    {
+      "time": 391.0,
+      "name": "Bombarian Special x10",
+      "type": "mechanic",
+      "castTime": 19.0
+    },
+    {
+      "time": 413.7,
+      "name": "Bombariboom",
+      "type": "mechanic"
+    },
+    {
+      "time": 425.5,
+      "name": "Fuses of Fury",
+      "type": "raidwide"
+    },
+    {
+      "time": 431.5,
+      "name": "Tag Team",
+      "type": "mechanic"
+    },
+    {
+      "time": 441.7,
+      "name": "Chain Deathmatch",
+      "type": "tankbuster"
+    },
+    {
+      "time": 456.6,
+      "name": "Murderous Mist",
+      "type": "raidwide"
+    },
+    {
+      "time": 469.3,
+      "name": "Octoboom Dive/Quadroboom Dive (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 470.2,
+      "name": "Octoboom Dive/Quadroboom Dive (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 482.7,
+      "name": "Brutal Impact x8",
+      "type": "raidwide",
+      "castTime": 7.3
+    },
+    {
+      "time": 496.1,
+      "name": "Knuckle Sandwich x8",
+      "type": "tankbuster",
+      "castTime": 7.4
+    },
+    {
+      "time": 515.3,
+      "name": "Fuse or Foe",
+      "type": "mechanic"
+    },
+    {
+      "time": 524.7,
+      "name": "Explosive Rain",
+      "type": "mechanic"
+    },
+    {
+      "time": 524.7,
+      "name": "Infernal Spin",
+      "type": "mechanic",
+      "castTime": 6.8
+    },
+    {
+      "time": 545.6,
+      "name": "Quadruple Lariat/Octuple Lariat (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 546.4,
+      "name": "Quadruple Lariat/Octuple Lariat (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 553.7,
+      "name": "Brutal Impact x8",
+      "type": "raidwide",
+      "castTime": 7.3
+    },
+    {
+      "time": 573.2,
+      "name": "Barbarous Barrage",
+      "type": "raidwide"
+    },
+    {
+      "time": 613.0,
+      "name": "Knuckle Sandwich x8",
+      "type": "tankbuster",
+      "castTime": 7.4
+    },
+    {
+      "time": 635.4,
+      "name": "Doping Draught",
+      "type": "mechanic"
+    },
+    {
+      "time": 654.6,
+      "name": "Special Bombarian Special",
+      "type": "mechanic"
+    },
+    {
+      "time": 675.2,
+      "name": "Special Bombarian Special (enrage)",
+      "type": "enrage"
+    }
   ]
 }

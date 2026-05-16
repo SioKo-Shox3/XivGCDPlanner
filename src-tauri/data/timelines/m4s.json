@@ -1,35 +1,268 @@
 {
   "id": "m4s",
   "name": "ライトヘビー級零式 4層",
-  "duration": 670,
+  "duration": 834,
   "events": [
-    { "time": 11.0, "name": "ライトニングケージ",       "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 28.0, "name": "エレクトロン・ストリーム", "type": "tankbuster", "castTime": 4.5, "description": "タンクバスター" },
-    { "time": 46.0, "name": "ウィケッドボルト",         "type": "mechanic",   "castTime": 6.0, "description": "雷弾メカニクス" },
-    { "time": 68.0, "name": "ライトニングケージ",       "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 88.0, "name": "サンダーリングレイン",     "type": "mechanic",   "castTime": 8.0, "description": "雷雨メカニクス" },
-    { "time": 108.0,"name": "エレクトロン・ストリーム", "type": "tankbuster", "castTime": 4.5, "description": "タンクバスター" },
-    { "time": 130.0,"name": "ワイルドチャージ",         "type": "mechanic",   "castTime": 7.0, "description": "突進メカニクス" },
-    { "time": 155.0,"name": "ライトニングケージ",       "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 178.0,"name": "ウィケッドボルト",         "type": "mechanic",   "castTime": 7.0, "description": "雷弾メカニクス（強化版）" },
-    { "time": 200.0,"name": "エレクトロン・ストリーム", "type": "tankbuster", "castTime": 4.5, "description": "タンクバスター" },
-    { "time": 220.0,"name": "サンダーリングレイン",     "type": "mechanic",   "castTime": 10.0,"description": "雷雨メカニクス（強化版）" },
-    { "time": 252.0,"name": "ライトニングケージ",       "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 272.0,"name": "ワイルドチャージ",         "type": "mechanic",   "castTime": 9.0, "description": "突進メカニクス（強化版）" },
-    { "time": 300.0,"name": "エレクトロン・ストリーム", "type": "tankbuster", "castTime": 4.5, "description": "タンクバスター" },
-    { "time": 320.0,"name": "フェーズ移行",             "type": "mechanic",   "castTime": 12.0,"description": "第2フェーズ移行" },
-    { "time": 345.0,"name": "ライトニングケージ",       "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃（P2）" },
-    { "time": 368.0,"name": "ダブルボルト",             "type": "tankbuster", "castTime": 5.0, "description": "タンクバスター（P2）" },
-    { "time": 390.0,"name": "ウィケッドボルト",         "type": "mechanic",   "castTime": 8.0, "description": "雷弾メカニクス（P2）" },
-    { "time": 415.0,"name": "サンダーリングレイン",     "type": "mechanic",   "castTime": 9.0, "description": "雷雨メカニクス（P2）" },
-    { "time": 442.0,"name": "ライトニングケージ",       "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃（P2）" },
-    { "time": 465.0,"name": "ダブルボルト",             "type": "tankbuster", "castTime": 5.0, "description": "タンクバスター（P2）" },
-    { "time": 488.0,"name": "ワイルドチャージ",         "type": "mechanic",   "castTime": 9.0, "description": "突進メカニクス（P2）" },
-    { "time": 515.0,"name": "ライトニングケージ",       "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃（P2）" },
-    { "time": 542.0,"name": "ウィケッドボルト",         "type": "mechanic",   "castTime": 8.0, "description": "雷弾メカニクス（P2）" },
-    { "time": 570.0,"name": "ダブルボルト",             "type": "tankbuster", "castTime": 5.0, "description": "タンクバスター（P2）" },
-    { "time": 595.0,"name": "ライトニングケージ",       "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃（P2）" },
-    { "time": 630.0,"name": "サンダーリングレイン",     "type": "mechanic",   "castTime": 9.0, "description": "雷雨メカニクス（P2）" },
-    { "time": 650.0,"name": "時間切れ",                 "type": "enrage",     "castTime": 10.0,"description": "時間切れ" }
+    {
+      "time": 15.6,
+      "name": "Wrath of Zeus",
+      "type": "raidwide"
+    },
+    {
+      "time": 38.2,
+      "name": "Bewitching Flight",
+      "type": "mechanic"
+    },
+    {
+      "time": 49.6,
+      "name": "Electrifying Witch Hunt",
+      "type": "mechanic"
+    },
+    {
+      "time": 57.6,
+      "name": "Witch Hunt + Forked Lightning",
+      "type": "mechanic"
+    },
+    {
+      "time": 74.7,
+      "name": "Widening Witch Hunt/Narrowing Witch Hunt",
+      "type": "mechanic"
+    },
+    {
+      "time": 98.4,
+      "name": "Wrath of Zeus",
+      "type": "raidwide"
+    },
+    {
+      "time": 109.7,
+      "name": "Electrope Edge (mines)",
+      "type": "mechanic"
+    },
+    {
+      "time": 116.8,
+      "name": "Witchgleam",
+      "type": "mechanic"
+    },
+    {
+      "time": 134.4,
+      "name": "Spark + Sidewise Spark",
+      "type": "mechanic"
+    },
+    {
+      "time": 134.4,
+      "name": "Four Star/Eight Star",
+      "type": "mechanic"
+    },
+    {
+      "time": 142.6,
+      "name": "Wicked Jolt",
+      "type": "tankbuster"
+    },
+    {
+      "time": 145.7,
+      "name": "Wicked Jolt (second hit)",
+      "type": "tankbuster"
+    },
+    {
+      "time": 157.0,
+      "name": "Electrope Edge (players)",
+      "type": "mechanic"
+    },
+    {
+      "time": 172.1,
+      "name": "Lightning Cage",
+      "type": "mechanic"
+    },
+    {
+      "time": 189.2,
+      "name": "Sidewise Spark",
+      "type": "mechanic"
+    },
+    {
+      "time": 206.4,
+      "name": "Wicked Bolt x6",
+      "type": "mechanic",
+      "castTime": 5.0
+    },
+    {
+      "time": 230.0,
+      "name": "Right Roll/Left Roll",
+      "type": "mechanic"
+    },
+    {
+      "time": 232.0,
+      "name": "Stampeding Thunder x6",
+      "type": "mechanic",
+      "castTime": 7.0
+    },
+    {
+      "time": 249.2,
+      "name": "Electron Stream",
+      "type": "mechanic"
+    },
+    {
+      "time": 288.7,
+      "name": "Wicked Jolt",
+      "type": "tankbuster"
+    },
+    {
+      "time": 313.7,
+      "name": "Electrope Transplant",
+      "type": "mechanic"
+    },
+    {
+      "time": 323.9,
+      "name": "Fulminous Field 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 332.9,
+      "name": "Conduction Point",
+      "type": "mechanic"
+    },
+    {
+      "time": 375.2,
+      "name": "Soulshock",
+      "type": "raidwide"
+    },
+    {
+      "time": 383.9,
+      "name": "Cannonbolt",
+      "type": "mechanic"
+    },
+    {
+      "time": 408.1,
+      "name": "Cross Tail Switch x10",
+      "type": "mechanic",
+      "castTime": 9.0
+    },
+    {
+      "time": 426.0,
+      "name": "Wicked Blaze",
+      "type": "mechanic"
+    },
+    {
+      "time": 437.2,
+      "name": "Wicked Special",
+      "type": "mechanic"
+    },
+    {
+      "time": 479.8,
+      "name": "Tail Thrust/Switch of Tides",
+      "type": "tankbuster"
+    },
+    {
+      "time": 500.9,
+      "name": "Azure Thunder",
+      "type": "raidwide"
+    },
+    {
+      "time": 507.0,
+      "name": "Twilight Sabbath",
+      "type": "mechanic"
+    },
+    {
+      "time": 515.1,
+      "name": "Wicked Fire (puddles drop)",
+      "type": "mechanic"
+    },
+    {
+      "time": 526.2,
+      "name": "Wicked Special + Sidewise Spark",
+      "type": "mechanic"
+    },
+    {
+      "time": 536.4,
+      "name": "Midnight Sabbath",
+      "type": "mechanic"
+    },
+    {
+      "time": 547.5,
+      "name": "Wicked Flare/Wicked Spark 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 556.5,
+      "name": "Wicked Special",
+      "type": "mechanic"
+    },
+    {
+      "time": 563.6,
+      "name": "Wicked Thunder",
+      "type": "mechanic"
+    },
+    {
+      "time": 583.9,
+      "name": "Flame Slash",
+      "type": "mechanic"
+    },
+    {
+      "time": 589.0,
+      "name": "Raining Swords",
+      "type": "mechanic"
+    },
+    {
+      "time": 610.1,
+      "name": "Chain Lightning",
+      "type": "raidwide",
+      "castTime": 19.8
+    },
+    {
+      "time": 637.2,
+      "name": "Tail Thrust/Switch of Tides",
+      "type": "tankbuster"
+    },
+    {
+      "time": 678.6,
+      "name": "Azure Thunder",
+      "type": "raidwide"
+    },
+    {
+      "time": 684.7,
+      "name": "Ion Cluster",
+      "type": "mechanic"
+    },
+    {
+      "time": 690.8,
+      "name": "Sunrise Sabbath",
+      "type": "mechanic"
+    },
+    {
+      "time": 711.8,
+      "name": "Wicked Special",
+      "type": "mechanic"
+    },
+    {
+      "time": 727.9,
+      "name": "Tail Thrust/Switch of Tides",
+      "type": "tankbuster"
+    },
+    {
+      "time": 743.1,
+      "name": "Sword Quiver",
+      "type": "mechanic",
+      "castTime": 4.5
+    },
+    {
+      "time": 751.8,
+      "name": "Burst + Laceration",
+      "type": "mechanic"
+    },
+    {
+      "time": 776.9,
+      "name": "Sword Quiver",
+      "type": "mechanic",
+      "castTime": 4.5
+    },
+    {
+      "time": 785.6,
+      "name": "Burst + Laceration",
+      "type": "mechanic"
+    },
+    {
+      "time": 804.5,
+      "name": "Wicked Thunder (enrage)",
+      "type": "enrage"
+    }
   ]
 }

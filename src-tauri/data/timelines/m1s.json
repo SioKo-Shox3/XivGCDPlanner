@@ -1,27 +1,295 @@
 {
   "id": "m1s",
   "name": "ライトヘビー級零式 1層",
-  "duration": 620,
+  "duration": 589,
   "events": [
-    { "time": 10.5, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 28.0, "name": "ブラッディスクラッチ", "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 48.0, "name": "ネイルチッパー", "type": "mechanic", "castTime": 6.0, "description": "AoEメカニクス" },
-    { "time": 72.0, "name": "ヘアスプリッター", "type": "tankbuster", "castTime": 5.0, "description": "タンクバスター(MT)" },
-    { "time": 95.0, "name": "シェイド・シフト", "type": "mechanic", "castTime": 8.0, "description": "影分身メカニクス" },
-    { "time": 120.0, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 145.0, "name": "ムサスピテイル", "type": "mechanic", "castTime": 6.0, "description": "尻尾メカニクス" },
-    { "time": 170.0, "name": "ブラッディスクラッチ", "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 195.0, "name": "ナインライヴス", "type": "mechanic", "castTime": 10.0, "description": "9連メカニクス" },
-    { "time": 230.0, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 260.0, "name": "ヘアスプリッター", "type": "tankbuster", "castTime": 5.0, "description": "タンクバスター" },
-    { "time": 290.0, "name": "シェイド・シフト", "type": "mechanic", "castTime": 12.0, "description": "影分身メカニクス（強化版）" },
-    { "time": 330.0, "name": "ブラッディスクラッチ", "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 360.0, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 400.0, "name": "ナインライヴス", "type": "mechanic", "castTime": 10.0, "description": "9連メカニクス（強化版）" },
-    { "time": 450.0, "name": "ムサスピテイル", "type": "mechanic", "castTime": 6.0, "description": "尻尾メカニクス" },
-    { "time": 480.0, "name": "ブラッディスクラッチ", "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
-    { "time": 510.0, "name": "ヘアスプリッター", "type": "tankbuster", "castTime": 5.0, "description": "タンクバスター" },
-    { "time": 550.0, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },
-    { "time": 600.0, "name": "時間切れ", "type": "enrage", "castTime": 10.0, "description": "時間切れ" }
+    {
+      "time": 13.3,
+      "name": "Quadruple Crossing (cast)",
+      "type": "raidwide"
+    },
+    {
+      "time": 14.1,
+      "name": "Quadruple Crossing (damage)",
+      "type": "raidwide"
+    },
+    {
+      "time": 32.4,
+      "name": "Biscuit Maker (First)",
+      "type": "tankbuster"
+    },
+    {
+      "time": 34.4,
+      "name": "Biscuit Maker (Second)",
+      "type": "tankbuster"
+    },
+    {
+      "time": 49.4,
+      "name": "Nine Lives",
+      "type": "raidwide"
+    },
+    {
+      "time": 56.4,
+      "name": "One-two Paw (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 57.4,
+      "name": "One-two Paw (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 64.4,
+      "name": "Soulshade",
+      "type": "mechanic"
+    },
+    {
+      "time": 86.7,
+      "name": "Quadruple Swipe/Double Swipe (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 87.7,
+      "name": "Quadruple Swipe/Double Swipe (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 99.7,
+      "name": "Leaping Quadruple Crossing (cast)",
+      "type": "raidwide"
+    },
+    {
+      "time": 101.6,
+      "name": "Leaping Quadruple Crossing (damage)",
+      "type": "raidwide"
+    },
+    {
+      "time": 111.1,
+      "name": "Quadruple Swipe/Double Swipe",
+      "type": "mechanic"
+    },
+    {
+      "time": 121.8,
+      "name": "Bloody Scratch",
+      "type": "tankbuster"
+    },
+    {
+      "time": 135.3,
+      "name": "Mouser (telegraphs)",
+      "type": "mechanic",
+      "castTime": 9.7
+    },
+    {
+      "time": 145.0,
+      "name": "Mouser (hits)",
+      "type": "mechanic",
+      "castTime": 10.4
+    },
+    {
+      "time": 166.0,
+      "name": "Copycat",
+      "type": "mechanic"
+    },
+    {
+      "time": 175.9,
+      "name": "Elevate and Eviscerate (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 178.3,
+      "name": "Elevate and Eviscerate (hit)",
+      "type": "mechanic"
+    },
+    {
+      "time": 179.2,
+      "name": "Shockwave",
+      "type": "mechanic"
+    },
+    {
+      "time": 182.1,
+      "name": "Impact",
+      "type": "mechanic"
+    },
+    {
+      "time": 223.2,
+      "name": "Biscuit Maker (First)",
+      "type": "tankbuster"
+    },
+    {
+      "time": 225.2,
+      "name": "Biscuit Maker (Second)",
+      "type": "tankbuster"
+    },
+    {
+      "time": 235.2,
+      "name": "Shockwave (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 236.2,
+      "name": "Shockwave (hit)",
+      "type": "mechanic"
+    },
+    {
+      "time": 240.0,
+      "name": "Grimalkin Gale",
+      "type": "raidwide"
+    },
+    {
+      "time": 255.3,
+      "name": "Nine Lives",
+      "type": "raidwide"
+    },
+    {
+      "time": 262.3,
+      "name": "Leaping One-two Paw (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 264.1,
+      "name": "Leaping One-two Paw (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 283.5,
+      "name": "Leaping Quadruple Crossing (cast)",
+      "type": "raidwide"
+    },
+    {
+      "time": 285.3,
+      "name": "Leaping Quadruple Crossing (damage)",
+      "type": "raidwide"
+    },
+    {
+      "time": 298.5,
+      "name": "Soulshade",
+      "type": "mechanic"
+    },
+    {
+      "time": 312.0,
+      "name": "Nailchipper (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 313.8,
+      "name": "Nailchipper (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 342.9,
+      "name": "Tempestuous Tear (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 344.8,
+      "name": "Tempestuous Tear (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 358.0,
+      "name": "Bloody Scratch",
+      "type": "tankbuster"
+    },
+    {
+      "time": 380.2,
+      "name": "Mouser (telegraphs)",
+      "type": "mechanic",
+      "castTime": 9.7
+    },
+    {
+      "time": 389.9,
+      "name": "Mouser (hits)",
+      "type": "mechanic",
+      "castTime": 10.4
+    },
+    {
+      "time": 411.0,
+      "name": "Copycat",
+      "type": "mechanic"
+    },
+    {
+      "time": 425.5,
+      "name": "Elevate and Eviscerate (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 427.9,
+      "name": "Elevate and Eviscerate (hit)",
+      "type": "mechanic"
+    },
+    {
+      "time": 428.8,
+      "name": "Shockwave",
+      "type": "mechanic"
+    },
+    {
+      "time": 429.0,
+      "name": "Overshadow/Splintering Nails (damage)",
+      "type": "mechanic"
+    },
+    {
+      "time": 444.0,
+      "name": "Biscuit Maker (First)",
+      "type": "tankbuster"
+    },
+    {
+      "time": 446.1,
+      "name": "Biscuit Maker (Second)",
+      "type": "tankbuster"
+    },
+    {
+      "time": 457.1,
+      "name": "Shockwave (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 458.1,
+      "name": "Shockwave (knockback)",
+      "type": "mechanic"
+    },
+    {
+      "time": 461.9,
+      "name": "Grimalkin Gale",
+      "type": "raidwide"
+    },
+    {
+      "time": 481.3,
+      "name": "Raining Cats (cast)",
+      "type": "raidwide"
+    },
+    {
+      "time": 511.4,
+      "name": "Copycat",
+      "type": "mechanic"
+    },
+    {
+      "time": 521.2,
+      "name": "Predaceous Pounce (telegraphs)",
+      "type": "mechanic",
+      "castTime": 12.7
+    },
+    {
+      "time": 534.0,
+      "name": "Predaceous Pounce (hits)",
+      "type": "mechanic",
+      "castTime": 4.8
+    },
+    {
+      "time": 538.9,
+      "name": "One-two Paw (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 551.8,
+      "name": "Mouser (cast)",
+      "type": "mechanic",
+      "castTime": 8.0
+    },
+    {
+      "time": 559.8,
+      "name": "Mouser (enrage)",
+      "type": "enrage",
+      "castTime": 8.5
+    }
   ]
 }
