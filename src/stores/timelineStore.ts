@@ -147,6 +147,13 @@ export const useAppStore = create<AppState>((set, get) => ({
             gcds[i] = { ...gcds[i], time: Math.max(0, maxTime) };
           } else break;
         }
+        // Forward pass: fix spacing when blocks were clamped at 0 boundary
+        for (let i = 1; i < movedIdx; i++) {
+          const minTime = Math.round((gcds[i - 1].time + gcdTime) * 100) / 100;
+          if (gcds[i].time < minTime) {
+            gcds[i] = { ...gcds[i], time: minTime };
+          }
+        }
 
         // If left GCDs hit 0 boundary, clamp moved GCD so it doesn't overlap
         if (movedIdx > 0) {
