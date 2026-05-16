@@ -74,6 +74,14 @@ export async function listSaves(): Promise<SaveFileEntry[]> {
   return invoke<SaveFileEntry[]>("list_saves");
 }
 
+export async function parseCactbotTimeline(
+  id: string,
+  name: string,
+  content: string
+): Promise<BossTimelineDef> {
+  return invoke<BossTimelineDef>("parse_cactbot_timeline", { id, name, content });
+}
+
 export function calculateGcdTime(baseGcd: number, spellSpeed: number): number {
   // FF14 GCD formula approximation (client-side for instant feedback)
   const base = 400;

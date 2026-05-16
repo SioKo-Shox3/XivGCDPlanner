@@ -1,0 +1,361 @@
+{
+  "id": "hw_m2s",
+  "name": "ヘビー級零式 2層",
+  "duration": 626,
+  "events": [
+    {
+      "time": 14.6,
+      "name": "Hot Impact",
+      "type": "raidwide"
+    },
+    {
+      "time": 30.3,
+      "name": "Flame Floater 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 33.5,
+      "name": "Flame Floater 2",
+      "type": "mechanic"
+    },
+    {
+      "time": 36.8,
+      "name": "Flame Floater 3",
+      "type": "mechanic"
+    },
+    {
+      "time": 39.9,
+      "name": "Flame Floater 4",
+      "type": "mechanic"
+    },
+    {
+      "time": 52.3,
+      "name": "Alley-oop Inferno",
+      "type": "mechanic"
+    },
+    {
+      "time": 61.9,
+      "name": "Cutback Blaze",
+      "type": "mechanic"
+    },
+    {
+      "time": 68.4,
+      "name": "Pyrotation x3",
+      "type": "mechanic",
+      "castTime": 4.9
+    },
+    {
+      "time": 82.5,
+      "name": "Divers Dare",
+      "type": "tankbuster"
+    },
+    {
+      "time": 96.9,
+      "name": "Sick Swell",
+      "type": "mechanic"
+    },
+    {
+      "time": 106.0,
+      "name": "Sickest Take-off",
+      "type": "mechanic"
+    },
+    {
+      "time": 117.5,
+      "name": "Awesome Splash/Awesome Slab",
+      "type": "mechanic"
+    },
+    {
+      "time": 136.3,
+      "name": "Deep Impact (bait)",
+      "type": "mechanic"
+    },
+    {
+      "time": 143.5,
+      "name": "Divers Dare",
+      "type": "tankbuster"
+    },
+    {
+      "time": 160.9,
+      "name": "Xtreme Spectacular",
+      "type": "raidwide"
+    },
+    {
+      "time": 173.6,
+      "name": "Xtreme Spectacular (big)",
+      "type": "raidwide"
+    },
+    {
+      "time": 178.8,
+      "name": "Epic Brotherhood x2",
+      "type": "mechanic"
+    },
+    {
+      "time": 194.6,
+      "name": "Insane Air",
+      "type": "mechanic"
+    },
+    {
+      "time": 201.9,
+      "name": "Insane Air",
+      "type": "mechanic"
+    },
+    {
+      "time": 209.2,
+      "name": "Insane Air",
+      "type": "mechanic"
+    },
+    {
+      "time": 216.5,
+      "name": "Insane Air",
+      "type": "mechanic"
+    },
+    {
+      "time": 229.1,
+      "name": "Divers Dare x2",
+      "type": "tankbuster"
+    },
+    {
+      "time": 237.7,
+      "name": "Epic Brotherhood x2",
+      "type": "mechanic"
+    },
+    {
+      "time": 244.8,
+      "name": "Firesnaking/Watersnaking",
+      "type": "mechanic"
+    },
+    {
+      "time": 256.8,
+      "name": "Alley-oop Inferno",
+      "type": "mechanic"
+    },
+    {
+      "time": 258.0,
+      "name": "Reverse Alley-oop/Alley-oop Double-dip",
+      "type": "mechanic"
+    },
+    {
+      "time": 262.6,
+      "name": "Sick Swell",
+      "type": "mechanic"
+    },
+    {
+      "time": 268.8,
+      "name": "Hot Impact",
+      "type": "raidwide"
+    },
+    {
+      "time": 275.2,
+      "name": "Deep Varial",
+      "type": "mechanic"
+    },
+    {
+      "time": 279.4,
+      "name": "Alley-oop Inferno",
+      "type": "mechanic"
+    },
+    {
+      "time": 280.0,
+      "name": "Awesome Splash/Awesome Slab",
+      "type": "mechanic"
+    },
+    {
+      "time": 288.5,
+      "name": "Hot Aerial",
+      "type": "mechanic"
+    },
+    {
+      "time": 292.1,
+      "name": "Sickest Take-off",
+      "type": "mechanic"
+    },
+    {
+      "time": 296.2,
+      "name": "Hot Aerial 4",
+      "type": "mechanic"
+    },
+    {
+      "time": 303.7,
+      "name": "Awesome Splash/Awesome Slab",
+      "type": "mechanic"
+    },
+    {
+      "time": 306.3,
+      "name": "Cutback Blaze",
+      "type": "mechanic"
+    },
+    {
+      "time": 313.2,
+      "name": "Deep Impact (bait)",
+      "type": "mechanic"
+    },
+    {
+      "time": 320.5,
+      "name": "Divers Dare x2",
+      "type": "tankbuster"
+    },
+    {
+      "time": 326.7,
+      "name": "Epic Brotherhood x2",
+      "type": "mechanic"
+    },
+    {
+      "time": 328.8,
+      "name": "Deep Aerial (tower)",
+      "type": "mechanic",
+      "castTime": 5.0
+    },
+    {
+      "time": 334.8,
+      "name": "Deep Aerial (damage)",
+      "type": "mechanic",
+      "castTime": 2.0
+    },
+    {
+      "time": 345.7,
+      "name": "Xtreme Wave 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 347.8,
+      "name": "Scathing Steam 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 354.1,
+      "name": "Xtreme Wave 2",
+      "type": "mechanic"
+    },
+    {
+      "time": 362.6,
+      "name": "Xtreme Wave 3",
+      "type": "mechanic"
+    },
+    {
+      "time": 371.1,
+      "name": "Xtreme Wave 4",
+      "type": "mechanic"
+    },
+    {
+      "time": 379.6,
+      "name": "Xtreme Wave 5",
+      "type": "mechanic"
+    },
+    {
+      "time": 388.3,
+      "name": "Xtreme Wave 6",
+      "type": "mechanic"
+    },
+    {
+      "time": 398.7,
+      "name": "Divers Dare x2",
+      "type": "tankbuster"
+    },
+    {
+      "time": 404.8,
+      "name": "Epic Brotherhood x2",
+      "type": "mechanic"
+    },
+    {
+      "time": 409.9,
+      "name": "Sick Swell",
+      "type": "mechanic"
+    },
+    {
+      "time": 414.3,
+      "name": "Flame Floater",
+      "type": "mechanic"
+    },
+    {
+      "time": 423.6,
+      "name": "Alley-oop Inferno",
+      "type": "mechanic"
+    },
+    {
+      "time": 435.8,
+      "name": "Sickest Take-off",
+      "type": "mechanic"
+    },
+    {
+      "time": 447.1,
+      "name": "Awesome Slab",
+      "type": "mechanic"
+    },
+    {
+      "time": 451.8,
+      "name": "Divers Dare x2",
+      "type": "tankbuster"
+    },
+    {
+      "time": 460.3,
+      "name": "Epic Brotherhood x2",
+      "type": "mechanic"
+    },
+    {
+      "time": 467.4,
+      "name": "Xtreme Firesnaking/Xtreme Watersnaking",
+      "type": "mechanic"
+    },
+    {
+      "time": 482.3,
+      "name": "Insane Air",
+      "type": "mechanic"
+    },
+    {
+      "time": 492.8,
+      "name": "Insane Air",
+      "type": "mechanic"
+    },
+    {
+      "time": 503.2,
+      "name": "Insane Air",
+      "type": "mechanic"
+    },
+    {
+      "time": 513.6,
+      "name": "Insane Air",
+      "type": "mechanic"
+    },
+    {
+      "time": 526.0,
+      "name": "Divers Dare x2",
+      "type": "tankbuster"
+    },
+    {
+      "time": 532.2,
+      "name": "Epic Brotherhood x2",
+      "type": "mechanic"
+    },
+    {
+      "time": 542.1,
+      "name": "Reverse Alley-oop/Alley-oop Double-dip",
+      "type": "mechanic"
+    },
+    {
+      "time": 552.3,
+      "name": "Pyrotation x3",
+      "type": "mechanic",
+      "castTime": 4.9
+    },
+    {
+      "time": 553.2,
+      "name": "Deep Impact (bait)",
+      "type": "mechanic"
+    },
+    {
+      "time": 566.5,
+      "name": "Divers Dare x2",
+      "type": "tankbuster"
+    },
+    {
+      "time": 575.6,
+      "name": "Divers Dare x2",
+      "type": "tankbuster"
+    },
+    {
+      "time": 596.4,
+      "name": "Over the Falls (enrage)",
+      "type": "enrage"
+    }
+  ]
+}

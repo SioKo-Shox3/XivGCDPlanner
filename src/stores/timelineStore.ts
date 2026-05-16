@@ -58,6 +58,9 @@ interface AppState {
   setScrollLeft: (sl: number) => void;
   selectPlacement: (id: string | null) => void;
 
+  // Actions - timeline management
+  addTimeline: (t: BossTimelineDef) => void;
+
   // Actions - save/load
   loadPlan: (plan: { jobId: string; timelineId: string; spellSpeed: number; level: number; placements: SkillPlacement[] }) => void;
 
@@ -90,6 +93,12 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   setJobs: (jobs) => set({ jobs }),
   setTimelines: (timelines) => set({ timelines }),
+  addTimeline: (t) =>
+    set((s) => ({
+      timelines: s.timelines.some((x) => x.id === t.id)
+        ? s.timelines
+        : [...s.timelines, t],
+    })),
 
   selectJob: (jobId) =>
     set({ selectedJobId: jobId, placements: [], validationResult: null, stats: null }),

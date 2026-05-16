@@ -1,0 +1,381 @@
+{
+  "id": "hw_m1s",
+  "name": "ヘビー級零式 1層",
+  "duration": 631,
+  "events": [
+    {
+      "time": 10.4,
+      "name": "Killer Voice",
+      "type": "raidwide"
+    },
+    {
+      "time": 20.5,
+      "name": "Hardcore",
+      "type": "raidwide"
+    },
+    {
+      "time": 30.6,
+      "name": "Vamp Stomp",
+      "type": "mechanic"
+    },
+    {
+      "time": 34.7,
+      "name": "Blast Beat",
+      "type": "mechanic"
+    },
+    {
+      "time": 38.1,
+      "name": "Blast Beat",
+      "type": "mechanic"
+    },
+    {
+      "time": 41.7,
+      "name": "Blast Beat",
+      "type": "mechanic"
+    },
+    {
+      "time": 46.7,
+      "name": "Brutal Rain x3+",
+      "type": "mechanic",
+      "castTime": 2.0
+    },
+    {
+      "time": 60.7,
+      "name": "Sadistic Screech",
+      "type": "raidwide"
+    },
+    {
+      "time": 67.9,
+      "name": "Dead Wake",
+      "type": "mechanic"
+    },
+    {
+      "time": 75.1,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 78.1,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 85.3,
+      "name": "Dead Wake",
+      "type": "mechanic"
+    },
+    {
+      "time": 92.5,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 95.5,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 102.6,
+      "name": "Dead Wake",
+      "type": "mechanic"
+    },
+    {
+      "time": 109.8,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 112.8,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 119.9,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 122.9,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 130.0,
+      "name": "Dead Wake (Enrage)",
+      "type": "enrage"
+    },
+    {
+      "time": 137.9,
+      "name": "Sadistic Screech",
+      "type": "raidwide"
+    },
+    {
+      "time": 152.3,
+      "name": "Crowd Kill",
+      "type": "raidwide"
+    },
+    {
+      "time": 171.3,
+      "name": "Finale Fatale",
+      "type": "raidwide"
+    },
+    {
+      "time": 176.2,
+      "name": "Pulping Pulse",
+      "type": "raidwide"
+    },
+    {
+      "time": 190.3,
+      "name": "Aetherletting Proteans x4",
+      "type": "mechanic",
+      "castTime": 6.3
+    },
+    {
+      "time": 219.7,
+      "name": "Hardcore",
+      "type": "raidwide"
+    },
+    {
+      "time": 224.7,
+      "name": "Pulping Pulse",
+      "type": "raidwide"
+    },
+    {
+      "time": 229.8,
+      "name": "Vamp Stomp",
+      "type": "mechanic"
+    },
+    {
+      "time": 233.9,
+      "name": "Blast Beat",
+      "type": "mechanic"
+    },
+    {
+      "time": 237.3,
+      "name": "Blast Beat",
+      "type": "mechanic"
+    },
+    {
+      "time": 240.9,
+      "name": "Blast Beat",
+      "type": "mechanic"
+    },
+    {
+      "time": 245.9,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 248.9,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 256.1,
+      "name": "Brutal Rain x4+",
+      "type": "mechanic",
+      "castTime": 3.0
+    },
+    {
+      "time": 270.1,
+      "name": "Insatiable Thirst",
+      "type": "mechanic"
+    },
+    {
+      "time": 283.1,
+      "name": "Sadistic Screech",
+      "type": "raidwide"
+    },
+    {
+      "time": 295.3,
+      "name": "Plummet",
+      "type": "mechanic"
+    },
+    {
+      "time": 304.3,
+      "name": "Killer Voice",
+      "type": "raidwide"
+    },
+    {
+      "time": 313.4,
+      "name": "Plummet",
+      "type": "mechanic"
+    },
+    {
+      "time": 322.4,
+      "name": "Killer Voice",
+      "type": "raidwide"
+    },
+    {
+      "time": 331.5,
+      "name": "Plummet",
+      "type": "mechanic"
+    },
+    {
+      "time": 355.5,
+      "name": "Sadistic Screech",
+      "type": "raidwide"
+    },
+    {
+      "time": 369.9,
+      "name": "Crowd Kill",
+      "type": "raidwide"
+    },
+    {
+      "time": 388.9,
+      "name": "Finale Fatale",
+      "type": "raidwide"
+    },
+    {
+      "time": 393.8,
+      "name": "Pulping Pulse",
+      "type": "raidwide"
+    },
+    {
+      "time": 398.8,
+      "name": "Hell in a Cell",
+      "type": "mechanic"
+    },
+    {
+      "time": 400.0,
+      "name": "Bloody Bondage",
+      "type": "mechanic"
+    },
+    {
+      "time": 407.9,
+      "name": "Ultrasonic Spread/Ultrasonic Amp?",
+      "type": "mechanic"
+    },
+    {
+      "time": 415.0,
+      "name": "Ultrasonic Amp/Ultrasonic Spread?",
+      "type": "mechanic"
+    },
+    {
+      "time": 421.1,
+      "name": "Hell in a Cell",
+      "type": "mechanic"
+    },
+    {
+      "time": 422.3,
+      "name": "Bloody Bondage",
+      "type": "mechanic"
+    },
+    {
+      "time": 430.2,
+      "name": "Ultrasonic Amp/Ultrasonic Spread?",
+      "type": "mechanic"
+    },
+    {
+      "time": 437.3,
+      "name": "Ultrasonic Spread/Ultrasonic Amp?",
+      "type": "mechanic"
+    },
+    {
+      "time": 442.4,
+      "name": "Pulping Pulse",
+      "type": "raidwide"
+    },
+    {
+      "time": 446.4,
+      "name": "Pulping Pulse",
+      "type": "raidwide"
+    },
+    {
+      "time": 451.4,
+      "name": "Undead Deathmatch",
+      "type": "mechanic"
+    },
+    {
+      "time": 452.6,
+      "name": "Bloody Bondage",
+      "type": "mechanic"
+    },
+    {
+      "time": 459.7,
+      "name": "Sanguine Scratch 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 471.9,
+      "name": "Breakdown Drop",
+      "type": "mechanic"
+    },
+    {
+      "time": 477.7,
+      "name": "Sanguine Scratch 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 490.0,
+      "name": "Breakdown Drop",
+      "type": "mechanic"
+    },
+    {
+      "time": 496.9,
+      "name": "Brutal Rain x5+",
+      "type": "mechanic",
+      "castTime": 4.0
+    },
+    {
+      "time": 509.9,
+      "name": "Vamp Stomp",
+      "type": "mechanic"
+    },
+    {
+      "time": 514.0,
+      "name": "Blast Beat",
+      "type": "mechanic"
+    },
+    {
+      "time": 517.4,
+      "name": "Blast Beat",
+      "type": "mechanic"
+    },
+    {
+      "time": 521.0,
+      "name": "Blast Beat",
+      "type": "mechanic"
+    },
+    {
+      "time": 526.0,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 529.0,
+      "name": "Half Moon",
+      "type": "mechanic"
+    },
+    {
+      "time": 536.1,
+      "name": "Hardcore",
+      "type": "raidwide"
+    },
+    {
+      "time": 541.1,
+      "name": "Pulping Pulse",
+      "type": "raidwide"
+    },
+    {
+      "time": 548.3,
+      "name": "Sanguine Scratch 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 568.4,
+      "name": "Insatiable Thirst",
+      "type": "mechanic"
+    },
+    {
+      "time": 582.5,
+      "name": "Crowd Kill",
+      "type": "raidwide"
+    },
+    {
+      "time": 601.2,
+      "name": "Finale Fatale (Enrage)",
+      "type": "enrage"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAppStore } from "@/stores/timelineStore";
 import { SaveLoadDialog } from "./SaveLoadDialog";
+import { ImportTimelineDialog } from "./ImportTimelineDialog";
 
 export function Header() {
   const jobs = useAppStore((s) => s.jobs);
@@ -15,7 +16,7 @@ export function Header() {
   const setLevel = useAppStore((s) => s.setLevel);
   const clearPlacements = useAppStore((s) => s.clearPlacements);
 
-  const [dialog, setDialog] = useState<"save" | "load" | null>(null);
+  const [dialog, setDialog] = useState<"save" | "load" | "import" | null>(null);
 
   return (
     <header
@@ -95,6 +96,9 @@ export function Header() {
 
       {/* Spacer + Actions */}
       <div className="ml-auto flex items-center gap-2">
+        <button className="btn btn-ghost" onClick={() => setDialog("import")}>
+          タイムラインをインポート
+        </button>
         <button className="btn btn-ghost" onClick={() => setDialog("load")}>
           ロード
         </button>
@@ -106,8 +110,11 @@ export function Header() {
         </button>
       </div>
 
-      {dialog && (
+      {(dialog === "save" || dialog === "load") && (
         <SaveLoadDialog mode={dialog} onClose={() => setDialog(null)} />
+      )}
+      {dialog === "import" && (
+        <ImportTimelineDialog onClose={() => setDialog(null)} />
       )}
     </header>
   );

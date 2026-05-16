@@ -106,7 +106,24 @@ export function TimelineCanvas() {
         <TimeRuler duration={duration} pps={pps} />
 
         {/* Boss events track */}
-        <div className="relative h-8" style={{ background: "rgba(255,255,255,0.015)" }}>
+        <div className="relative h-10" style={{ background: "rgba(255,255,255,0.015)" }}>
+          {/* Track label */}
+          <span className="absolute left-1.5 top-0.5 text-[9px] font-semibold tracking-wider pointer-events-none z-10"
+            style={{ color: "var(--text-muted)", opacity: 0.5 }}>ボスアクション</span>
+          {/* Color legend */}
+          <div className="absolute right-1 top-0 bottom-0 flex items-center gap-2 z-10 pointer-events-none">
+            {([
+              ["var(--boss-raidwide)", "全体"],
+              ["var(--boss-tankbuster)", "TB"],
+              ["var(--boss-mechanic)", "ギミック"],
+              ["var(--boss-enrage)", "エンレイジ"],
+            ] as [string, string][]).map(([color, label]) => (
+              <span key={label} className="flex items-center gap-0.5 text-[8px]" style={{ color }}>
+                <span className="inline-block w-1.5 h-1.5 rounded-full" style={{ background: color, opacity: 0.8 }} />
+                {label}
+              </span>
+            ))}
+          </div>
           {selectedTimeline.events.map((evt, i) => (
             <BossEventMarker key={i} event={evt} pps={pps} />
           ))}
@@ -139,7 +156,7 @@ export function TimelineCanvas() {
         {/* Ability track */}
         <div className="relative h-16 border-t" style={{ background: "rgba(16,185,129,0.03)", borderColor: "var(--border)" }}>
           <span className="absolute left-1.5 top-0.5 text-[9px] font-semibold tracking-wider uppercase pointer-events-none z-10"
-            style={{ color: "var(--ability-color)", opacity: 0.4 }}>ABILITY</span>
+            style={{ color: "var(--ability-color)", opacity: 0.4 }}>アビリティ</span>
           {abilityPlacements.map((p) => {
             const skill = selectedJob.skills.ability.find((s) => s.id === p.skillId);
             if (!skill) return null;

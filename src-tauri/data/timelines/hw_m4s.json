@@ -1,0 +1,247 @@
+{
+  "id": "hw_m4s",
+  "name": "ヘビー級零式 4層",
+  "duration": 650,
+  "events": [
+    {
+      "time": 15.6,
+      "name": "The Fixer",
+      "type": "mechanic"
+    },
+    {
+      "time": 70.0,
+      "name": "Grotesquerie: Act 1",
+      "type": "raidwide"
+    },
+    {
+      "time": 87.7,
+      "name": "Ravenous Reach",
+      "type": "mechanic"
+    },
+    {
+      "time": 88.0,
+      "name": "Fourth-wall Fusion",
+      "type": "mechanic"
+    },
+    {
+      "time": 96.7,
+      "name": "Burst",
+      "type": "raidwide"
+    },
+    {
+      "time": 97.3,
+      "name": "Fourth-wall Fusion",
+      "type": "mechanic"
+    },
+    {
+      "time": 107.3,
+      "name": "The Fixer",
+      "type": "mechanic"
+    },
+    {
+      "time": 119.5,
+      "name": "Grotesquerie: Act 2",
+      "type": "raidwide"
+    },
+    {
+      "time": 134.7,
+      "name": "Cruel Coil",
+      "type": "tankbuster"
+    },
+    {
+      "time": 140.7,
+      "name": "Skinsplitter 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 145.7,
+      "name": "Skinsplitter 2",
+      "type": "mechanic"
+    },
+    {
+      "time": 150.7,
+      "name": "Skinsplitter 3",
+      "type": "mechanic"
+    },
+    {
+      "time": 152.7,
+      "name": "Roiling Mass 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 155.7,
+      "name": "Skinsplitter 4",
+      "type": "mechanic"
+    },
+    {
+      "time": 157.7,
+      "name": "Roiling Mass 2",
+      "type": "mechanic"
+    },
+    {
+      "time": 160.7,
+      "name": "Skinsplitter 5",
+      "type": "mechanic"
+    },
+    {
+      "time": 162.7,
+      "name": "Roiling Mass 3",
+      "type": "mechanic"
+    },
+    {
+      "time": 165.7,
+      "name": "Skinsplitter 6",
+      "type": "mechanic"
+    },
+    {
+      "time": 170.7,
+      "name": "Skinsplitter 7",
+      "type": "mechanic"
+    },
+    {
+      "time": 176.7,
+      "name": "Constrictor",
+      "type": "mechanic"
+    },
+    {
+      "time": 188.2,
+      "name": "Splattershed",
+      "type": "mechanic"
+    },
+    {
+      "time": 205.9,
+      "name": "Grotesquerie: Act 3",
+      "type": "raidwide"
+    },
+    {
+      "time": 211.0,
+      "name": "Feral Fission",
+      "type": "mechanic"
+    },
+    {
+      "time": 218.2,
+      "name": "Metamitosis x8",
+      "type": "mechanic"
+    },
+    {
+      "time": 226.9,
+      "name": "Split Scourge (cast)",
+      "type": "mechanic"
+    },
+    {
+      "time": 228.0,
+      "name": "Split Scourge",
+      "type": "mechanic"
+    },
+    {
+      "time": 230.4,
+      "name": "Venomous Scourge",
+      "type": "mechanic"
+    },
+    {
+      "time": 239.6,
+      "name": "The Fixer",
+      "type": "mechanic"
+    },
+    {
+      "time": 251.7,
+      "name": "Grotesquerie: Curtain Call",
+      "type": "raidwide"
+    },
+    {
+      "time": 266.5,
+      "name": "Ravenous Reach",
+      "type": "mechanic"
+    },
+    {
+      "time": 279.4,
+      "name": "Burst",
+      "type": "raidwide"
+    },
+    {
+      "time": 288.5,
+      "name": "Splattershed",
+      "type": "mechanic"
+    },
+    {
+      "time": 338.5,
+      "name": "Slaughtershed 1 (castbar)",
+      "type": "mechanic"
+    },
+    {
+      "time": 340.9,
+      "name": "Slaughtershed 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 355.1,
+      "name": "Serpentine Scourge/Raptor Knuckles?",
+      "type": "mechanic"
+    },
+    {
+      "time": 359.8,
+      "name": "Serpentine Scourge/Raptor Knuckles?",
+      "type": "mechanic"
+    },
+    {
+      "time": 367.4,
+      "name": "Slaughtershed 2 (castbar)",
+      "type": "mechanic"
+    },
+    {
+      "time": 369.8,
+      "name": "Slaughtershed 2",
+      "type": "mechanic"
+    },
+    {
+      "time": 450.0,
+      "name": "Burst",
+      "type": "raidwide"
+    },
+    {
+      "time": 455.1,
+      "name": "Serpentine Scourge Left",
+      "type": "mechanic"
+    },
+    {
+      "time": 459.8,
+      "name": "Serpentine Scourge Right",
+      "type": "mechanic"
+    },
+    {
+      "time": 467.4,
+      "name": "Slaughtershed 2 (castbar)",
+      "type": "mechanic"
+    },
+    {
+      "time": 469.8,
+      "name": "Slaughtershed 2",
+      "type": "mechanic"
+    },
+    {
+      "time": 478.5,
+      "name": "Burst",
+      "type": "raidwide"
+    },
+    {
+      "time": 490.0,
+      "name": "Phase 2 (Lindschrat)",
+      "type": "mechanic"
+    },
+    {
+      "time": 540.0,
+      "name": "The Fixer",
+      "type": "mechanic"
+    },
+    {
+      "time": 580.0,
+      "name": "Burst",
+      "type": "raidwide"
+    },
+    {
+      "time": 620.0,
+      "name": "Slaughtershed (Enrage)",
+      "type": "enrage"
+    }
+  ]
+}

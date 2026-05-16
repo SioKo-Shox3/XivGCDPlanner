@@ -1,0 +1,32 @@
+{
+  "id": "m3s",
+  "name": "ライトヘビー級零式 3層",
+  "duration": 620,
+  "events": [
+    { "time": 10.0, "name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 26.0, "name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 42.0, "name": "ボム・スラップ",           "type": "mechanic",   "castTime": 6.0, "description": "爆弾メカニクス" },
+    { "time": 62.0, "name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 80.0, "name": "ブロースラッガー",         "type": "mechanic",   "castTime": 8.0, "description": "乱打メカニクス" },
+    { "time": 99.0, "name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 120.0,"name": "ダブルコード",             "type": "mechanic",   "castTime": 7.0, "description": "縄メカニクス" },
+    { "time": 143.0,"name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 163.0,"name": "ボム・スラップ",           "type": "mechanic",   "castTime": 7.0, "description": "爆弾メカニクス（強化版）" },
+    { "time": 187.0,"name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 208.0,"name": "ブロースラッガー",         "type": "mechanic",   "castTime": 10.0,"description": "乱打メカニクス（強化版）" },
+    { "time": 237.0,"name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 258.0,"name": "ダブルコード",             "type": "mechanic",   "castTime": 9.0, "description": "縄メカニクス（強化版）" },
+    { "time": 287.0,"name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 307.0,"name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 340.0,"name": "ボム・スラップ",           "type": "mechanic",   "castTime": 6.0, "description": "爆弾メカニクス" },
+    { "time": 365.0,"name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 388.0,"name": "ブロースラッガー",         "type": "mechanic",   "castTime": 8.0, "description": "乱打メカニクス" },
+    { "time": 418.0,"name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 448.0,"name": "ダブルコード",             "type": "mechanic",   "castTime": 9.0, "description": "縄メカニクス" },
+    { "time": 478.0,"name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 507.0,"name": "ブルートアッパー",         "type": "raidwide",   "castTime": 5.0, "description": "全体攻撃" },
+    { "time": 540.0,"name": "ボム・スラップ",           "type": "mechanic",   "castTime": 6.0, "description": "爆弾メカニクス" },
+    { "time": 570.0,"name": "ダブルレッグ",             "type": "tankbuster", "castTime": 4.0, "description": "タンクバスター" },
+    { "time": 600.0,"name": "時間切れ",                 "type": "enrage",     "castTime": 10.0,"description": "時間切れ" }
+  ]
+}

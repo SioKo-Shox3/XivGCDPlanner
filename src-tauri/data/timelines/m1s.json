@@ -1,6 +1,6 @@
 {
   "id": "m1s",
-  "name": "AAC ライトヘビー級 M1零式",
+  "name": "ライトヘビー級零式 1層",
   "duration": 620,
   "events": [
     { "time": 10.5, "name": "ブラックキャット・クロッシング", "type": "raidwide", "castTime": 5.0, "description": "全体攻撃" },

@@ -1,0 +1,217 @@
+{
+  "id": "hw_m3s",
+  "name": "ヘビー級零式 3層",
+  "duration": 510,
+  "events": [
+    {
+      "time": 10.6,
+      "name": "Crown of Arcadia",
+      "type": "raidwide"
+    },
+    {
+      "time": 17.7,
+      "name": "Raw Steel Trophy (Scythe/Axe)",
+      "type": "mechanic"
+    },
+    {
+      "time": 117.7,
+      "name": "Raw Steel Trophy Axe",
+      "type": "mechanic"
+    },
+    {
+      "time": 124.0,
+      "name": "Raw Steel (Axe)",
+      "type": "tankbuster"
+    },
+    {
+      "time": 125.1,
+      "name": "Impact x6 (Axe)",
+      "type": "mechanic"
+    },
+    {
+      "time": 138.4,
+      "name": "Trophy Weapons",
+      "type": "mechanic"
+    },
+    {
+      "time": 148.2,
+      "name": "Assault Evolved",
+      "type": "mechanic"
+    },
+    {
+      "time": 150.3,
+      "name": "Weapon 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 155.4,
+      "name": "Weapon 2",
+      "type": "mechanic"
+    },
+    {
+      "time": 160.5,
+      "name": "Weapon 3",
+      "type": "mechanic"
+    },
+    {
+      "time": 172.7,
+      "name": "Trophy Weapons",
+      "type": "mechanic"
+    },
+    {
+      "time": 179.8,
+      "name": "Void Stardust",
+      "type": "mechanic"
+    },
+    {
+      "time": 289.9,
+      "name": "Comet",
+      "type": "mechanic"
+    },
+    {
+      "time": 292.7,
+      "name": "Assault Evolved",
+      "type": "mechanic"
+    },
+    {
+      "time": 294.8,
+      "name": "Weapon 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 299.9,
+      "name": "Weapon 2",
+      "type": "mechanic"
+    },
+    {
+      "time": 305.0,
+      "name": "Weapon 3",
+      "type": "mechanic"
+    },
+    {
+      "time": 316.2,
+      "name": "Crushing Comet",
+      "type": "mechanic"
+    },
+    {
+      "time": 322.2,
+      "name": "Crown of Arcadia",
+      "type": "raidwide"
+    },
+    {
+      "time": 330.4,
+      "name": "Dance of Domination Trophy",
+      "type": "mechanic"
+    },
+    {
+      "time": 341.3,
+      "name": "Dance of Domination 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 345.5,
+      "name": "Dance of Domination 7",
+      "type": "mechanic"
+    },
+    {
+      "time": 350.5,
+      "name": "Eye of the Hurricane",
+      "type": "raidwide"
+    },
+    {
+      "time": 350.7,
+      "name": "Explosion",
+      "type": "mechanic"
+    },
+    {
+      "time": 356.4,
+      "name": "Raw Steel Trophy Scythe",
+      "type": "mechanic"
+    },
+    {
+      "time": 363.8,
+      "name": "Heavy Hitter (Scythe)",
+      "type": "mechanic"
+    },
+    {
+      "time": 371.8,
+      "name": "Trophy Weapons",
+      "type": "mechanic"
+    },
+    {
+      "time": 380.0,
+      "name": "Assault Evolved",
+      "type": "mechanic"
+    },
+    {
+      "time": 382.0,
+      "name": "Weapon 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 387.0,
+      "name": "Weapon 2",
+      "type": "mechanic"
+    },
+    {
+      "time": 392.0,
+      "name": "Weapon 3",
+      "type": "mechanic"
+    },
+    {
+      "time": 400.0,
+      "name": "Void Stardust",
+      "type": "mechanic"
+    },
+    {
+      "time": 410.0,
+      "name": "Crushing Comet",
+      "type": "mechanic"
+    },
+    {
+      "time": 420.0,
+      "name": "Crown of Arcadia",
+      "type": "raidwide"
+    },
+    {
+      "time": 430.0,
+      "name": "Charybdistopia",
+      "type": "raidwide"
+    },
+    {
+      "time": 438.0,
+      "name": "Ultimate Trophy Weapons",
+      "type": "raidwide"
+    },
+    {
+      "time": 448.0,
+      "name": "Assault Evolved",
+      "type": "mechanic"
+    },
+    {
+      "time": 450.0,
+      "name": "Weapon 1",
+      "type": "mechanic"
+    },
+    {
+      "time": 455.0,
+      "name": "Weapon 2",
+      "type": "mechanic"
+    },
+    {
+      "time": 460.0,
+      "name": "Weapon 3",
+      "type": "mechanic"
+    },
+    {
+      "time": 470.0,
+      "name": "Crown of Arcadia",
+      "type": "raidwide"
+    },
+    {
+      "time": 480.0,
+      "name": "Charybdis (Enrage)",
+      "type": "enrage"
+    }
+  ]
+}

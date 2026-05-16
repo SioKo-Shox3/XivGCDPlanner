@@ -55,6 +55,19 @@ pub fn load_timelines_from_dir(data_dir: &PathBuf) -> Result<Vec<BossTimelineDef
     Ok(timelines)
 }
 
+/// Save a parsed/imported BossTimelineDef as a JSON file
+pub fn save_timeline_to_dir(dir: &PathBuf, timeline: &BossTimelineDef) -> Result<(), String> {
+    fs::create_dir_all(dir)
+        .map_err(|e| format!("Failed to create user_timelines dir: {}", e))?;
+    let filename = format!("{}.json", sanitize_filename(&timeline.id));
+    let path = dir.join(&filename);
+    let content = serde_json::to_string_pretty(timeline)
+        .map_err(|e| format!("Failed to serialize timeline: {}", e))?;
+    fs::write(&path, content)
+        .map_err(|e| format!("Failed to write {}: {}", path.display(), e))?;
+    Ok(())
+}
+
 /// Save a rotation plan to a JSON file
 pub fn save_rotation_file(
     save_dir: &PathBuf,
