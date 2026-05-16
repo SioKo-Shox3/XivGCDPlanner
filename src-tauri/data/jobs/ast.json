@@ -1,0 +1,180 @@
+{
+  "id": "ast",
+  "name": "占星術師",
+  "role": "healer",
+  "icon": "icons/jobs/ast.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 3596,
+        "name": "マレフィク",
+        "castTime": 1.5,
+        "potency": 150,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003120_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：150"
+      },
+      {
+        "id": 7442,
+        "name": "マレフィガ",
+        "castTime": 1.5,
+        "potency": 250,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003145_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：250"
+      },
+      {
+        "id": 25871,
+        "name": "フォールマレフィク",
+        "castTime": 1.5,
+        "potency": 270,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003559_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：270"
+      },
+      {
+        "id": 3599,
+        "name": "コンバス",
+        "castTime": 0,
+        "potency": 50,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003124_hr1.tex",
+        "description": "対象に継続ダメージを付与する。威力：50"
+      },
+      {
+        "id": 16554,
+        "name": "コンバガ",
+        "castTime": 0,
+        "potency": 60,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003554_hr1.tex",
+        "description": "対象に継続ダメージを付与する。威力：60"
+      },
+      {
+        "id": 3615,
+        "name": "グラビデ",
+        "castTime": 1.5,
+        "potency": 130,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003123_hr1.tex",
+        "description": "対象とその周囲の敵に範囲魔法攻撃。威力：130"
+      },
+      {
+        "id": 25872,
+        "name": "グラビラ",
+        "castTime": 1.5,
+        "potency": 140,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003560_hr1.tex",
+        "description": "対象とその周囲の敵に範囲魔法攻撃。威力：140"
+      },
+      {
+        "id": 3600,
+        "name": "ヘリオス",
+        "castTime": 1.5,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003129_hr1.tex",
+        "description": "自身と周囲のパーティメンバーのHPを回復する。"
+      },
+      {
+        "id": 3601,
+        "name": "アスペクト・ヘリオス",
+        "castTime": 1.5,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003130_hr1.tex",
+        "description": "範囲回復と継続回復を付与する。"
+      },
+      {
+        "id": 25874,
+        "name": "マクロコスモス",
+        "castTime": 0,
+        "potency": 250,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003562_hr1.tex",
+        "description": "対象と周囲の敵に範囲魔法攻撃を行い、マクロコスモスを付与する。威力：250"
+      },
+      {
+        "id": 37029,
+        "name": "オラクル",
+        "castTime": 0,
+        "potency": 310,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003566_hr1.tex",
+        "description": "対象と周囲の敵に追撃を行う。威力：310"
+      }
+    ],
+    "ability": [
+      {
+        "id": 3606,
+        "name": "ライトスピード",
+        "recastTime": 60,
+        "maxCharges": 2,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003135_hr1.tex",
+        "description": "一定時間、魔法の詠唱時間を大きく短縮する。"
+      },
+      {
+        "id": 3614,
+        "name": "ディグニティ",
+        "recastTime": 40,
+        "maxCharges": 3,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003141_hr1.tex",
+        "description": "対象の残HPが少ないほど回復量が上がる即時回復。"
+      },
+      {
+        "id": 7439,
+        "name": "アーサリースター",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003143_hr1.tex",
+        "description": "星を設置し、時間経過後に範囲ダメージと範囲回復を行う。"
+      },
+      {
+        "id": 16552,
+        "name": "ディヴィネーション",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003553_hr1.tex",
+        "description": "自身と周囲のパーティメンバーの与ダメージを上昇させる。"
+      },
+      {
+        "id": 16559,
+        "name": "ニュートラルセクト",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003552_hr1.tex",
+        "description": "回復魔法を強化し、一部魔法にバリア効果を付与する。"
+      },
+      {
+        "id": 25873,
+        "name": "エクザルテーション",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003561_hr1.tex",
+        "description": "対象の被ダメージを軽減し、終了時に追加回復する。"
+      },
+      {
+        "id": 37017,
+        "name": "アストラルドロー",
+        "recastTime": 55,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003564_hr1.tex",
+        "description": "攻撃用カードとクラウンロードをドローする。"
+      },
+      {
+        "id": 37022,
+        "name": "マイナーアルカナ",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003119_hr1.tex",
+        "description": "クラウンロードまたはクラウンレディを扱う。"
+      },
+      {
+        "id": 7444,
+        "name": "クラウンロード",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003147_hr1.tex",
+        "description": "対象とその周囲の敵に範囲攻撃を行う。"
+      },
+      {
+        "id": 7445,
+        "name": "クラウンレディ",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003146_hr1.tex",
+        "description": "自身と周囲のパーティメンバーを回復する。"
+      }
+    ]
+  }
+}

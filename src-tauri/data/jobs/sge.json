@@ -1,0 +1,164 @@
+{
+  "id": "sge",
+  "name": "賢者",
+  "role": "healer",
+  "icon": "icons/jobs/sge.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 24312,
+        "name": "ドシスIII",
+        "castTime": 1.5,
+        "potency": 330,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003680_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：330"
+      },
+      {
+        "id": 24290,
+        "name": "エウクラシア",
+        "castTime": 0,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003658_hr1.tex",
+        "description": "特定の魔法を変化させる。"
+      },
+      {
+        "id": 24314,
+        "name": "エウクラシア・ドシスIII",
+        "castTime": 0,
+        "potency": 70,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003682_hr1.tex",
+        "description": "対象に継続ダメージを付与する。威力：70"
+      },
+      {
+        "id": 24315,
+        "name": "ディスクラシアII",
+        "castTime": 0,
+        "potency": 170,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003683_hr1.tex",
+        "description": "自身の周囲の敵に範囲魔法攻撃。威力：170"
+      },
+      {
+        "id": 24316,
+        "name": "トキシコンII",
+        "castTime": 0,
+        "potency": 330,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003684_hr1.tex",
+        "description": "対象とその周囲の敵に範囲魔法攻撃。威力：330"
+      },
+      {
+        "id": 24313,
+        "name": "フレグマIII",
+        "castTime": 0,
+        "potency": 600,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003681_hr1.tex",
+        "description": "対象とその周囲の敵に範囲魔法攻撃。威力：600"
+      },
+      {
+        "id": 24284,
+        "name": "ディアグノシス",
+        "castTime": 1.5,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003652_hr1.tex",
+        "description": "対象のHPを回復する。"
+      },
+      {
+        "id": 24286,
+        "name": "プログノシス",
+        "castTime": 2,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003654_hr1.tex",
+        "description": "自身と周囲のパーティメンバーのHPを回復する。"
+      },
+      {
+        "id": 24292,
+        "name": "エウクラシア・プログノシス",
+        "castTime": 0,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003660_hr1.tex",
+        "description": "範囲回復とバリア付与を行う。"
+      },
+      {
+        "id": 24318,
+        "name": "プネウマ",
+        "castTime": 1.5,
+        "potency": 330,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003686_hr1.tex",
+        "description": "直線範囲の敵に魔法攻撃を行い、味方を回復する。威力：330"
+      }
+    ],
+    "ability": [
+      {
+        "id": 24294,
+        "name": "ソーテリア",
+        "recastTime": 90,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003662_hr1.tex",
+        "description": "カルディアによる回復量を上昇させる。"
+      },
+      {
+        "id": 24296,
+        "name": "ドルオコレ",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003664_hr1.tex",
+        "description": "対象のHPを即座に回復する。"
+      },
+      {
+        "id": 24300,
+        "name": "ゾーエ",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003668_hr1.tex",
+        "description": "次に使用する一部回復魔法の効果を上昇させる。"
+      },
+      {
+        "id": 24309,
+        "name": "リゾーマタ",
+        "recastTime": 90,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003677_hr1.tex",
+        "description": "アダーガルを1つ得る。"
+      },
+      {
+        "id": 24310,
+        "name": "ホーリズム",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003678_hr1.tex",
+        "description": "周囲のパーティメンバーに回復と軽減を付与する。"
+      },
+      {
+        "id": 24311,
+        "name": "パンハイマ",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003679_hr1.tex",
+        "description": "範囲に多重バリアを付与する。"
+      },
+      {
+        "id": 24317,
+        "name": "クラーシス",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003685_hr1.tex",
+        "description": "対象のHP回復量を上昇させる。"
+      },
+      {
+        "id": 37033,
+        "name": "プシュケー",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003688_hr1.tex",
+        "description": "対象とその周囲の敵に範囲攻撃を行う。"
+      },
+      {
+        "id": 37035,
+        "name": "フィロソフィア",
+        "recastTime": 180,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003690_hr1.tex",
+        "description": "カルディアの効果を全体化し、回復支援を強化する。"
+      }
+    ]
+  }
+}

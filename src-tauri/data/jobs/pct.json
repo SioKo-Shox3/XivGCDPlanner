@@ -1,0 +1,172 @@
+{
+  "id": "pct",
+  "name": "ピクトマンサー",
+  "role": "caster",
+  "icon": "icons/jobs/pct.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 34650,
+        "name": "レッドファイア",
+        "castTime": 1.5,
+        "potency": 490,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003801_hr1.tex",
+        "description": "対象に火属性魔法攻撃。威力：490"
+      },
+      {
+        "id": 34652,
+        "name": "ブルーウォータ",
+        "castTime": 1.5,
+        "potency": 570,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003803_hr1.tex",
+        "description": "対象に水属性魔法攻撃。威力：570"
+      },
+      {
+        "id": 34653,
+        "name": "シアンブリザド",
+        "castTime": 2.3,
+        "potency": 860,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003804_hr1.tex",
+        "description": "対象に氷属性魔法攻撃。威力：860"
+      },
+      {
+        "id": 34654,
+        "name": "イエローストーン",
+        "castTime": 2.3,
+        "potency": 900,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003805_hr1.tex",
+        "description": "対象に土属性魔法攻撃。威力：900"
+      },
+      {
+        "id": 34655,
+        "name": "マゼンタサンダー",
+        "castTime": 2.3,
+        "potency": 940,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003806_hr1.tex",
+        "description": "対象に雷属性魔法攻撃。威力：940"
+      },
+      {
+        "id": 34662,
+        "name": "ホワイトホーリー",
+        "castTime": 0,
+        "potency": 570,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003813_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：570"
+      },
+      {
+        "id": 34663,
+        "name": "ブラックコメット",
+        "castTime": 0,
+        "potency": 940,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003814_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：940"
+      },
+      {
+        "id": 34678,
+        "name": "ハンマースタンプ",
+        "castTime": 0,
+        "potency": 560,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003829_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：560"
+      },
+      {
+        "id": 34679,
+        "name": "ハンマーブラッシュ",
+        "castTime": 0,
+        "potency": 580,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003830_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：580"
+      },
+      {
+        "id": 34680,
+        "name": "ハンマーポリッシュ",
+        "castTime": 0,
+        "potency": 600,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003831_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：600"
+      },
+      {
+        "id": 34688,
+        "name": "レインボードリップ",
+        "castTime": 4,
+        "potency": 1000,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003838_hr1.tex",
+        "description": "対象に向かって前方直線範囲無属性魔法攻撃。威力：1000"
+      },
+      {
+        "id": 34681,
+        "name": "スタープリズム",
+        "castTime": 0,
+        "potency": 1100,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003832_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：1100"
+      }
+    ],
+    "ability": [
+      {
+        "id": 34675,
+        "name": "イマジンスカイ",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003826_hr1.tex",
+        "description": "自身と周囲のパーティメンバーの与ダメージを5%上昇させる。効果時間：20秒"
+      },
+      {
+        "id": 34683,
+        "name": "サブトラクティブパレット",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003833_hr1.tex",
+        "description": "自身に3スタックの「サブトラクティブパレット」を付与する。"
+      },
+      {
+        "id": 34684,
+        "name": "スマッジ",
+        "recastTime": 20,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003834_hr1.tex",
+        "description": "自身の15m前方に向かって素早く移動する。"
+      },
+      {
+        "id": 34670,
+        "name": "イマジンポンポン",
+        "recastTime": 40,
+        "maxCharges": 3,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003821_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：800"
+      },
+      {
+        "id": 34671,
+        "name": "イマジンウィング",
+        "recastTime": 40,
+        "maxCharges": 3,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003822_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：800"
+      },
+      {
+        "id": 34674,
+        "name": "イマジンハンマー",
+        "recastTime": 60,
+        "maxCharges": 2,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003825_hr1.tex",
+        "description": "自身に3スタックの「ハンマーコンボ実行可」を付与する。"
+      },
+      {
+        "id": 34676,
+        "name": "モーグリストリーム",
+        "recastTime": 30,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003827_hr1.tex",
+        "description": "対象に向かって前方直線範囲無属性魔法攻撃。威力：1000"
+      },
+      {
+        "id": 34677,
+        "name": "マディーンレトリビューション",
+        "recastTime": 30,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003828_hr1.tex",
+        "description": "対象に向かって前方直線範囲無属性魔法攻撃。威力：1100"
+      }
+    ]
+  }
+}

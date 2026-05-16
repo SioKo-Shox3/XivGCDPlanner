@@ -1,0 +1,172 @@
+{
+  "id": "vpr",
+  "name": "ヴァイパー",
+  "role": "melee",
+  "icon": "icons/jobs/vpr.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 34606,
+        "name": "壱の牙【咬創】",
+        "castTime": 0,
+        "potency": 200.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003701_hr1.tex",
+        "description": "対象に物理攻撃。威力：200。咬創ルート始動。"
+      },
+      {
+        "id": 34607,
+        "name": "壱の牙【穿裂】",
+        "castTime": 0,
+        "potency": 200.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003702_hr1.tex",
+        "description": "対象に物理攻撃。威力：200。穿裂ルート始動。"
+      },
+      {
+        "id": 34608,
+        "name": "弐の牙【猛襲】",
+        "castTime": 0,
+        "potency": 300.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003703_hr1.tex",
+        "description": "対象に物理攻撃。威力：300。猛襲を付与する。"
+      },
+      {
+        "id": 34609,
+        "name": "弐の牙【疾速】",
+        "castTime": 0,
+        "potency": 300.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003704_hr1.tex",
+        "description": "対象に物理攻撃。威力：300。疾速を付与する。"
+      },
+      {
+        "id": 34610,
+        "name": "参の牙【側撃】",
+        "castTime": 0,
+        "potency": 400.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003705_hr1.tex",
+        "description": "対象に物理攻撃。側面時威力：400。霊力ゲージを上昇させる。"
+      },
+      {
+        "id": 34612,
+        "name": "参の牙【背撃】",
+        "castTime": 0,
+        "potency": 400.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003707_hr1.tex",
+        "description": "対象に物理攻撃。背面時威力：400。霊力ゲージを上昇させる。"
+      },
+      {
+        "id": 34620,
+        "name": "壱の蛇【強砕】",
+        "castTime": 0,
+        "potency": 500.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003715_hr1.tex",
+        "description": "対象に物理攻撃。威力：500。飛蛇の魂を付与する。"
+      },
+      {
+        "id": 34621,
+        "name": "弐の蛇【猛襲】",
+        "castTime": 0,
+        "potency": 620.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003716_hr1.tex",
+        "description": "対象に物理攻撃。側面時威力：620。双牙連術を強化する。"
+      },
+      {
+        "id": 34622,
+        "name": "弐の蛇【疾速】",
+        "castTime": 0,
+        "potency": 620.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003717_hr1.tex",
+        "description": "対象に物理攻撃。背面時威力：620。双牙乱術を強化する。"
+      },
+      {
+        "id": 34626,
+        "name": "祖霊降ろし",
+        "castTime": 0,
+        "potency": 750.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003721_hr1.tex",
+        "description": "自身周囲に範囲物理攻撃。威力：750。祖霊連撃を開始する。"
+      },
+      {
+        "id": 34627,
+        "name": "祖霊の牙【壱】",
+        "castTime": 0,
+        "potency": 680.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003722_hr1.tex",
+        "description": "対象と周囲に範囲物理攻撃。連続祖霊コンボの初段。"
+      },
+      {
+        "id": 34631,
+        "name": "祖霊の大蛇牙",
+        "castTime": 0,
+        "potency": 1150.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003726_hr1.tex",
+        "description": "対象と周囲に範囲物理攻撃。威力：1150。祖霊コンボの締め。"
+      }
+    ],
+    "ability": [
+      {
+        "id": 34647,
+        "name": "蛇の霊気",
+        "recastTime": 120.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003742_hr1.tex",
+        "description": "飛蛇の魂と祖霊降ろし実行可を付与する。"
+      },
+      {
+        "id": 35921,
+        "name": "双牙連術",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003744_hr1.tex",
+        "description": "条件に応じて双牙連撃や飛蛇連尾撃へ変化する。"
+      },
+      {
+        "id": 35922,
+        "name": "双牙乱術",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003745_hr1.tex",
+        "description": "条件に応じて双牙乱撃や飛蛇乱尾撃へ変化する。"
+      },
+      {
+        "id": 34634,
+        "name": "蛇尾撃",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003729_hr1.tex",
+        "description": "対象に物理攻撃。威力：280。コンボ派生後の追撃。"
+      },
+      {
+        "id": 34635,
+        "name": "蛇尾閃",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003730_hr1.tex",
+        "description": "自身周囲に範囲物理攻撃。威力：100。範囲コンボ派生後の追撃。"
+      },
+      {
+        "id": 34644,
+        "name": "飛蛇連尾撃",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003739_hr1.tex",
+        "description": "対象と周囲に範囲物理攻撃。威力：170。双牙連術の派生。"
+      },
+      {
+        "id": 34645,
+        "name": "飛蛇乱尾撃",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003740_hr1.tex",
+        "description": "対象と周囲に範囲物理攻撃。威力：170。双牙乱術の派生。"
+      },
+      {
+        "id": 34646,
+        "name": "蛇行",
+        "recastTime": 30.0,
+        "maxCharges": 3,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003741_hr1.tex",
+        "description": "対象の目前まで素早く移動する。"
+      }
+    ]
+  }
+}

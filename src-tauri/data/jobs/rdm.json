@@ -1,0 +1,180 @@
+{
+  "id": "rdm",
+  "name": "赤魔道士",
+  "role": "caster",
+  "icon": "icons/jobs/rdm.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 37004,
+        "name": "ジョルラ",
+        "castTime": 2,
+        "potency": 280,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003241_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：280"
+      },
+      {
+        "id": 25855,
+        "name": "ヴァルサンダガ",
+        "castTime": 5,
+        "potency": 440,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003235_hr1.tex",
+        "description": "対象に雷属性魔法攻撃。威力：440"
+      },
+      {
+        "id": 25856,
+        "name": "ヴァルエアロガ",
+        "castTime": 5,
+        "potency": 440,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003236_hr1.tex",
+        "description": "対象に風属性魔法攻撃。威力：440"
+      },
+      {
+        "id": 7510,
+        "name": "ヴァルファイア",
+        "castTime": 2,
+        "potency": 380,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003208_hr1.tex",
+        "description": "対象に火属性魔法攻撃。威力：380"
+      },
+      {
+        "id": 7511,
+        "name": "ヴァルストーン",
+        "castTime": 2,
+        "potency": 380,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003209_hr1.tex",
+        "description": "対象に土属性魔法攻撃。威力：380"
+      },
+      {
+        "id": 7527,
+        "name": "エンリポスト",
+        "castTime": 0,
+        "potency": 340,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003225_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：340"
+      },
+      {
+        "id": 7528,
+        "name": "エンツヴェルクハウ",
+        "castTime": 0,
+        "potency": 380,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003226_hr1.tex",
+        "description": "対象に無属性魔法攻撃。コンボ時威力：380"
+      },
+      {
+        "id": 7529,
+        "name": "エンルドゥブルマン",
+        "castTime": 0,
+        "potency": 560,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003227_hr1.tex",
+        "description": "対象に無属性魔法攻撃。コンボ時威力：560"
+      },
+      {
+        "id": 7525,
+        "name": "ヴァルフレア",
+        "castTime": 0,
+        "potency": 650,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003223_hr1.tex",
+        "description": "対象とその周囲の敵に火属性範囲魔法攻撃。威力：650"
+      },
+      {
+        "id": 16530,
+        "name": "スコーチ",
+        "castTime": 0,
+        "potency": 750,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003234_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：750"
+      },
+      {
+        "id": 25858,
+        "name": "レゾリューション",
+        "castTime": 0,
+        "potency": 850,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003238_hr1.tex",
+        "description": "対象に向かって前方直線範囲無属性魔法攻撃。威力：850"
+      },
+      {
+        "id": 37006,
+        "name": "ノーブルインパクト",
+        "castTime": 0,
+        "potency": 600,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003243_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：600"
+      }
+    ],
+    "ability": [
+      {
+        "id": 7506,
+        "name": "コル・ア・コル",
+        "recastTime": 35,
+        "maxCharges": 2,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003204_hr1.tex",
+        "description": "対象に急接近して物理攻撃を行う。威力：130"
+      },
+      {
+        "id": 7517,
+        "name": "フレッシュ",
+        "recastTime": 25,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003212_hr1.tex",
+        "description": "対象に物理攻撃。威力：480"
+      },
+      {
+        "id": 7518,
+        "name": "アクセラレーション",
+        "recastTime": 55,
+        "maxCharges": 2,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003214_hr1.tex",
+        "description": "次のヴァルサンダガ、ヴァルエアロガ、インパクト系魔法を詠唱無しにする。"
+      },
+      {
+        "id": 7519,
+        "name": "コントルシクスト",
+        "recastTime": 35,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003217_hr1.tex",
+        "description": "対象とその周囲の敵に範囲物理攻撃。威力：420"
+      },
+      {
+        "id": 7520,
+        "name": "エンボルデン",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003218_hr1.tex",
+        "description": "自身の与魔法ダメージを10%、周囲のパーティメンバーの与ダメージを5%上昇させる。効果時間：20秒"
+      },
+      {
+        "id": 7521,
+        "name": "マナフィケーション",
+        "recastTime": 110,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003219_hr1.tex",
+        "description": "魔法剣コンボをマナ消費なしで実行できるようにし、プリフルジェンス実行可を付与する。"
+      },
+      {
+        "id": 7561,
+        "name": "迅速魔",
+        "recastTime": 40,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000866_hr1.tex",
+        "description": "次に実行する1回の魔法を詠唱時間無しで唱えることができる。"
+      },
+      {
+        "id": 37005,
+        "name": "ブライヤー・クロゼ",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003242_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：950"
+      },
+      {
+        "id": 37007,
+        "name": "プリフルジェンス",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003244_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：1200"
+      }
+    ]
+  }
+}

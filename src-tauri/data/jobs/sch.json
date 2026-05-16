@@ -1,0 +1,156 @@
+{
+  "id": "sch",
+  "name": "学者",
+  "role": "healer",
+  "icon": "icons/jobs/sch.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 17869,
+        "name": "ルイン",
+        "castTime": 1.5,
+        "potency": 150,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000501_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：150"
+      },
+      {
+        "id": 17870,
+        "name": "ルインラ",
+        "castTime": 0,
+        "potency": 220,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000502_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：220"
+      },
+      {
+        "id": 16540,
+        "name": "蠱毒法",
+        "castTime": 0,
+        "potency": 40,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002820_hr1.tex",
+        "description": "対象に継続ダメージを付与する。威力：40"
+      },
+      {
+        "id": 25865,
+        "name": "極炎法",
+        "castTime": 1.5,
+        "potency": 310,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002875_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：310"
+      },
+      {
+        "id": 25866,
+        "name": "裂陣法",
+        "castTime": 0,
+        "potency": 180,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002876_hr1.tex",
+        "description": "自身の周囲の敵に範囲魔法攻撃。威力：180"
+      },
+      {
+        "id": 190,
+        "name": "フィジク",
+        "castTime": 1.5,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000518_hr1.tex",
+        "description": "対象のHPを回復する。"
+      },
+      {
+        "id": 185,
+        "name": "鼓舞激励の策",
+        "castTime": 2,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002801_hr1.tex",
+        "description": "対象を回復し、バリアを付与する。"
+      },
+      {
+        "id": 186,
+        "name": "士気高揚の策",
+        "castTime": 2,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002802_hr1.tex",
+        "description": "範囲回復とバリア付与を同時に行う。"
+      }
+    ],
+    "ability": [
+      {
+        "id": 166,
+        "name": "エーテルフロー",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000510_hr1.tex",
+        "description": "エーテルフロースタックを回復し、MPを回復する。"
+      },
+      {
+        "id": 167,
+        "name": "エナジードレイン",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000514_hr1.tex",
+        "description": "対象に無属性攻撃を行い、MPを回復する。"
+      },
+      {
+        "id": 188,
+        "name": "野戦治療の陣",
+        "recastTime": 30,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002804_hr1.tex",
+        "description": "設置した陣内のパーティメンバーの被ダメージを軽減する。"
+      },
+      {
+        "id": 189,
+        "name": "生命活性法",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002805_hr1.tex",
+        "description": "対象のHPを即座に回復する。"
+      },
+      {
+        "id": 3583,
+        "name": "不撓不屈の策",
+        "recastTime": 30,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002806_hr1.tex",
+        "description": "周囲のパーティメンバーのHPを回復する。"
+      },
+      {
+        "id": 3585,
+        "name": "展開戦術",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002808_hr1.tex",
+        "description": "鼓舞激励の策などのバリア効果を周囲に展開する。"
+      },
+      {
+        "id": 3587,
+        "name": "転化",
+        "recastTime": 180,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002810_hr1.tex",
+        "description": "フェアリーを一時退避させ、エーテルフロースタックを回復する。"
+      },
+      {
+        "id": 7436,
+        "name": "連環計",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002815_hr1.tex",
+        "description": "対象に被クリティカル率上昇効果を付与する。"
+      },
+      {
+        "id": 16542,
+        "name": "秘策",
+        "recastTime": 90,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002822_hr1.tex",
+        "description": "次の一部回復魔法を必ずクリティカルにする。"
+      },
+      {
+        "id": 25868,
+        "name": "疾風怒濤の計",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002878_hr1.tex",
+        "description": "パーティメンバーに移動速度上昇と被ダメージ軽減を付与する。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "id": "smn",
+  "name": "召喚士",
+  "role": "caster",
+  "icon": "icons/jobs/smn.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 3579,
+        "name": "ルインガ",
+        "castTime": 1.5,
+        "potency": 400,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002682_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：400"
+      },
+      {
+        "id": 7426,
+        "name": "ルインジャ",
+        "castTime": 0,
+        "potency": 520,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002686_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：520"
+      },
+      {
+        "id": 7427,
+        "name": "サモン・バハムート",
+        "castTime": 0,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002691_hr1.tex",
+        "description": "デミ・バハムートを顕現し、ルインガをアストラルインパルスに変化させる。"
+      },
+      {
+        "id": 25820,
+        "name": "アストラルインパルス",
+        "castTime": 0,
+        "potency": 500,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002757_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：500"
+      },
+      {
+        "id": 25831,
+        "name": "サモン・フェニックス",
+        "castTime": 0,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002765_hr1.tex",
+        "description": "デミ・フェニックスを顕現し、ルインガを霊泉の炎に変化させる。"
+      },
+      {
+        "id": 25835,
+        "name": "クリムゾンサイクロン",
+        "castTime": 0,
+        "potency": 560,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002769_hr1.tex",
+        "description": "対象に急接近して火属性範囲魔法攻撃。威力：560"
+      },
+      {
+        "id": 25885,
+        "name": "クリムゾンストライク",
+        "castTime": 0,
+        "potency": 560,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002779_hr1.tex",
+        "description": "対象とその周囲の敵に火属性範囲魔法攻撃。威力：560"
+      },
+      {
+        "id": 25837,
+        "name": "スリップストリーム",
+        "castTime": 3,
+        "potency": 520,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002771_hr1.tex",
+        "description": "対象とその周囲の敵に風属性範囲魔法攻撃。威力：520"
+      },
+      {
+        "id": 36992,
+        "name": "サモン・ソルバハムート",
+        "castTime": 0,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002782_hr1.tex",
+        "description": "ソルバハムートを顕現し、ルインガをアンブラルインパルスに変化させる。"
+      },
+      {
+        "id": 36994,
+        "name": "アンブラルインパルス",
+        "castTime": 0,
+        "potency": 640,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002784_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：640"
+      }
+    ],
+    "ability": [
+      {
+        "id": 25799,
+        "name": "守りの光",
+        "recastTime": 60,
+        "maxCharges": 2,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002750_hr1.tex",
+        "description": "自身に最大HPの20%分ダメージを軽減するバリアを張る。"
+      },
+      {
+        "id": 25801,
+        "name": "シアリングライト",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002780_hr1.tex",
+        "description": "自身と周囲のパーティメンバーの与ダメージを5%上昇させる。効果時間：20秒"
+      },
+      {
+        "id": 16508,
+        "name": "エナジードレイン",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000514_hr1.tex",
+        "description": "対象に無属性魔法攻撃を行い、エーテルフローを2スタック付与する。"
+      },
+      {
+        "id": 7429,
+        "name": "エンキンドル・バハムート",
+        "recastTime": 20,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002693_hr1.tex",
+        "description": "デミ・バハムートに「アク・モーン」を実行させる。"
+      },
+      {
+        "id": 36990,
+        "name": "ミアズマノヴァ",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002699_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：500"
+      },
+      {
+        "id": 36991,
+        "name": "シアリングスパーク",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002781_hr1.tex",
+        "description": "対象とその周囲の敵に無属性範囲魔法攻撃。威力：700"
+      },
+      {
+        "id": 36997,
+        "name": "ルクス・ソラリス",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002787_hr1.tex",
+        "description": "自身と周囲のパーティメンバーのHPを回復する。回復力：500"
+      },
+      {
+        "id": 36998,
+        "name": "エンキンドル・ソルバハムート",
+        "recastTime": 20,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002788_hr1.tex",
+        "description": "ソルバハムートに「エクソダス」を実行させる。"
+      }
+    ]
+  }
+}

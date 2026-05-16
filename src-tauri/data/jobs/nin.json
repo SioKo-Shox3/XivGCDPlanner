@@ -1,0 +1,156 @@
+{
+  "id": "nin",
+  "name": "忍者",
+  "role": "melee",
+  "icon": "icons/jobs/nin.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 2240,
+        "name": "双刃旋",
+        "castTime": 0,
+        "potency": 300.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000601_hr1.tex",
+        "description": "対象に物理攻撃。威力：300。基本コンボ始動。"
+      },
+      {
+        "id": 2242,
+        "name": "風断ち",
+        "castTime": 0,
+        "potency": 400.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000602_hr1.tex",
+        "description": "対象に物理攻撃。コンボ時威力：400。"
+      },
+      {
+        "id": 2255,
+        "name": "旋風刃",
+        "castTime": 0,
+        "potency": 440.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000605_hr1.tex",
+        "description": "対象に物理攻撃。コンボ時威力：440。背面でさらに強化。"
+      },
+      {
+        "id": 3563,
+        "name": "強甲破点突",
+        "castTime": 0,
+        "potency": 480.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002915_hr1.tex",
+        "description": "対象に物理攻撃。コンボ時威力：480。風纏を付与する。"
+      },
+      {
+        "id": 2267,
+        "name": "雷遁の術",
+        "castTime": 0,
+        "potency": 740.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002912_hr1.tex",
+        "description": "対象に雷属性魔法攻撃。威力：740。雷獣コンボを解放する。"
+      },
+      {
+        "id": 16492,
+        "name": "氷晶乱流の術",
+        "castTime": 0,
+        "potency": 1300.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002926_hr1.tex",
+        "description": "対象に氷属性魔法攻撃。威力：1300。活殺自在中の主力忍術。"
+      },
+      {
+        "id": 25774,
+        "name": "残影鎌鼬",
+        "castTime": 0,
+        "potency": 600.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002929_hr1.tex",
+        "description": "分身による風属性範囲魔法攻撃。威力：600。"
+      },
+      {
+        "id": 25777,
+        "name": "月影雷獣爪",
+        "castTime": 0,
+        "potency": 700.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002931_hr1.tex",
+        "description": "対象に急接近して雷属性魔法攻撃。威力：700。"
+      },
+      {
+        "id": 25778,
+        "name": "月影雷獣牙",
+        "castTime": 0,
+        "potency": 700.0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002932_hr1.tex",
+        "description": "対象に雷属性魔法攻撃。威力：700。"
+      }
+    ],
+    "ability": [
+      {
+        "id": 2248,
+        "name": "ぶんどる",
+        "recastTime": 120.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000613_hr1.tex",
+        "description": "対象に物理攻撃し、被ダメージ上昇を付与する。"
+      },
+      {
+        "id": 36957,
+        "name": "毒盛の術",
+        "recastTime": 120.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000619_hr1.tex",
+        "description": "対象に物理攻撃し、受けるダメージを上昇させる。"
+      },
+      {
+        "id": 16493,
+        "name": "分身の術",
+        "recastTime": 90.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002927_hr1.tex",
+        "description": "自身に分身を付与し、ウェポンスキルに追撃を発生させる。"
+      },
+      {
+        "id": 3566,
+        "name": "夢幻三段",
+        "recastTime": 60.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002918_hr1.tex",
+        "description": "対象に3回連続物理攻撃。"
+      },
+      {
+        "id": 7403,
+        "name": "天地人",
+        "recastTime": 120.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002922_hr1.tex",
+        "description": "一定時間、連続で3種の忍術を実行できる。"
+      },
+      {
+        "id": 7402,
+        "name": "六道輪廻",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002921_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：380。忍気50消費。"
+      },
+      {
+        "id": 36960,
+        "name": "是生滅法",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002933_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：700。秘技実行可中の強化版。"
+      },
+      {
+        "id": 36959,
+        "name": "口寄せの術・蝦蟇仙",
+        "recastTime": 1.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002934_hr1.tex",
+        "description": "対象と周囲に火属性範囲魔法攻撃。威力：300。"
+      },
+      {
+        "id": 36958,
+        "name": "百雷銃",
+        "recastTime": 60.0,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000620_hr1.tex",
+        "description": "対象と周囲に範囲物理攻撃し、自身の与ダメージを上昇させる。"
+      }
+    ]
+  }
+}

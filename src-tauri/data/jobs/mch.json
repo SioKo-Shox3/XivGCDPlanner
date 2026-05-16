@@ -1,0 +1,148 @@
+{
+  "id": "mch",
+  "name": "機工士",
+  "role": "ranged",
+  "icon": "icons/jobs/mch.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 7411,
+        "name": "ヒートスプリットショット",
+        "castTime": 0,
+        "potency": 200,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003031_hr1.tex",
+        "description": "対象に物理攻撃。威力：200 コンボの起点。ヒートを上昇させる。"
+      },
+      {
+        "id": 7412,
+        "name": "ヒートスラッグショット",
+        "castTime": 0,
+        "potency": 320,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003032_hr1.tex",
+        "description": "対象に物理攻撃。コンボ時威力：320 ヒートを上昇させる。"
+      },
+      {
+        "id": 7413,
+        "name": "ヒートクリーンショット",
+        "castTime": 0,
+        "potency": 420,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003033_hr1.tex",
+        "description": "対象に物理攻撃。コンボ時威力：420 バッテリーを上昇させる。"
+      },
+      {
+        "id": 16498,
+        "name": "ドリル",
+        "castTime": 0,
+        "potency": 660,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003043_hr1.tex",
+        "description": "対象に物理攻撃。威力：660 固有リキャストを持つ。"
+      },
+      {
+        "id": 16500,
+        "name": "エアアンカー",
+        "castTime": 0,
+        "potency": 660,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003045_hr1.tex",
+        "description": "対象に物理攻撃。威力：660 バッテリーを20上昇させる。"
+      },
+      {
+        "id": 25788,
+        "name": "回転のこぎり",
+        "castTime": 0,
+        "potency": 660,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003048_hr1.tex",
+        "description": "前方直線範囲物理攻撃。威力：660 エクスカベーター実行可を付与する。"
+      },
+      {
+        "id": 36981,
+        "name": "エクスカベーター",
+        "castTime": 0,
+        "potency": 660,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003500_hr1.tex",
+        "description": "対象とその周囲に範囲物理攻撃。威力：660 回転のこぎり後に実行可能。"
+      },
+      {
+        "id": 36982,
+        "name": "フルメタルバースト",
+        "castTime": 0,
+        "potency": 900,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003049_hr1.tex",
+        "description": "対象とその周囲に範囲物理攻撃。威力：900 必ずクリティカルかつダイレクトヒットする。"
+      },
+      {
+        "id": 7410,
+        "name": "ヒートブラスト",
+        "castTime": 0,
+        "potency": 240,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003030_hr1.tex",
+        "description": "対象に物理攻撃。威力：240 オーバーヒート中に実行でき、ダブルチェックとチェックメイトのリキャストを短縮する。"
+      }
+    ],
+    "ability": [
+      {
+        "id": 2876,
+        "name": "整備",
+        "recastTime": 55,
+        "maxCharges": 2,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003022_hr1.tex",
+        "description": "次に実行する一部ウェポンスキルを必ずクリティカルかつダイレクトヒットさせる。"
+      },
+      {
+        "id": 2878,
+        "name": "ワイルドファイア",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003018_hr1.tex",
+        "description": "対象にワイルドファイアを付与し、ウェポンスキル命中回数に応じたダメージを与える。"
+      },
+      {
+        "id": 7414,
+        "name": "バレルヒーター",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003034_hr1.tex",
+        "description": "ヒートを50上昇させ、自身にフルメタルバースト実行可を付与する。"
+      },
+      {
+        "id": 17209,
+        "name": "ハイパーチャージ",
+        "recastTime": 10,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003041_hr1.tex",
+        "description": "オーバーヒート状態へ移行し、ヒートブラストを連打できるようにする。"
+      },
+      {
+        "id": 16501,
+        "name": "オートマトン・クイーン",
+        "recastTime": 6,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003501_hr1.tex",
+        "description": "オートマトン・クイーンを起動する。バッテリー量に応じて攻撃威力が変化する。"
+      },
+      {
+        "id": 36979,
+        "name": "ダブルチェック",
+        "recastTime": 1,
+        "maxCharges": 3,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003507_hr1.tex",
+        "description": "対象に物理攻撃を行う。ガウスラウンドから変化する。"
+      },
+      {
+        "id": 36980,
+        "name": "チェックメイト",
+        "recastTime": 1,
+        "maxCharges": 3,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003508_hr1.tex",
+        "description": "対象とその周囲に範囲物理攻撃を行う。リコシェットから変化する。"
+      },
+      {
+        "id": 16889,
+        "name": "タクティシャン",
+        "recastTime": 90,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003040_hr1.tex",
+        "description": "自身と周囲のパーティメンバーの被ダメージを軽減する。効果時間：15秒"
+      }
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "id": "brd",
+  "name": "吟遊詩人",
+  "role": "ranged",
+  "icon": "icons/jobs/brd.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 16495,
+        "name": "バーストショット",
+        "castTime": 0,
+        "potency": 220,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002618_hr1.tex",
+        "description": "対象に物理攻撃。威力：220 ヘヴィショットから変化する。"
+      },
+      {
+        "id": 7409,
+        "name": "リフルジェントアロー",
+        "castTime": 0,
+        "potency": 280,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002616_hr1.tex",
+        "description": "対象に物理攻撃。威力：280 ホークアイまたは乱れ撃ち効果中に実行可能。"
+      },
+      {
+        "id": 7406,
+        "name": "コースティックバイト",
+        "castTime": 0,
+        "potency": 150,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002613_hr1.tex",
+        "description": "対象に物理攻撃。威力：150 継続ダメージを付与する。"
+      },
+      {
+        "id": 7407,
+        "name": "ストームバイト",
+        "castTime": 0,
+        "potency": 100,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002614_hr1.tex",
+        "description": "対象に物理攻撃。威力：100 継続ダメージを付与する。"
+      },
+      {
+        "id": 3560,
+        "name": "アイアンジョーズ",
+        "castTime": 0,
+        "potency": 100,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002608_hr1.tex",
+        "description": "対象に物理攻撃。威力：100 自身のコースティックバイトとストームバイトを更新する。"
+      },
+      {
+        "id": 16496,
+        "name": "エイペックスアロー",
+        "castTime": 0,
+        "potency": 700,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002619_hr1.tex",
+        "description": "前方直線範囲物理攻撃。威力：140～700 ソウルボイスを消費して放つ。"
+      },
+      {
+        "id": 25784,
+        "name": "ブラストアロー",
+        "castTime": 0,
+        "potency": 700,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002621_hr1.tex",
+        "description": "前方直線範囲物理攻撃。威力：700 エイペックスアロー後に実行可能。"
+      },
+      {
+        "id": 36976,
+        "name": "レゾナンスアロー",
+        "castTime": 0,
+        "potency": 640,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002624_hr1.tex",
+        "description": "対象とその周囲に範囲物理攻撃。威力：640 乱れ撃ち後に実行可能。"
+      },
+      {
+        "id": 36977,
+        "name": "光神のアンコール",
+        "castTime": 0,
+        "potency": 1100,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002100_hr1.tex",
+        "description": "対象とその周囲に範囲物理攻撃。威力：700～1100 光神のフィナーレ後に実行可能。"
+      }
+    ],
+    "ability": [
+      {
+        "id": 118,
+        "name": "バトルボイス",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002601_hr1.tex",
+        "description": "自身と周囲のパーティメンバーのダイレクトヒット発動率を上昇させる。効果時間：20秒"
+      },
+      {
+        "id": 101,
+        "name": "猛者の撃",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000352_hr1.tex",
+        "description": "自身の与ダメージを上昇させる。効果時間：20秒"
+      },
+      {
+        "id": 107,
+        "name": "乱れ撃ち",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000353_hr1.tex",
+        "description": "リフルジェントアローを強化し、レゾナンスアロー実行可を付与する。効果時間：10秒"
+      },
+      {
+        "id": 114,
+        "name": "賢人のバラード",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002602_hr1.tex",
+        "description": "賢人のバラードを歌い、PTの与ダメージを1％上昇させる。効果時間：45秒"
+      },
+      {
+        "id": 116,
+        "name": "軍神のパイオン",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002603_hr1.tex",
+        "description": "軍神のパイオンを歌い、PTのダイレクトヒット発動率を上昇させる。効果時間：45秒"
+      },
+      {
+        "id": 3559,
+        "name": "旅神のメヌエット",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002607_hr1.tex",
+        "description": "旅神のメヌエットを歌い、PTのクリティカル発動率を上昇させる。効果時間：45秒"
+      },
+      {
+        "id": 7404,
+        "name": "ピッチパーフェクト",
+        "recastTime": 1,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002611_hr1.tex",
+        "description": "対象とその周囲に範囲物理攻撃。詩心の数に応じて威力が変化する。"
+      },
+      {
+        "id": 3558,
+        "name": "エンピリアルアロー",
+        "recastTime": 15,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002606_hr1.tex",
+        "description": "対象に物理攻撃。威力：260 戦歌中なら詩心を付与する。"
+      },
+      {
+        "id": 3562,
+        "name": "サイドワインダー",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002610_hr1.tex",
+        "description": "対象に物理攻撃。威力：400 ホークアイまたは乱れ撃ち効果中に実行可能。"
+      },
+      {
+        "id": 25785,
+        "name": "光神のフィナーレ",
+        "recastTime": 110,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002622_hr1.tex",
+        "description": "自身と周囲のパーティメンバーの与ダメージを上昇させる。コーダ数で効果量が変化する。"
+      }
+    ]
+  }
+}

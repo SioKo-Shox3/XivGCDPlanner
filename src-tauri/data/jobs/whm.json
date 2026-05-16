@@ -1,0 +1,156 @@
+{
+  "id": "whm",
+  "name": "白魔道士",
+  "role": "healer",
+  "icon": "icons/jobs/whm.png",
+  "skills": {
+    "gcd": [
+      {
+        "id": 25859,
+        "name": "グレアガ",
+        "castTime": 1.5,
+        "potency": 310,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002646_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：310"
+      },
+      {
+        "id": 37009,
+        "name": "グレアジャ",
+        "castTime": 0,
+        "potency": 310,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002126_hr1.tex",
+        "description": "対象に無属性魔法攻撃。威力：310。神速魔中に実行可能。"
+      },
+      {
+        "id": 16532,
+        "name": "ディア",
+        "castTime": 0,
+        "potency": 65,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002641_hr1.tex",
+        "description": "対象に継続ダメージを付与する。威力：65"
+      },
+      {
+        "id": 25860,
+        "name": "ホーリガ",
+        "castTime": 2.5,
+        "potency": 150,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002647_hr1.tex",
+        "description": "自身の周囲の敵に範囲魔法攻撃。威力：150"
+      },
+      {
+        "id": 124,
+        "name": "メディカ",
+        "castTime": 2,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000408_hr1.tex",
+        "description": "自身と周囲のパーティメンバーのHPを回復する。"
+      },
+      {
+        "id": 131,
+        "name": "ケアルガ",
+        "castTime": 2,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000407_hr1.tex",
+        "description": "対象とその周囲のパーティメンバーのHPを大きく回復する。"
+      },
+      {
+        "id": 16531,
+        "name": "ハート・オブ・ソラス",
+        "castTime": 0,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002640_hr1.tex",
+        "description": "対象のHPを回復するアビリティ感覚のGCDヒール。"
+      },
+      {
+        "id": 16534,
+        "name": "ハート・オブ・ラプチャー",
+        "castTime": 0,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002643_hr1.tex",
+        "description": "自身と周囲のパーティメンバーのHPを回復するGCDヒール。"
+      },
+      {
+        "id": 16535,
+        "name": "ハート・オブ・ミゼリ",
+        "castTime": 0,
+        "potency": 1240,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002644_hr1.tex",
+        "description": "対象とその周囲に無属性範囲魔法攻撃。威力：1240"
+      },
+      {
+        "id": 37010,
+        "name": "メディガ",
+        "castTime": 2,
+        "potency": 0,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002127_hr1.tex",
+        "description": "自身と周囲のパーティメンバーを回復し、継続回復を付与する。"
+      }
+    ],
+    "ability": [
+      {
+        "id": 136,
+        "name": "神速魔",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002626_hr1.tex",
+        "description": "一定時間、自身の詠唱時間とリキャストタイムを短縮する。"
+      },
+      {
+        "id": 3569,
+        "name": "アサイラム",
+        "recastTime": 90,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002632_hr1.tex",
+        "description": "設置した陣内のパーティメンバーに継続回復を付与する。"
+      },
+      {
+        "id": 3571,
+        "name": "アサイズ",
+        "recastTime": 40,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002634_hr1.tex",
+        "description": "周囲の敵への攻撃とパーティ回復、MP回復を同時に行う。"
+      },
+      {
+        "id": 7430,
+        "name": "シンエアー",
+        "recastTime": 60,
+        "maxCharges": 2,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002636_hr1.tex",
+        "description": "次に使う魔法の消費MPを0にする。"
+      },
+      {
+        "id": 140,
+        "name": "ベネディクション",
+        "recastTime": 180,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002627_hr1.tex",
+        "description": "対象のHPを全回復する。"
+      },
+      {
+        "id": 25861,
+        "name": "アクアヴェール",
+        "recastTime": 60,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002648_hr1.tex",
+        "description": "対象に被ダメージ軽減効果を付与する。"
+      },
+      {
+        "id": 16536,
+        "name": "テンパランス",
+        "recastTime": 120,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002645_hr1.tex",
+        "description": "自身の回復魔法を強化し、周囲のパーティメンバーに軽減を付与する。"
+      },
+      {
+        "id": 25862,
+        "name": "リタージー・オブ・ベル",
+        "recastTime": 180,
+        "maxCharges": 1,
+        "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002649_hr1.tex",
+        "description": "鐘を設置し、被ダメージ時に範囲回復を行う。"
+      }
+    ]
+  }
+}
