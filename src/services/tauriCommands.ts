@@ -5,6 +5,7 @@ import type {
   SkillPlacement,
   ValidationResult,
   RotationStats,
+  RangeStats,
   RotationPlan,
 } from "@/types";
 
@@ -39,6 +40,22 @@ export async function calculateStats(
     placements,
     spellSpeed,
     duration,
+  });
+}
+
+export async function calculateRangeStats(
+  jobId: string,
+  placements: SkillPlacement[],
+  spellSpeed: number,
+  startTime: number,
+  endTime: number
+): Promise<RangeStats> {
+  return invoke<RangeStats>("calculate_range_stats", {
+    jobId,
+    placements,
+    spellSpeed,
+    startTime,
+    endTime,
   });
 }
 

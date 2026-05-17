@@ -21,6 +21,7 @@ export interface AbilitySkillDef {
   name: string;
   recastTime: number;
   maxCharges: number;
+  potency?: number;
   icon: string;
   description: string;
   /** The character level at which this skill is learned */
@@ -84,6 +85,15 @@ export interface RotationStats {
   gcdCount: number;
   abilityCount: number;
   gcdUptime: number;
+}
+
+export interface RangeStats {
+  startTime: number;
+  endTime: number;
+  duration: number;
+  totalPotency: number;
+  dps: number;
+  skillCount: number;
 }
 
 export interface RotationPlan {

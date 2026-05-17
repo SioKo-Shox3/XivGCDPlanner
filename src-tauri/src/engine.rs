@@ -125,6 +125,8 @@ pub fn calculate_stats(
 ) -> RotationStats {
     let gcd_time = calculate_gcd_time(2.5, spell_speed);
     let gcd_map: HashMap<u32, &GcdSkillDef> = job.skills.gcd.iter().map(|s| (s.id, s)).collect();
+    let ability_map: HashMap<u32, &AbilitySkillDef> =
+        job.skills.ability.iter().map(|s| (s.id, s)).collect();
 
     let mut total_potency: u32 = 0;
     let mut gcd_count: u32 = 0;
@@ -146,8 +148,10 @@ pub fn calculate_stats(
                 }
             }
             "ability" => {
+                if let Some(skill) = ability_map.get(&p.skill_id) {
+                    total_potency += skill.potency;
+                }
                 ability_count += 1;
-                // Abilities generally don't have potency in this model, but we could add it
             }
             _ => {}
         }
@@ -170,5 +174,59 @@ pub fn calculate_stats(
         gcd_count,
         ability_count,
         gcd_uptime,
+    }
+}
+
+/// Calculate rotation statistics for a specific time range [start_time, end_time]
+pub fn calculate_range_stats(
+    job: &JobDef,
+    placements: &[SkillPlacement],
+    spell_speed: u32,
+    start_time: f64,
+    end_time: f64,
+) -> crate::models::RangeStats {
+    let duration = (end_time - start_time).max(0.0);
+    let gcd_time = calculate_gcd_time(2.5, spell_speed);
+    let gcd_map: HashMap<u32, &GcdSkillDef> = job.skills.gcd.iter().map(|s| (s.id, s)).collect();
+    let ability_map: HashMap<u32, &AbilitySkillDef> =
+        job.skills.ability.iter().map(|s| (s.id, s)).collect();
+
+    let mut total_potency: u32 = 0;
+    let mut skill_count: u32 = 0;
+
+    for p in placements {
+        // Include skill if its start time falls within the range
+        if p.time < start_time || p.time >= end_time {
+            continue;
+        }
+        skill_count += 1;
+        match p.skill_type.as_str() {
+            "gcd" => {
+                if let Some(skill) = gcd_map.get(&p.skill_id) {
+                    total_potency += skill.potency;
+                }
+            }
+            "ability" => {
+                if let Some(skill) = ability_map.get(&p.skill_id) {
+                    total_potency += skill.potency;
+                }
+            }
+            _ => {}
+        }
+    }
+
+    let dps = if duration > 0.0 {
+        total_potency as f64 / duration
+    } else {
+        0.0
+    };
+
+    crate::models::RangeStats {
+        start_time,
+        end_time,
+        duration,
+        total_potency,
+        dps,
+        skill_count,
     }
 }

@@ -5,6 +5,7 @@ import type {
   SkillPlacement,
   ValidationResult,
   RotationStats,
+  RangeStats,
   TimelineViewState,
 } from "@/types";
 import { calculateGcdTime } from "@/services/tauriCommands";
@@ -23,6 +24,12 @@ interface AppState {
   placements: SkillPlacement[];
   validationResult: ValidationResult | null;
   stats: RotationStats | null;
+  rangeStart: number | null;
+  rangeEnd: number | null;
+  rangeStats: RangeStats | null;
+
+  // Player level
+  selectedLevel: number;
 
   // View state
   view: TimelineViewState;
@@ -34,11 +41,13 @@ interface AppState {
   // Actions - data loading
   setJobs: (jobs: JobDef[]) => void;
   setTimelines: (timelines: BossTimelineDef[]) => void;
+  addTimeline: (t: BossTimelineDef) => void;
 
   // Actions - selections
   selectJob: (jobId: string) => void;
   selectTimeline: (timelineId: string) => void;
   setSpellSpeed: (ss: number) => void;
+  setLevel: (level: number) => void;
 
   // Actions - rotation editing
   addPlacement: (p: SkillPlacement) => void;
@@ -50,6 +59,12 @@ interface AppState {
   // Actions - validation
   setValidationResult: (r: ValidationResult | null) => void;
   setStats: (s: RotationStats | null) => void;
+  setRangeStart: (t: number | null) => void;
+  setRangeEnd: (t: number | null) => void;
+  setRange: (start: number, end: number) => void;
+  clearRange: () => void;
+  setRangeStats: (s: RangeStats | null) => void;
+  loadPlan: (plan: { jobId: string; timelineId: string; spellSpeed: number; level: number; placements: SkillPlacement[] }) => void;
 
   // Actions - view
   setPixelsPerSecond: (pps: number) => void;
@@ -71,9 +86,13 @@ export const useAppStore = create<AppState>((set, get) => ({
   selectedJobId: null,
   selectedTimelineId: null,
   spellSpeed: 400,
+  selectedLevel: 100,
   placements: [],
   validationResult: null,
   stats: null,
+  rangeStart: null,
+  rangeEnd: null,
+  rangeStats: null,
   view: {
     pixelsPerSecond: 40,
     scrollLeft: 0,
@@ -84,12 +103,14 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   setJobs: (jobs) => set({ jobs }),
   setTimelines: (timelines) => set({ timelines }),
+  addTimeline: (t) => set((s) => ({ timelines: [...s.timelines.filter((x) => x.id !== t.id), t] })),
 
   selectJob: (jobId) =>
     set({ selectedJobId: jobId, placements: [], validationResult: null, stats: null }),
   selectTimeline: (timelineId) =>
     set({ selectedTimelineId: timelineId, placements: [], validationResult: null, stats: null }),
   setSpellSpeed: (ss) => set({ spellSpeed: ss }),
+  setLevel: (level) => set({ selectedLevel: level }),
 
   addPlacement: (p) =>
     set((s) => ({ placements: [...s.placements, p].sort((a, b) => a.time - b.time) })),
@@ -175,6 +196,24 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   setValidationResult: (r) => set({ validationResult: r }),
   setStats: (s) => set({ stats: s }),
+  setRangeStart: (t) => set({ rangeStart: t }),
+  setRangeEnd: (t) => set({ rangeEnd: t }),
+  setRange: (start, end) => set({ rangeStart: start, rangeEnd: end, rangeStats: null }),
+  clearRange: () => set({ rangeStart: null, rangeEnd: null, rangeStats: null }),
+  setRangeStats: (s) => set({ rangeStats: s }),
+  loadPlan: (plan) =>
+    set({
+      selectedJobId: plan.jobId,
+      selectedTimelineId: plan.timelineId,
+      spellSpeed: plan.spellSpeed,
+      selectedLevel: plan.level,
+      placements: plan.placements,
+      validationResult: null,
+      stats: null,
+      rangeStart: null,
+      rangeEnd: null,
+      rangeStats: null,
+    }),
 
   setPixelsPerSecond: (pps) =>
     set((s) => ({ view: { ...s.view, pixelsPerSecond: Math.max(10, Math.min(200, pps)) } })),

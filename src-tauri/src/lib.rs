@@ -1,3 +1,4 @@
+mod cactbot_parser;
 mod data;
 mod engine;
 mod models;
@@ -66,12 +67,37 @@ fn calculate_stats(
 }
 
 #[tauri::command]
+fn calculate_range_stats(
+    state: State<AppState>,
+    job_id: String,
+    placements: Vec<SkillPlacement>,
+    spell_speed: u32,
+    start_time: f64,
+    end_time: f64,
+) -> Result<models::RangeStats, String> {
+    let data = state.0.lock().map_err(|e| e.to_string())?;
+    let job = data
+        .jobs
+        .iter()
+        .find(|j| j.id == job_id)
+        .ok_or_else(|| format!("Job not found: {}", job_id))?;
+    Ok(engine::calculate_range_stats(
+        job,
+        &placements,
+        spell_speed,
+        start_time,
+        end_time,
+    ))
+}
+
+#[tauri::command]
 fn save_rotation(
     state: State<AppState>,
     name: String,
     job_id: String,
     timeline_id: String,
     spell_speed: u32,
+    level: Option<u32>,
     placements: Vec<SkillPlacement>,
 ) -> Result<String, String> {
     let data = state.0.lock().map_err(|e| e.to_string())?;
@@ -80,6 +106,7 @@ fn save_rotation(
         job_id,
         timeline_id,
         spell_speed,
+        level: level.unwrap_or(100),
         placements,
     };
     data::save_rotation_file(&data.save_dir, &plan)
@@ -88,6 +115,21 @@ fn save_rotation(
 #[tauri::command]
 fn load_rotation(path: String) -> Result<RotationPlan, String> {
     data::load_rotation_file(&path)
+}
+
+#[tauri::command]
+fn list_saves(state: State<AppState>) -> Result<Vec<SaveFileEntry>, String> {
+    let data = state.0.lock().map_err(|e| e.to_string())?;
+    data::list_save_files(&data.save_dir)
+}
+
+#[tauri::command]
+fn parse_cactbot_timeline(
+    id: String,
+    name: String,
+    content: String,
+) -> Result<BossTimelineDef, String> {
+    cactbot_parser::parse(&id, &name, &content)
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
@@ -161,8 +203,11 @@ pub fn run() {
             load_timelines,
             validate_rotation,
             calculate_stats,
+            calculate_range_stats,
             save_rotation,
             load_rotation,
+            list_saves,
+            parse_cactbot_timeline,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

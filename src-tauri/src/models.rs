@@ -26,6 +26,8 @@ pub struct AbilitySkillDef {
     pub recast_time: f64,
     #[serde(rename = "maxCharges")]
     pub max_charges: u32,
+    #[serde(default)]
+    pub potency: u32,
     pub icon: String,
     pub description: String,
     #[serde(default)]
@@ -133,4 +135,18 @@ pub struct SaveFileEntry {
     pub path: String,
     #[serde(rename = "savedAt")]
     pub saved_at: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RangeStats {
+    #[serde(rename = "startTime")]
+    pub start_time: f64,
+    #[serde(rename = "endTime")]
+    pub end_time: f64,
+    pub duration: f64,
+    #[serde(rename = "totalPotency")]
+    pub total_potency: u32,
+    pub dps: f64,
+    #[serde(rename = "skillCount")]
+    pub skill_count: u32,
 }
