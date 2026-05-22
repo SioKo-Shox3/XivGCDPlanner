@@ -113,7 +113,8 @@
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003135_hr1.tex",
         "description": "一定時間、魔法の詠唱時間を大きく短縮する。",
-        "level": 6
+        "level": 6,
+        "effectTime": 15
       },
       {
         "id": 3614,
@@ -140,7 +141,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003553_hr1.tex",
         "description": "自身と周囲のパーティメンバーの与ダメージを上昇させる。",
-        "level": 50
+        "level": 50,
+        "effectTime": 15
       },
       {
         "id": 16559,
@@ -149,7 +151,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003552_hr1.tex",
         "description": "回復魔法を強化し、一部魔法にバリア効果を付与する。",
-        "level": 80
+        "level": 80,
+        "effectTime": 30
       },
       {
         "id": 25873,
@@ -158,7 +161,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003561_hr1.tex",
         "description": "対象の被ダメージを軽減し、終了時に追加回復する。",
-        "level": 86
+        "level": 86,
+        "effectTime": 8
       },
       {
         "id": 37017,

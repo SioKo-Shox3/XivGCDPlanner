@@ -113,7 +113,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003633_hr1.tex",
         "description": "自身と周囲のパーティメンバーの与ダメージを3%上昇させる。",
-        "level": 72
+        "level": 72,
+        "effectTime": 20
       },
       {
         "id": 24393,
@@ -122,7 +123,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003621_hr1.tex",
         "description": "対象と周囲に無属性範囲魔法攻撃を行い、処刑人を付与する。",
-        "level": 76
+        "level": 76,
+        "effectTime": 30
       },
       {
         "id": 24394,
@@ -167,7 +169,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003632_hr1.tex",
         "description": "自身に最大HP10%分のバリアを付与する。",
-        "level": 40
+        "level": 40,
+        "effectTime": 5
       }
     ]
   }

@@ -122,7 +122,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003826_hr1.tex",
         "description": "自身と周囲のパーティメンバーの与ダメージを5%上昇させる。効果時間：20秒",
-        "level": 70
+        "level": 70,
+        "effectTime": 20
       },
       {
         "id": 34683,
@@ -131,7 +132,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003833_hr1.tex",
         "description": "自身に3スタックの「サブトラクティブパレット」を付与する。",
-        "level": 60
+        "level": 60,
+        "effectTime": 30
       },
       {
         "id": 34684,
@@ -167,7 +169,8 @@
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003825_hr1.tex",
         "description": "自身に3スタックの「ハンマーコンボ実行可」を付与する。",
-        "level": 50
+        "level": 50,
+        "effectTime": 30
       },
       {
         "id": 34676,

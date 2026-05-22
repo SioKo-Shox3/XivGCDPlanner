@@ -140,7 +140,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003678_hr1.tex",
         "description": "周囲のパーティメンバーに回復と軽減を付与する。",
-        "level": 76
+        "level": 76,
+        "effectTime": 20
       },
       {
         "id": 24311,
@@ -149,7 +150,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003679_hr1.tex",
         "description": "範囲に多重バリアを付与する。",
-        "level": 80
+        "level": 80,
+        "effectTime": 15
       },
       {
         "id": 24317,
@@ -176,7 +178,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003690_hr1.tex",
         "description": "カルディアの効果を全体化し、回復支援を強化する。",
-        "level": 100
+        "level": 100,
+        "effectTime": 20
       }
     ]
   }

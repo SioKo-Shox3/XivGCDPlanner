@@ -95,7 +95,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000613_hr1.tex",
         "description": "対象に物理攻撃し、被ダメージ上昇を付与する。",
-        "level": 15
+        "level": 15,
+        "effectTime": 20
       },
       {
         "id": 36957,
@@ -104,7 +105,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000619_hr1.tex",
         "description": "対象に物理攻撃し、受けるダメージを上昇させる。",
-        "level": 66
+        "level": 66,
+        "effectTime": 18
       },
       {
         "id": 16493,
@@ -113,7 +115,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002927_hr1.tex",
         "description": "自身に分身を付与し、ウェポンスキルに追撃を発生させる。",
-        "level": 80
+        "level": 80,
+        "effectTime": 15
       },
       {
         "id": 3566,
@@ -131,7 +134,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002922_hr1.tex",
         "description": "一定時間、連続で3種の忍術を実行できる。",
-        "level": 70
+        "level": 70,
+        "effectTime": 6
       },
       {
         "id": 7402,
@@ -167,7 +171,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F000000%2F000620_hr1.tex",
         "description": "対象と周囲に範囲物理攻撃し、自身の与ダメージを上昇させる。",
-        "level": 92
+        "level": 92,
+        "effectTime": 15
       }
     ]
   }

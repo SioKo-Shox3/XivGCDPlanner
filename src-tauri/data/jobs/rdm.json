@@ -158,7 +158,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003218_hr1.tex",
         "description": "自身の与魔法ダメージを10%、周囲のパーティメンバーの与ダメージを5%上昇させる。効果時間：20秒",
-        "level": 58
+        "level": 58,
+        "effectTime": 20
       },
       {
         "id": 7521,
@@ -167,7 +168,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F003000%2F003219_hr1.tex",
         "description": "魔法剣コンボをマナ消費なしで実行できるようにし、プリフルジェンス実行可を付与する。",
-        "level": 60
+        "level": 60,
+        "effectTime": 30
       },
       {
         "id": 7561,

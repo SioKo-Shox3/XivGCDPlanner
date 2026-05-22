@@ -122,7 +122,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000166_hr1.tex&format=png",
         "description": "一定時間、自身の与ダメージを25％上昇させる。 効果時間：20秒 追加効果：自身に「ゴアブレード実行可」を付与する。 効果時間：30秒",
-        "level": 2
+        "level": 2,
+        "effectTime": 20
       },
       {
         "id": 23,
@@ -131,7 +132,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000161_hr1.tex&format=png",
         "description": "自身の周囲の敵に範囲物理攻撃。 威力：140 追加効果：対象に継続ダメージを付与する。 威力：30 効果時間：15秒",
-        "level": 50
+        "level": 50,
+        "effectTime": 15
       },
       {
         "id": 7383,
@@ -140,7 +142,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002513_hr1.tex&format=png",
         "description": "対象に無属性魔法攻撃。 威力：320 追加効果：自身に4スタックの「レクイエスカット」を付与する。 効果時間：30秒 レクイエスカット効果：魔法を詠唱時間無しで実行できる。 加えて、ホーリースピリットとホーリーサークル、さらにコンフィテオルとそれ以降のコンボアクションの威力を上昇させる。 追加効果：自身に「コンフィテオル実行可」を付与する。 効果時間：30秒",
-        "level": 68
+        "level": 68,
+        "effectTime": 30
       },
       {
         "id": 16461,
@@ -167,7 +170,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002955_hr1.tex&format=png",
         "description": "対象とその周囲の敵に無属性範囲魔法攻撃。 威力：580 2体目以降の対象への威力は50％減少する。 追加効果：自身に4スタックの「レクイエスカット」を付与する。 効果時間：30秒 レクイエスカット効果：魔法を詠唱時間無しで実行できる。 加えて、ホーリースピリットとホーリーサークル、さらにコンフィテオルとそれ以降のコンボアクションの威力を上昇させる。 追加効果：自身に「コンフィテオル実行可」を付与する。 効果時間：30秒",
-        "level": 96
+        "level": 96,
+        "effectTime": 30
       },
       {
         "id": 36922,

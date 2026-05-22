@@ -149,7 +149,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002815_hr1.tex",
         "description": "対象に被クリティカル率上昇効果を付与する。",
-        "level": 66
+        "level": 66,
+        "effectTime": 15
       },
       {
         "id": 16542,
@@ -167,7 +168,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002878_hr1.tex",
         "description": "パーティメンバーに移動速度上昇と被ダメージ軽減を付与する。",
-        "level": 90
+        "level": 90,
+        "effectTime": 15
       }
     ]
   }

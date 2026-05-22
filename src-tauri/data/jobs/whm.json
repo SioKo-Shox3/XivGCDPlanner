@@ -104,7 +104,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002626_hr1.tex",
         "description": "一定時間、自身の詠唱時間とリキャストタイムを短縮する。",
-        "level": 30
+        "level": 30,
+        "effectTime": 15
       },
       {
         "id": 3569,
@@ -113,7 +114,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002632_hr1.tex",
         "description": "設置した陣内のパーティメンバーに継続回復を付与する。",
-        "level": 52
+        "level": 52,
+        "effectTime": 24
       },
       {
         "id": 3571,
@@ -149,7 +151,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002648_hr1.tex",
         "description": "対象に被ダメージ軽減効果を付与する。",
-        "level": 86
+        "level": 86,
+        "effectTime": 6
       },
       {
         "id": 16536,
@@ -158,7 +161,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?format=png&path=ui%2Ficon%2F002000%2F002645_hr1.tex",
         "description": "自身の回復魔法を強化し、周囲のパーティメンバーに軽減を付与する。",
-        "level": 80
+        "level": 80,
+        "effectTime": 22
       },
       {
         "id": 25862,

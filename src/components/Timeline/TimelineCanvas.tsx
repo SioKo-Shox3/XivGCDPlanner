@@ -1,8 +1,9 @@
-import { useCallback, useRef, useEffect, useState } from "react";
+import { useCallback, useRef, useEffect, useState, Fragment } from "react";
 import { useAppStore } from "@/stores/timelineStore";
 import { TimeRuler } from "./TimeRuler";
 import { BossEventMarker } from "./BossEventMarker";
 import { SkillBlock } from "./SkillBlock";
+import { AbilityCooldownOverlay } from "./AbilityCooldownOverlay";
 import { calculateGcdTime } from "@/services/tauriCommands";
 
 export function TimelineCanvas() {
@@ -218,16 +219,24 @@ export function TimelineCanvas() {
             const skill = selectedJob.skills.ability.find((s) => s.id === p.skillId);
             if (!skill) return null;
             return (
-              <SkillBlock
-                key={p.id}
-                placement={p}
-                name={skill.name}
-                icon={skill.icon}
-                widthSeconds={0.7}
-                pps={pps}
-                color="var(--ability-color)"
-                error={errorMap.get(p.id)}
-              />
+              <Fragment key={p.id}>
+                <AbilityCooldownOverlay
+                  placement={p}
+                  pps={pps}
+                  recastTime={skill.recastTime}
+                  effectTime={skill.effectTime}
+                  color="var(--ability-color)"
+                />
+                <SkillBlock
+                  placement={p}
+                  name={skill.name}
+                  icon={skill.icon}
+                  widthSeconds={0.7}
+                  pps={pps}
+                  color="var(--ability-color)"
+                  error={errorMap.get(p.id)}
+                />
+              </Fragment>
             );
           })}
         </div>
