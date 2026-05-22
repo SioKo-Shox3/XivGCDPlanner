@@ -95,7 +95,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003071_hr1.tex&format=png",
         "description": "自身に3スタックの「ブラッドウェポン」を付与する。 効果時間：15秒 ブラッドウェポン効果：自身のウェポンスキルおよび魔法が命中するとＭＰを回復する。 さらに、「ブラックブラッド」を10上昇させる。 範囲攻撃を2体以上の敵に命中させた場合、効果は1回のみ発動する。",
-        "level": 35
+        "level": 35,
+        "effectTime": 15
       },
       {
         "id": 3639,
@@ -104,7 +105,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003066_hr1.tex&format=png",
         "description": "自身の足元にダメージエリアを生成する。 範囲内に入った対象に無属性ダメージを与える。 威力：50 効果時間：15秒",
-        "level": 52
+        "level": 52,
+        "effectTime": 15
       },
       {
         "id": 3641,
@@ -131,7 +133,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003078_hr1.tex&format=png",
         "description": "自身に3スタックの「ブラッドデリリアム」と「ブラッドウェポン」を付与する。 効果時間：15秒 ブラッドデリリアム効果：ブラッドスピラーがレッドデリリアムに、クワイタスがインペイルメントに変化する。 ブラッドウェポン効果：自身のウェポンスキルおよび魔法が命中するとＭＰを回復し、さらに「ブラックブラッド」を10上昇させる。 範囲攻撃を2体以上の敵に命中させた場合、効果は1回のみ発動する。",
-        "level": 68
+        "level": 68,
+        "effectTime": 15
       },
       {
         "id": 16470,
@@ -140,7 +143,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003086_hr1.tex&format=png",
         "description": "対象に無属性魔法攻撃。 威力：460 追加効果：自身に「暗黒」を付与する。 効果時間：30秒 暗黒効果：自身の与ダメージを10％上昇させる。 既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。 最大60秒まで延長することができる。 リキャストタイマーを「漆黒の波動」と共有する。",
-        "level": 74
+        "level": 74,
+        "effectTime": 30
       },
       {
         "id": 16472,
@@ -149,7 +153,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003088_hr1.tex&format=png",
         "description": "自身と共に戦う「英雄の影身」を具現化する。 効果時間：20秒 追加効果：自身に「ディセスティーム実行可」を付与する。 効果時間：30秒 英雄の影身による攻撃の威力：420 シャドウブリンガー",
-        "level": 80
+        "level": 80,
+        "effectTime": 20
       },
       {
         "id": 25757,

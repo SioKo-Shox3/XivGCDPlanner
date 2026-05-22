@@ -122,7 +122,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003402_hr1.tex&format=png",
         "description": "一定時間、自身の与ダメージを20％上昇させる。 効果時間：20秒 追加効果：自身に「ソニックブレイク実行可」を付与する。 効果時間：30秒",
-        "level": 2
+        "level": 2,
+        "effectTime": 20
       },
       {
         "id": 16151,
@@ -131,7 +132,8 @@
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003415_hr1.tex&format=png",
         "description": "対象のＨＰを継続回復する。 回復力：200 効果時間：18秒 最大チャージ数：2",
-        "level": 45
+        "level": 45,
+        "effectTime": 18
       },
       {
         "id": 16156,
@@ -167,7 +169,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003423_hr1.tex&format=png",
         "description": "自身の周囲の敵に範囲物理攻撃。 威力：150 追加効果：対象に継続ダメージを付与する。 威力：60 効果時間：15秒",
-        "level": 62
+        "level": 62,
+        "effectTime": 15
       },
       {
         "id": 16161,
@@ -176,7 +179,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003425_hr1.tex&format=png",
         "description": "自身またはパーティメンバーひとりを対象とする。 対象の被ダメージを15％軽減する。 効果時間：7秒 追加効果：パーティメンバーを対象として実行した場合、自身に「ブルータルシェル」が付与されていれば、その効果を対象にも付与する。 効果時間：30秒",
-        "level": 68
+        "level": 68,
+        "effectTime": 7
       },
       {
         "id": 16164,
@@ -185,7 +189,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F003000%2F003428_hr1.tex&format=png",
         "description": "敵単体を対象とする。 自身に 3 スタックの「ソイル」を付与する。 追加効果：自身に「ハートコンボ実行可」を付与する。 効果時間：30秒",
-        "level": 76
+        "level": 76,
+        "effectTime": 30
       },
       {
         "id": 16165,

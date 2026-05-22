@@ -22,6 +22,8 @@ export interface AbilitySkillDef {
   recastTime: number;
   maxCharges: number;
   potency?: number;
+  /** Duration in seconds of the primary buff/effect granted by this ability */
+  effectTime?: number;
   icon: string;
   description: string;
   /** The character level at which this skill is learned */

@@ -176,7 +176,8 @@
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000304_hr1.tex&format=png",
         "description": "次の1回のWSが必ずクリティカルヒットし、HPを吸収する。効果時間：5秒",
-        "level": 6
+        "level": 6,
+        "effectTime": 5
       },
       {
         "id": 85,
@@ -185,7 +186,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000309_hr1.tex&format=png",
         "description": "与ダメージ10%上昇。効果時間：20秒",
-        "level": 30
+        "level": 30,
+        "effectTime": 20
       },
       {
         "id": 16478,
@@ -230,7 +232,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002585_hr1.tex&format=png",
         "description": "自身とPTメンバーのクリ率10%上昇。効果時間：20秒",
-        "level": 52
+        "level": 52,
+        "effectTime": 20
       },
       {
         "id": 3555,
@@ -239,7 +242,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F002000%2F002583_hr1.tex&format=png",
         "description": "前方直線範囲物理攻撃。威力：280 紅の竜血状態（与ダメ+15%）に移行。ナーストレンド実行可を付与。",
-        "level": 60
+        "level": 60,
+        "effectTime": 30
       },
       {
         "id": 7400,
@@ -302,7 +306,8 @@
         "maxCharges": 2,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000830_hr1.tex&format=png",
         "description": "方向指定を無視して成功させる。効果時間：10秒",
-        "level": 50
+        "level": 50,
+        "effectTime": 10
       },
       {
         "id": 7549,
@@ -311,7 +316,8 @@
         "maxCharges": 1,
         "icon": "https://beta.xivapi.com/api/1/asset?path=ui%2Ficon%2F000000%2F000828_hr1.tex&format=png",
         "description": "対象の与物理ダメ10%、与魔法ダメ5%減少。効果時間：15秒",
-        "level": 22
+        "level": 22,
+        "effectTime": 15
       }
     ]
   }
