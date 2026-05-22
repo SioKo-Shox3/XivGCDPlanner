@@ -34,6 +34,8 @@ pub struct AbilitySkillDef {
     pub level: Option<u32>,
     #[serde(rename = "replacesId", default)]
     pub replaces_id: Option<u32>,
+    #[serde(rename = "effectTime", default)]
+    pub effect_time: Option<f64>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
