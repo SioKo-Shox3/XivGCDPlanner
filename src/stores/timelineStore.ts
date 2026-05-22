@@ -9,6 +9,7 @@ import type {
   TimelineViewState,
 } from "@/types";
 import { calculateGcdTime } from "@/services/tauriCommands";
+import { PRE_PULL_SECONDS } from "@/constants";
 
 interface AppState {
   // Data
@@ -120,11 +121,12 @@ export const useAppStore = create<AppState>((set, get) => ({
     const gcdTime = calculateGcdTime(2.5, s.spellSpeed);
     let time = 0;
     if (skillType === "gcd") {
-      const lastGcd = [...s.placements].filter((p) => p.skillType === "gcd").pop();
+      const lastGcd = [...s.placements]
+        .filter((p) => p.skillType === "gcd" && p.time >= 0)
+        .pop();
       time = lastGcd ? Math.round((lastGcd.time + gcdTime) * 100) / 100 : 0;
     } else {
-      // Place ability after the last placement (GCD or ability)
-      const last = s.placements[s.placements.length - 1];
+      const last = [...s.placements].filter((p) => p.time >= 0).pop();
       time = last ? Math.round((last.time + 0.7) * 100) / 100 : 0;
     }
     set({
@@ -165,11 +167,11 @@ export const useAppStore = create<AppState>((set, get) => ({
         for (let i = movedIdx - 1; i >= 0; i--) {
           const maxTime = Math.round((gcds[i + 1].time - gcdTime) * 100) / 100;
           if (gcds[i].time > maxTime) {
-            gcds[i] = { ...gcds[i], time: Math.max(0, maxTime) };
+            gcds[i] = { ...gcds[i], time: Math.max(-PRE_PULL_SECONDS, maxTime) };
           } else break;
         }
 
-        // If left GCDs hit 0 boundary, clamp moved GCD so it doesn't overlap
+        // If left GCDs hit pre-pull boundary, clamp moved GCD so it doesn't overlap
         if (movedIdx > 0) {
           const leftEnd = Math.round((gcds[movedIdx - 1].time + gcdTime) * 100) / 100;
           if (gcds[movedIdx].time < leftEnd) {

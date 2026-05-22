@@ -27,13 +27,14 @@ const typeFullNames: Record<string, string> = {
 interface Props {
   event: BossEvent;
   pps: number;
+  startTime: number;
 }
 
-export function BossEventMarker({ event, pps }: Props) {
+export function BossEventMarker({ event, pps, startTime }: Props) {
   const color = typeColors[event.type] ?? "var(--boss-mechanic)";
   const label = typeLabels[event.type] ?? "ギミック";
   const fullName = typeFullNames[event.type] ?? "ギミック";
-  const left = event.time * pps;
+  const left = (event.time - startTime) * pps;
   const width = event.castTime ? event.castTime * pps : 2;
 
   return (

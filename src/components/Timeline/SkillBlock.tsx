@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import { useAppStore } from "@/stores/timelineStore";
 import type { SkillPlacement } from "@/types";
+import { PRE_PULL_SECONDS } from "@/constants";
 
 interface Props {
   placement: SkillPlacement;
@@ -11,9 +12,10 @@ interface Props {
   pps: number;
   color: string;
   error?: string;
+  startTime: number;
 }
 
-export function SkillBlock({ placement, name, icon, widthSeconds, castTime, pps, color, error }: Props) {
+export function SkillBlock({ placement, name, icon, widthSeconds, castTime, pps, color, error, startTime }: Props) {
   const removePlacement = useAppStore((s) => s.removePlacement);
   const movePlacement = useAppStore((s) => s.movePlacement);
   const selectPlacement = useAppStore((s) => s.selectPlacement);
@@ -23,7 +25,7 @@ export function SkillBlock({ placement, name, icon, widthSeconds, castTime, pps,
   const dragStartX = useRef(0);
   const dragStartTime = useRef(0);
 
-  const left = placement.time * pps;
+  const left = (placement.time - startTime) * pps;
   const width = widthSeconds * pps;
   const isSelected = selectedId === placement.id;
   const hasError = !!error;
@@ -43,7 +45,7 @@ export function SkillBlock({ placement, name, icon, widthSeconds, castTime, pps,
       const onMouseMove = (me: MouseEvent) => {
         const dx = me.clientX - dragStartX.current;
         const dt = dx / pps;
-        const newTime = Math.max(0, Math.round((dragStartTime.current + dt) * 100) / 100);
+        const newTime = Math.max(-PRE_PULL_SECONDS, Math.round((dragStartTime.current + dt) * 100) / 100);
         movePlacement(placement.id, newTime);
       };
       const onMouseUp = () => {

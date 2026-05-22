@@ -5,6 +5,9 @@ import { BossEventMarker } from "./BossEventMarker";
 import { SkillBlock } from "./SkillBlock";
 import { AbilityTimelineRows } from "./AbilityTimelineRows";
 import { calculateGcdTime } from "@/services/tauriCommands";
+import { PRE_PULL_SECONDS } from "@/constants";
+
+const START_TIME = -PRE_PULL_SECONDS;
 
 export function TimelineCanvas() {
   const selectedTimeline = useAppStore((s) => s.timelines.find((t) => t.id === s.selectedTimelineId));
@@ -27,7 +30,7 @@ export function TimelineCanvas() {
   const [dragCurrentTime, setDragCurrentTime] = useState<number | null>(null);
 
   const duration = selectedTimeline?.duration ?? 600;
-  const totalWidth = duration * pps;
+  const totalWidth = (duration - START_TIME) * pps;
 
   const errorMap = new Map(
     validationResult?.errors.map((e) => [e.placementId, e.message]) ?? []
@@ -63,7 +66,7 @@ export function TimelineCanvas() {
       const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
       const scrollLeft = scrollRef.current?.scrollLeft ?? 0;
       const x = e.clientX - rect.left + scrollLeft;
-      const time = Math.max(0, Math.round((x / pps) * 100) / 100);
+      const time = Math.max(START_TIME, Math.round((x / pps + START_TIME) * 100) / 100);
       setDragState({ startX: e.clientX, startTime: time });
       setDragCurrentTime(time);
     },
@@ -76,7 +79,7 @@ export function TimelineCanvas() {
       const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
       const scrollLeft = scrollRef.current?.scrollLeft ?? 0;
       const x = e.clientX - rect.left + scrollLeft;
-      const time = Math.max(0, Math.round((x / pps) * 100) / 100);
+      const time = Math.max(START_TIME, Math.round((x / pps + START_TIME) * 100) / 100);
       setDragCurrentTime(time);
     },
     [dragState, pps]
@@ -88,7 +91,7 @@ export function TimelineCanvas() {
       const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
       const scrollLeft = scrollRef.current?.scrollLeft ?? 0;
       const x = e.clientX - rect.left + scrollLeft;
-      const endTime = Math.max(0, Math.round((x / pps) * 100) / 100);
+      const endTime = Math.max(START_TIME, Math.round((x / pps + START_TIME) * 100) / 100);
       const start = Math.min(dragState.startTime, endTime);
       const end = Math.max(dragState.startTime, endTime);
       if (end > start) {
@@ -122,7 +125,7 @@ export function TimelineCanvas() {
         const rect = e.currentTarget.getBoundingClientRect();
         const scrollLeft = scrollRef.current?.scrollLeft ?? 0;
         const x = e.clientX - rect.left + scrollLeft;
-        const time = Math.max(0, Math.round((x / pps) * 100) / 100);
+        const time = Math.max(START_TIME, Math.round((x / pps + START_TIME) * 100) / 100);
 
         addPlacement({
           id: crypto.randomUUID(),
@@ -178,12 +181,12 @@ export function TimelineCanvas() {
     >
       <div className="relative" style={{ width: totalWidth, minHeight: "100%" }}>
         {/* Time ruler */}
-        <TimeRuler duration={duration} pps={pps} />
+        <TimeRuler duration={duration} pps={pps} startTime={START_TIME} />
 
         {/* Boss events track */}
         <div className="relative h-8" style={{ background: "rgba(255,255,255,0.015)" }}>
           {selectedTimeline.events.map((evt, i) => (
-            <BossEventMarker key={i} event={evt} pps={pps} />
+            <BossEventMarker key={i} event={evt} pps={pps} startTime={START_TIME} />
           ))}
         </div>
 
@@ -206,6 +209,7 @@ export function TimelineCanvas() {
                 pps={pps}
                 color="var(--gcd-color)"
                 error={errorMap.get(p.id)}
+                startTime={START_TIME}
               />
             );
           })}
@@ -228,20 +232,21 @@ export function TimelineCanvas() {
                 pps={pps}
                 color="var(--ability-color)"
                 error={errorMap.get(p.id)}
+                startTime={START_TIME}
               />
             );
           })}
         </div>
 
         {/* Per-ability cooldown / effect-time rows */}
-        <AbilityTimelineRows placements={placements} job={selectedJob} pps={pps} />
+        <AbilityTimelineRows placements={placements} job={selectedJob} pps={pps} startTime={START_TIME} />
 
         {/* Range selection overlay */}
         {showOverlay && overlayStart !== null && overlayEnd !== null && (
           <div
             className="absolute top-0 bottom-0 pointer-events-none z-20"
             style={{
-              left: overlayStart * pps,
+              left: (overlayStart - START_TIME) * pps,
               width: (overlayEnd - overlayStart) * pps,
               background: "rgba(250,204,21,0.12)",
               borderLeft: "2px solid rgba(250,204,21,0.6)",
