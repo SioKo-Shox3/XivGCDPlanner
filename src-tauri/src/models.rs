@@ -120,11 +120,19 @@ pub struct RotationPlan {
     pub job_id: String,
     #[serde(rename = "timelineId")]
     pub timeline_id: String,
-    #[serde(rename = "spellSpeed")]
-    pub spell_speed: u32,
+    /// GCD time in seconds (direct input)
+    #[serde(rename = "gcdTime", default = "default_gcd_time")]
+    pub gcd_time: f64,
+    /// Legacy field: spell speed value from old save files
+    #[serde(rename = "spellSpeed", default)]
+    pub spell_speed_legacy: Option<u32>,
     #[serde(default = "default_level")]
     pub level: u32,
     pub placements: Vec<SkillPlacement>,
+}
+
+fn default_gcd_time() -> f64 {
+    2.5
 }
 
 fn default_level() -> u32 {

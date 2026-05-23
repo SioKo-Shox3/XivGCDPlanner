@@ -8,11 +8,11 @@ export function Header() {
   const timelines = useAppStore((s) => s.timelines);
   const selectedJobId = useAppStore((s) => s.selectedJobId);
   const selectedTimelineId = useAppStore((s) => s.selectedTimelineId);
-  const spellSpeed = useAppStore((s) => s.spellSpeed);
+  const gcdTime = useAppStore((s) => s.gcdTime);
   const selectedLevel = useAppStore((s) => s.selectedLevel);
   const selectJob = useAppStore((s) => s.selectJob);
   const selectTimeline = useAppStore((s) => s.selectTimeline);
-  const setSpellSpeed = useAppStore((s) => s.setSpellSpeed);
+  const setGcdTime = useAppStore((s) => s.setGcdTime);
   const setLevel = useAppStore((s) => s.setLevel);
   const clearPlacements = useAppStore((s) => s.clearPlacements);
 
@@ -66,17 +66,18 @@ export function Header() {
         </select>
       </div>
 
-      {/* Spell Speed */}
+      {/* GCD */}
       <div className="flex items-center gap-2">
-        <span className="ctrl-label">SS</span>
+        <span className="ctrl-label">GCD</span>
         <input
           type="number"
           className="ctrl"
           style={{ width: 68 }}
-          value={spellSpeed}
-          min={400}
-          max={4000}
-          onChange={(e) => setSpellSpeed(Number(e.target.value))}
+          value={gcdTime}
+          min={1.5}
+          max={4.0}
+          step={0.01}
+          onChange={(e) => setGcdTime(Number(e.target.value))}
         />
       </div>
 

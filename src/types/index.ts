@@ -102,7 +102,7 @@ export interface RotationPlan {
   name: string;
   jobId: string;
   timelineId: string;
-  spellSpeed: number;
+  gcdTime: number;
   level: number;
   placements: SkillPlacement[];
 }

@@ -38,7 +38,7 @@ fn validate_rotation(
     state: State<AppState>,
     job_id: String,
     placements: Vec<SkillPlacement>,
-    spell_speed: u32,
+    gcd_time: f64,
 ) -> Result<ValidationResult, String> {
     let data = state.0.lock().map_err(|e| e.to_string())?;
     let job = data
@@ -46,7 +46,7 @@ fn validate_rotation(
         .iter()
         .find(|j| j.id == job_id)
         .ok_or_else(|| format!("Job not found: {}", job_id))?;
-    Ok(engine::validate_rotation(job, &placements, spell_speed))
+    Ok(engine::validate_rotation(job, &placements, gcd_time))
 }
 
 #[tauri::command]
@@ -54,7 +54,7 @@ fn calculate_stats(
     state: State<AppState>,
     job_id: String,
     placements: Vec<SkillPlacement>,
-    spell_speed: u32,
+    gcd_time: f64,
     duration: f64,
 ) -> Result<RotationStats, String> {
     let data = state.0.lock().map_err(|e| e.to_string())?;
@@ -63,7 +63,7 @@ fn calculate_stats(
         .iter()
         .find(|j| j.id == job_id)
         .ok_or_else(|| format!("Job not found: {}", job_id))?;
-    Ok(engine::calculate_stats(job, &placements, spell_speed, duration))
+    Ok(engine::calculate_stats(job, &placements, gcd_time, duration))
 }
 
 #[tauri::command]
@@ -71,7 +71,7 @@ fn calculate_range_stats(
     state: State<AppState>,
     job_id: String,
     placements: Vec<SkillPlacement>,
-    spell_speed: u32,
+    gcd_time: f64,
     start_time: f64,
     end_time: f64,
 ) -> Result<models::RangeStats, String> {
@@ -84,7 +84,7 @@ fn calculate_range_stats(
     Ok(engine::calculate_range_stats(
         job,
         &placements,
-        spell_speed,
+        gcd_time,
         start_time,
         end_time,
     ))
@@ -96,7 +96,7 @@ fn save_rotation(
     name: String,
     job_id: String,
     timeline_id: String,
-    spell_speed: u32,
+    gcd_time: f64,
     level: Option<u32>,
     placements: Vec<SkillPlacement>,
 ) -> Result<String, String> {
@@ -105,7 +105,8 @@ fn save_rotation(
         name,
         job_id,
         timeline_id,
-        spell_speed,
+        gcd_time,
+        spell_speed_legacy: None,
         level: level.unwrap_or(100),
         placements,
     };

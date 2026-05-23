@@ -17,7 +17,7 @@ interface Props {
 export function SaveLoadDialog({ mode, onClose }: Props) {
   const selectedJobId = useAppStore((s) => s.selectedJobId);
   const selectedTimelineId = useAppStore((s) => s.selectedTimelineId);
-  const spellSpeed = useAppStore((s) => s.spellSpeed);
+  const gcdTime = useAppStore((s) => s.gcdTime);
   const selectedLevel = useAppStore((s) => s.selectedLevel);
   const placements = useAppStore((s) => s.placements);
   const loadPlan = useAppStore((s) => s.loadPlan);
@@ -48,7 +48,7 @@ export function SaveLoadDialog({ mode, onClose }: Props) {
     }
     setBusy(true);
     try {
-      await saveRotation(name, selectedJobId, selectedTimelineId, spellSpeed, selectedLevel, placements);
+      await saveRotation(name, selectedJobId, selectedTimelineId, gcdTime, selectedLevel, placements);
       setStatus({ type: "success", msg: `「${name}」をセーブしました` });
       setTimeout(onClose, 800);
     } catch (e) {
@@ -69,7 +69,7 @@ export function SaveLoadDialog({ mode, onClose }: Props) {
       loadPlan({
         jobId: plan.jobId,
         timelineId: plan.timelineId,
-        spellSpeed: plan.spellSpeed,
+        gcdTime: plan.gcdTime,
         level: plan.level,
         placements: plan.placements,
       });
@@ -134,7 +134,7 @@ export function SaveLoadDialog({ mode, onClose }: Props) {
             </label>
 
             <div style={{ fontSize: 11, color: "var(--text-muted)" }}>
-              ジョブ・レベル・タイムライン・SS・スキル配置をすべて保存します
+              ジョブ・レベル・タイムライン・GCD・スキル配置をすべて保存します
             </div>
           </div>
         ) : (
