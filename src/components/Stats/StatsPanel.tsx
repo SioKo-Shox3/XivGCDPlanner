@@ -6,7 +6,7 @@ export function StatsPanel() {
   const selectedJob = useAppStore((s) => s.jobs.find((j) => j.id === s.selectedJobId));
   const selectedTimeline = useAppStore((s) => s.timelines.find((t) => t.id === s.selectedTimelineId));
   const placements = useAppStore((s) => s.placements);
-  const spellSpeed = useAppStore((s) => s.spellSpeed);
+  const gcdTime = useAppStore((s) => s.gcdTime);
   const stats = useAppStore((s) => s.stats);
   const rangeStart = useAppStore((s) => s.rangeStart);
   const rangeEnd = useAppStore((s) => s.rangeEnd);
@@ -31,9 +31,9 @@ export function StatsPanel() {
     const timer = setTimeout(async () => {
       try {
         const [vr, st] = await Promise.all([
-          validateRotation(selectedJob.id, placements, spellSpeed),
+          validateRotation(selectedJob.id, placements, gcdTime),
           selectedTimeline
-            ? calculateStats(selectedJob.id, placements, spellSpeed, selectedTimeline.duration)
+            ? calculateStats(selectedJob.id, placements, gcdTime, selectedTimeline.duration)
             : Promise.resolve(null),
         ]);
         setValidationResult(vr);
@@ -44,7 +44,7 @@ export function StatsPanel() {
     }, 300);
 
     return () => clearTimeout(timer);
-  }, [selectedJob, selectedTimeline, placements, spellSpeed, setValidationResult, setStats]);
+  }, [selectedJob, selectedTimeline, placements, gcdTime, setValidationResult, setStats]);
 
   // Recompute range stats when range or placements change
   useEffect(() => {
@@ -58,7 +58,7 @@ export function StatsPanel() {
         const rs = await calculateRangeStats(
           selectedJob.id,
           placements,
-          spellSpeed,
+          gcdTime,
           rangeStart,
           rangeEnd
         );
@@ -69,7 +69,7 @@ export function StatsPanel() {
     }, 300);
 
     return () => clearTimeout(timer);
-  }, [selectedJob, placements, spellSpeed, rangeStart, rangeEnd, setRangeStats]);
+  }, [selectedJob, placements, gcdTime, rangeStart, rangeEnd, setRangeStats]);
 
   const handleRangeStartChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {

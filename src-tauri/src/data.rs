@@ -91,8 +91,15 @@ pub fn save_rotation_file(
 pub fn load_rotation_file(path: &str) -> Result<RotationPlan, String> {
     let content = fs::read_to_string(path)
         .map_err(|e| format!("Failed to read {}: {}", path, e))?;
-    let plan: RotationPlan = serde_json::from_str(&content)
+    let mut plan: RotationPlan = serde_json::from_str(&content)
         .map_err(|e| format!("Failed to parse {}: {}", path, e))?;
+    // Migrate old saves: if gcdTime is missing (defaulted to 2.5) but spellSpeed exists,
+    // convert using the FFXIV formula
+    if plan.gcd_time == 2.5 {
+        if let Some(ss) = plan.spell_speed_legacy {
+            plan.gcd_time = crate::engine::calculate_gcd_time(2.5, ss);
+        }
+    }
     Ok(plan)
 }
 

@@ -20,25 +20,25 @@ export async function loadTimelines(): Promise<BossTimelineDef[]> {
 export async function validateRotation(
   jobId: string,
   placements: SkillPlacement[],
-  spellSpeed: number
+  gcdTime: number
 ): Promise<ValidationResult> {
   return invoke<ValidationResult>("validate_rotation", {
     jobId,
     placements,
-    spellSpeed,
+    gcdTime,
   });
 }
 
 export async function calculateStats(
   jobId: string,
   placements: SkillPlacement[],
-  spellSpeed: number,
+  gcdTime: number,
   duration: number
 ): Promise<RotationStats> {
   return invoke<RotationStats>("calculate_stats", {
     jobId,
     placements,
-    spellSpeed,
+    gcdTime,
     duration,
   });
 }
@@ -46,14 +46,14 @@ export async function calculateStats(
 export async function calculateRangeStats(
   jobId: string,
   placements: SkillPlacement[],
-  spellSpeed: number,
+  gcdTime: number,
   startTime: number,
   endTime: number
 ): Promise<RangeStats> {
   return invoke<RangeStats>("calculate_range_stats", {
     jobId,
     placements,
-    spellSpeed,
+    gcdTime,
     startTime,
     endTime,
   });
@@ -63,7 +63,7 @@ export async function saveRotation(
   name: string,
   jobId: string,
   timelineId: string,
-  spellSpeed: number,
+  gcdTime: number,
   level: number,
   placements: SkillPlacement[]
 ): Promise<string> {
@@ -71,7 +71,7 @@ export async function saveRotation(
     name,
     jobId,
     timelineId,
-    spellSpeed,
+    gcdTime,
     level,
     placements,
   });

@@ -4,7 +4,6 @@ import { TimeRuler } from "./TimeRuler";
 import { BossEventMarker } from "./BossEventMarker";
 import { SkillBlock } from "./SkillBlock";
 import { AbilityTimelineRows } from "./AbilityTimelineRows";
-import { calculateGcdTime } from "@/services/tauriCommands";
 import { PRE_PULL_SECONDS } from "@/constants";
 
 const START_TIME = -PRE_PULL_SECONDS;
@@ -15,7 +14,7 @@ export function TimelineCanvas() {
   const placements = useAppStore((s) => s.placements);
   const validationResult = useAppStore((s) => s.validationResult);
   const pps = useAppStore((s) => s.view.pixelsPerSecond);
-  const spellSpeed = useAppStore((s) => s.spellSpeed);
+  const gcdTime = useAppStore((s) => s.gcdTime);
   const addPlacement = useAppStore((s) => s.addPlacement);
   const setPixelsPerSecond = useAppStore((s) => s.setPixelsPerSecond);
   const endDrag = useAppStore((s) => s.endDrag);
@@ -197,7 +196,6 @@ export function TimelineCanvas() {
           {gcdPlacements.map((p) => {
             const skill = selectedJob.skills.gcd.find((s) => s.id === p.skillId);
             if (!skill) return null;
-            const gcdTime = calculateGcdTime(2.5, spellSpeed);
             return (
               <SkillBlock
                 key={p.id}

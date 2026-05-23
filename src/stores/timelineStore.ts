@@ -8,7 +8,6 @@ import type {
   RangeStats,
   TimelineViewState,
 } from "@/types";
-import { calculateGcdTime } from "@/services/tauriCommands";
 import { PRE_PULL_SECONDS } from "@/constants";
 
 interface AppState {
@@ -19,7 +18,7 @@ interface AppState {
   // Selections
   selectedJobId: string | null;
   selectedTimelineId: string | null;
-  spellSpeed: number;
+  gcdTime: number;
 
   // Rotation state
   placements: SkillPlacement[];
@@ -47,7 +46,7 @@ interface AppState {
   // Actions - selections
   selectJob: (jobId: string) => void;
   selectTimeline: (timelineId: string) => void;
-  setSpellSpeed: (ss: number) => void;
+  setGcdTime: (gcd: number) => void;
   setLevel: (level: number) => void;
 
   // Actions - rotation editing
@@ -65,7 +64,7 @@ interface AppState {
   setRange: (start: number, end: number) => void;
   clearRange: () => void;
   setRangeStats: (s: RangeStats | null) => void;
-  loadPlan: (plan: { jobId: string; timelineId: string; spellSpeed: number; level: number; placements: SkillPlacement[] }) => void;
+  loadPlan: (plan: { jobId: string; timelineId: string; gcdTime: number; level: number; placements: SkillPlacement[] }) => void;
 
   // Actions - view
   setPixelsPerSecond: (pps: number) => void;
@@ -86,7 +85,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   timelines: [],
   selectedJobId: null,
   selectedTimelineId: null,
-  spellSpeed: 400,
+  gcdTime: 2.5,
   selectedLevel: 100,
   placements: [],
   validationResult: null,
@@ -110,7 +109,7 @@ export const useAppStore = create<AppState>((set, get) => ({
     set({ selectedJobId: jobId, placements: [], validationResult: null, stats: null }),
   selectTimeline: (timelineId) =>
     set({ selectedTimelineId: timelineId, placements: [], validationResult: null, stats: null }),
-  setSpellSpeed: (ss) => set({ spellSpeed: ss }),
+  setGcdTime: (gcd) => set({ gcdTime: Math.max(1.5, Math.min(4.0, gcd)) }),
   setLevel: (level) => set({ selectedLevel: level }),
 
   addPlacement: (p) =>
@@ -118,7 +117,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   appendSkill: (skillId, skillType) => {
     const s = get();
     if (!s.selectedJobId || !s.selectedTimelineId) return;
-    const gcdTime = calculateGcdTime(2.5, s.spellSpeed);
+    const gcdTime = s.gcdTime;
     let time = 0;
     if (skillType === "gcd") {
       const lastGcd = [...s.placements]
@@ -151,7 +150,7 @@ export const useAppStore = create<AppState>((set, get) => ({
 
       // GCD repulsion: push overlapping GCDs apart
       if (target.skillType === "gcd") {
-        const gcdTime = calculateGcdTime(2.5, s.spellSpeed);
+        const gcdTime = s.gcdTime;
         const gcds = updated.filter((p) => p.skillType === "gcd").sort((a, b) => a.time - b.time);
         const nonGcds = updated.filter((p) => p.skillType !== "gcd");
 
@@ -207,7 +206,7 @@ export const useAppStore = create<AppState>((set, get) => ({
     set({
       selectedJobId: plan.jobId,
       selectedTimelineId: plan.timelineId,
-      spellSpeed: plan.spellSpeed,
+      gcdTime: plan.gcdTime,
       selectedLevel: plan.level,
       placements: plan.placements,
       validationResult: null,

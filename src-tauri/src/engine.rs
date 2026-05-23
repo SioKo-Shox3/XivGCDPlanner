@@ -1,7 +1,7 @@
 use crate::models::*;
 use std::collections::HashMap;
 
-/// Calculate the actual GCD time based on spell speed
+/// Calculate the actual GCD time based on spell speed (kept for legacy migration)
 pub fn calculate_gcd_time(base_gcd: f64, spell_speed: u32) -> f64 {
     let base = 400_f64;
     let ss = spell_speed as f64;
@@ -13,10 +13,10 @@ pub fn calculate_gcd_time(base_gcd: f64, spell_speed: u32) -> f64 {
 pub fn validate_rotation(
     job: &JobDef,
     placements: &[SkillPlacement],
-    spell_speed: u32,
+    gcd_time: f64,
 ) -> ValidationResult {
     let mut errors = Vec::new();
-    let gcd_time = calculate_gcd_time(2.5, spell_speed);
+    let gcd_time = gcd_time.max(1.5);
 
     // Build lookup maps
     let gcd_map: HashMap<u32, &GcdSkillDef> = job.skills.gcd.iter().map(|s| (s.id, s)).collect();
@@ -120,10 +120,10 @@ pub fn validate_rotation(
 pub fn calculate_stats(
     job: &JobDef,
     placements: &[SkillPlacement],
-    spell_speed: u32,
+    gcd_time: f64,
     duration: f64,
 ) -> RotationStats {
-    let gcd_time = calculate_gcd_time(2.5, spell_speed);
+    let gcd_time = gcd_time.max(1.5);
     let gcd_map: HashMap<u32, &GcdSkillDef> = job.skills.gcd.iter().map(|s| (s.id, s)).collect();
     let ability_map: HashMap<u32, &AbilitySkillDef> =
         job.skills.ability.iter().map(|s| (s.id, s)).collect();
@@ -181,12 +181,11 @@ pub fn calculate_stats(
 pub fn calculate_range_stats(
     job: &JobDef,
     placements: &[SkillPlacement],
-    spell_speed: u32,
+    _gcd_time: f64,
     start_time: f64,
     end_time: f64,
 ) -> crate::models::RangeStats {
     let duration = (end_time - start_time).max(0.0);
-    let gcd_time = calculate_gcd_time(2.5, spell_speed);
     let gcd_map: HashMap<u32, &GcdSkillDef> = job.skills.gcd.iter().map(|s| (s.id, s)).collect();
     let ability_map: HashMap<u32, &AbilitySkillDef> =
         job.skills.ability.iter().map(|s| (s.id, s)).collect();
